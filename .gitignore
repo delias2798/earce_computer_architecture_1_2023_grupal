@@ -1,0 +1,38 @@
+# Quartus II Project Files
+*.qpf
+*.qsf
+*.qdf
+*.srf
+*.vqm
+*.bsf
+*.rpt
+*.rpd
+*.summary
+*.smsg
+*.htm
+*.htm.*
+*.eqn
+*.pin
+*.csf
+*.csf.*
+*.dpf
+*.dpf.*
+*.jdi
+*.pof
+*.sof
+*.jic
+*.jam
+*.jbc
+
+# ModelSim-Altera Simulation Files
+*.vcd
+*.wlf
+
+# Backups
+*~
+*#
+*.bak
+*.BAK
+
+# VSCode files
+.vscode/
