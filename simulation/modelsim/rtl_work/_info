@@ -7,25 +7,30 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/simulation/modelsim
-vALU
+Z0 dC:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/simulation/modelsim
+vALU_deco
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+<<<<<<< HEAD
 Z2 !s110 1683113508
+=======
+Z2 !s110 1682989982
+>>>>>>> 6f6192a9401a9bc75798d8cac49979a8bcb50a5e
 !i10b 1
-!s100 JmEb?U[V4jQ6H1^A6CEFD3
-IQdB;4^^[ZlmJ7kKef:Veb3
+!s100 X;4O``iX03oa=cQh<E40X3
+IK;IA[8iHLLOml9M3YDZBA0
 Z3 VDg1SIo80bB@j0V0VzS_@n1
-!s105 ALU_sv_unit
+!s105 ALU_deco_sv_unit
 S1
 R0
-w1683008995
-8C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/ALU.sv
-FC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/ALU.sv
-L0 14
+w1669252629
+8C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/ALU_deco.sv
+FC:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/ALU_deco.sv
+L0 1
 Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
+<<<<<<< HEAD
 Z5 !s108 1683113508.000000
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/ALU.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/ALU.sv|
@@ -40,23 +45,331 @@ R2
 !i10b 1
 !s100 GSicAX79TWd2?Kd_Kmd8;2
 IgC<8z3l5gMWTeTk^RglB@1
+=======
+Z5 !s108 1682989982.000000
+!s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/ALU_deco.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/ALU_deco.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work {+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal}
+Z8 tCvgOpt 0
+n@a@l@u_deco
+vcond_check
+R1
+R2
+!i10b 1
+!s100 1:2LPIb6g@GBicQJQaFGG2
+ICboEX25HLYTRJo^YPTOeF2
+>>>>>>> 6f6192a9401a9bc75798d8cac49979a8bcb50a5e
 R3
-!s105 ALU_tb_sv_unit
+!s105 cond_check_sv_unit
 S1
 R0
+<<<<<<< HEAD
 w1683009060
 8C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/testbenches/ALU_tb.sv
 FC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/testbenches/ALU_tb.sv
+=======
+w1669179292
+8C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/cond_check.sv
+FC:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/cond_check.sv
+>>>>>>> 6f6192a9401a9bc75798d8cac49979a8bcb50a5e
 L0 1
 R4
 r1
 !s85 0
 31
 R5
+<<<<<<< HEAD
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/testbenches/ALU_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/testbenches|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/testbenches/ALU_tb.sv|
+=======
+!s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/cond_check.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/cond_check.sv|
+!i113 1
+R6
+R7
+R8
+vlogica_cond
+R1
+Z9 !s110 1682989981
+!i10b 1
+!s100 gzcTF=5[HdQV5S<dQQDF83
+I>0CCz5J^<2i_e:R`@Tz=72
+R3
+!s105 logica_cond_sv_unit
+S1
+R0
+w1669182954
+8C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/logica_cond.sv
+FC:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/logica_cond.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z10 !s108 1682989981.000000
+!s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/logica_cond.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/logica_cond.sv|
+!i113 1
+R6
+R7
+R8
+vmain_deco
+R1
+R9
+!i10b 1
+!s100 XJ<BiSJL@RX2WMD09zoU@3
+IFW2hjZIRo4QeX^fl_YeGT3
+R3
+!s105 main_deco_sv_unit
+S1
+R0
+w1669252536
+8C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/main_deco.sv
+FC:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/main_deco.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/main_deco.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/main_deco.sv|
+!i113 1
+R6
+R7
+R8
+vsenal_ALU_control
+R1
+R9
+!i10b 1
+!s100 @n@de8_hXhlJBaUS54L=k3
+IiNO2VEATA=8kljD2j5k[_2
+R3
+!s105 senal_ALU_control_sv_unit
+S1
+R0
+w1669368777
+8C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_ALU_control.sv
+FC:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_ALU_control.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_ALU_control.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_ALU_control.sv|
+!i113 1
+R6
+R7
+R8
+nsenal_@a@l@u_control
+vsenal_ALU_src
+R1
+R9
+!i10b 1
+!s100 _Ulh2_18UClPhYe=O?S2:1
+IRWm807IF^gjTZXIzVAk_B2
+R3
+!s105 senal_ALU_src_sv_unit
+S1
+R0
+w1669176119
+8C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_ALU_src.sv
+FC:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_ALU_src.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_ALU_src.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_ALU_src.sv|
+!i113 1
+R6
+R7
+R8
+nsenal_@a@l@u_src
+vsenal_imm_src
+R1
+R9
+!i10b 1
+!s100 2fB7zRjah1lQFJYDgSVNZ3
+IMOZzeBi[2h@<Bc7NO9c3:2
+R3
+!s105 senal_imm_src_sv_unit
+S1
+R0
+w1669176163
+8C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_imm_src.sv
+FC:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_imm_src.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_imm_src.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_imm_src.sv|
+!i113 1
+R6
+R7
+R8
+vsenal_mem_to_reg
+R1
+R9
+!i10b 1
+!s100 :OdJb`6LAY2=3m3Ij2@<K1
+I?0ke1AdOmJfM_5dN2=Tkm0
+R3
+!s105 senal_mem_to_reg_sv_unit
+S1
+R0
+w1669176229
+8C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_mem_to_reg.sv
+FC:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_mem_to_reg.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_mem_to_reg.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_mem_to_reg.sv|
+!i113 1
+R6
+R7
+R8
+vsenal_mem_write
+R1
+R9
+!i10b 1
+!s100 e@B[HhLoE7e4KicXFN5_:0
+ILmCfJhCOhOVmiRob3DNd^3
+R3
+!s105 senal_mem_write_sv_unit
+S1
+R0
+w1669176153
+8C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_mem_write.sv
+FC:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_mem_write.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_mem_write.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_mem_write.sv|
+!i113 1
+R6
+R7
+R8
+vsenal_reg_src
+R1
+Z11 !s110 1682989980
+!i10b 1
+!s100 =B_[Dz1MJkSR=X^Jbj_iO0
+IcHC9GTAUdC=n:BDa=@kWE1
+R3
+!s105 senal_reg_src_sv_unit
+S1
+R0
+w1669179159
+8C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_reg_src.sv
+FC:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_reg_src.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z12 !s108 1682989980.000000
+!s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_reg_src.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_reg_src.sv|
+!i113 1
+R6
+R7
+R8
+vsenal_reg_write
+R1
+R11
+!i10b 1
+!s100 HEgG2Xg^T]Un6E=86=SB?0
+IG30?]0XR5UW>NBNPjMm<A1
+R3
+!s105 senal_reg_write_sv_unit
+S1
+R0
+w1669182618
+8C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_reg_write.sv
+FC:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_reg_write.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_reg_write.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/senal_reg_write.sv|
+!i113 1
+R6
+R7
+R8
+vunidad_control
+R1
+R11
+!i10b 1
+!s100 C0^f3^m>gVIG4Wd3HM8FW1
+I>4KcP_UhzV65MjVchmil73
+R3
+!s105 unidad_control_sv_unit
+S1
+R0
+w1669252433
+8C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/unidad_control.sv
+FC:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/unidad_control.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/unidad_control.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/unidad_control.sv|
+!i113 1
+R6
+R7
+R8
+vunidad_control_tb
+R1
+!s110 1682989983
+!i10b 1
+!s100 IViYE?VH;eUFi[cV>]H@H3
+I>hGJPcjbBP[W=aBllTF=n3
+R3
+!s105 unidad_control_tb_sv_unit
+S1
+R0
+w1669398221
+8C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/unidad_control_tb.sv
+FC:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/unidad_control_tb.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/unidad_control_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/unidad_control_tb.sv|
+>>>>>>> 6f6192a9401a9bc75798d8cac49979a8bcb50a5e
 !i113 1
 R6
 !s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/testbenches
 R7
+<<<<<<< HEAD
 n@a@l@u_tb
+=======
+R8
+>>>>>>> 6f6192a9401a9bc75798d8cac49979a8bcb50a5e
