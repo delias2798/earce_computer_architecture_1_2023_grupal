@@ -12,29 +12,29 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/ALU.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:30 on May 02,2023
+# Start time: 05:31:48 on May 03,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/ALU.sv 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 00:33:30 on May 02,2023, Elapsed time: 0:00:00
+# End time: 05:31:48 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/ALU_tb.sv}
+# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/testbenches {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/testbenches/ALU_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:30 on May 02,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/ALU_tb.sv 
+# Start time: 05:31:48 on May 03,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/testbenches" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/testbenches/ALU_tb.sv 
 # -- Compiling module ALU_tb
 # 
 # Top level modules:
 # 	ALU_tb
-# End time: 00:33:30 on May 02,2023, Elapsed time: 0:00:00
+# End time: 05:31:48 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ALU_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" ALU_tb 
-# Start time: 00:33:31 on May 02,2023
+# Start time: 05:31:48 on May 03,2023
 # Loading sv_std.std
 # Loading work.ALU_tb
 # Loading work.ALU
@@ -76,5 +76,5 @@
 # exito para A = 0010, B = 0001
 # exito para A = 0010, B = 0010
 # exito para A = 0010, B = 1000
-# End time: 00:34:20 on May 02,2023, Elapsed time: 0:00:49
+# End time: 05:31:57 on May 03,2023, Elapsed time: 0:00:09
 # Errors: 0, Warnings: 0
