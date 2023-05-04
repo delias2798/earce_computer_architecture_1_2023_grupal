@@ -1,0 +1,190 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do single_cycle_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/ALU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:21 on May 03,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 20:10:21 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/alu_deco.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:21 on May 03,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/alu_deco.sv 
+# -- Compiling module ALU_deco
+# 
+# Top level modules:
+# 	ALU_deco
+# End time: 20:10:21 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/main_deco.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:21 on May 03,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/main_deco.sv 
+# -- Compiling module main_deco
+# 
+# Top level modules:
+# 	main_deco
+# End time: 20:10:21 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_reg_write.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:21 on May 03,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_reg_write.sv 
+# -- Compiling module senal_reg_write
+# 
+# Top level modules:
+# 	senal_reg_write
+# End time: 20:10:21 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_mem_write.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:21 on May 03,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_mem_write.sv 
+# -- Compiling module senal_mem_write
+# 
+# Top level modules:
+# 	senal_mem_write
+# End time: 20:10:21 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_mem_to_reg.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:21 on May 03,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_mem_to_reg.sv 
+# -- Compiling module senal_mem_to_reg
+# 
+# Top level modules:
+# 	senal_mem_to_reg
+# End time: 20:10:21 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_alu_src.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:21 on May 03,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_alu_src.sv 
+# -- Compiling module senal_ALU_src
+# 
+# Top level modules:
+# 	senal_ALU_src
+# End time: 20:10:21 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_imm_src.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:21 on May 03,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_imm_src.sv 
+# -- Compiling module senal_imm_src
+# 
+# Top level modules:
+# 	senal_imm_src
+# End time: 20:10:21 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_reg_src.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:21 on May 03,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_reg_src.sv 
+# -- Compiling module senal_reg_src
+# 
+# Top level modules:
+# 	senal_reg_src
+# End time: 20:10:21 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_alu_control.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:21 on May 03,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_alu_control.sv 
+# -- Compiling module senal_ALU_control
+# 
+# Top level modules:
+# 	senal_ALU_control
+# End time: 20:10:22 on May 03,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/logica_cond.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:22 on May 03,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/logica_cond.sv 
+# -- Compiling module logica_cond
+# 
+# Top level modules:
+# 	logica_cond
+# End time: 20:10:22 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/cond_check.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:22 on May 03,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/cond_check.sv 
+# -- Compiling module cond_check
+# 
+# Top level modules:
+# 	cond_check
+# End time: 20:10:22 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/testbenches {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/testbenches/ALU_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:22 on May 03,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/testbenches" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/testbenches/ALU_tb.sv 
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 20:10:22 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ALU_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" ALU_tb 
+# Start time: 20:10:22 on May 03,2023
+# Loading sv_std.std
+# Loading work.ALU_tb
+# Loading work.ALU
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# =============SUMADOR=============
+# exito para A = 0001, B = 0001
+# exito para A = 1111, B = 1110
+# exito para A = 0000, B = 1110
+# exito para A = 1111, B = 1111
+# =============RESTADOR=============
+# exito para A = 0001, B = 0001
+# exito para A = 1111, B = 1110
+# exito para A = 0000, B = 1110
+# exito para A = 1111, B = 1111
+# =============MODULO=============
+# exito para A = 0000, B = 1100
+# exito para A = 0011, B = 0010
+# exito para A = 0100, B = 1000
+# exito para A = 0111, B = 0110
+# exito para A = 1101, B = 1010
+# =============AND=============
+# exito para A = 0011, B = 0000
+# exito para A = 0110, B = 1001
+# exito para A = 1100, B = 1110
+# exito para A = 1111, B = 0001
+# =============SHIFT-R=============
+# exito para A = 0101
+# exito para A = 1100
+# exito para A = 0100
+# exito para A = 0110
+# =============MULTIPLICADOR=============
+# exito para A = 0011, B = 0010
+# exito para A = 0010, B = 0001
+# exito para A = 0010, B = 0010
+# exito para A = 0010, B = 1000
+# End time: 20:10:31 on May 03,2023, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0
