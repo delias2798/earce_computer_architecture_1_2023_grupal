@@ -1,0 +1,3 @@
+Warning (10273): Verilog HDL warning at ExtendImmediate.sv(17): extended using "x" or "z" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/ExtendImmediate.sv Line: 17
+Warning (10273): Verilog HDL warning at Decoder.sv(31): extended using "x" or "z" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/Decoder.sv Line: 31
+Warning (10273): Verilog HDL warning at Decoder.sv(45): extended using "x" or "z" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/Decoder.sv Line: 45

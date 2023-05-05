@@ -1,37 +1,31 @@
-# Quartus II Project Files
+# Quartus-generated files
+/db/
+/output_files/
+/simulation/
+/synthesis/
+/tmp/
+/*.rpt
+/*.summary
+/*.smsg
+/*.sof
+/*.pof
+/*.qws
+/*.qws.gz
+/*.jdi
+/*.rdb
+
+# Quartus settings file
 *.qsf
-*.qdf
-*.srf
-*.vqm
-*.bsf
-*.rpt
-*.rpd
-*.summary
-*.smsg
-*.htm
-*.htm.*
-*.eqn
-*.pin
-*.csf
-*.csf.*
-*.dpf
-*.dpf.*
-*.jdi
-*.pof
-*.sof
-*.jic
-*.jam
-*.jbc
 
-# ModelSim-Altera Simulation Files
-*.vcd
-*.wlf
+# Quartus project file
+*.qpf
 
-# Backups
+# Quartus project database file
+*.qdb
+
+# Quartus system database file
+*.sopcinfo
+
+# Quartus backup files
 *~
-*#
 *.bak
-*.BAK
-
-# VSCode files
-.vscode/
