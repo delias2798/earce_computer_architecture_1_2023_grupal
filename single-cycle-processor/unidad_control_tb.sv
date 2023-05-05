@@ -46,6 +46,13 @@ module unidad_control_tb ();
 		clk = 1;
 		#10
 		clk = 0;
+		cond = 1110;
+		op = 10;
+		funct = 101000;
+		rd = 0010;
+		#10
+		clk = 1;
+		#10;
 
 	end 
 endmodule 

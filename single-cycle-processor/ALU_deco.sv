@@ -27,11 +27,13 @@ module ALU_deco (
 	
 	//PC Logic
 	
-	assign pcs = ((rd == 4'b1111) & reg_w) | branch;
+	always @ (rd or branch or reg_w) begin
+		pcs = ((rd == 4'b1111) & reg_w) | branch;
+	end
 	
 	//ALU Decoder
 	
-	senal_ALU_control sac(.funct(funct[4:0]), .ALU_op(ALU_op), .res(ALU_control));
+	senal_ALU_control sac(.funct(funct[4:0]), .ALU_op(ALU_op), .res(ALU_control), .flag_w(flag_w));
 	
 	
 endmodule 

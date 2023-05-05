@@ -10,33 +10,175 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/ExtendImmediate.sv}
+# vlog -sv -work work +incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I\ Semestre\ 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/unidad_control.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:06:45 on May 03,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/ExtendImmediate.sv 
-# -- Compiling module ExtendImmediate
+# Start time: 23:10:48 on May 04,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/unidad_control.sv 
+# -- Compiling module unidad_control
 # 
 # Top level modules:
-# 	ExtendImmediate
-# End time: 21:06:45 on May 03,2023, Elapsed time: 0:00:00
+# 	unidad_control
+# End time: 23:10:48 on May 04,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/testbenches {C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/testbenches/ExtendImmediate_tb.sv}
+# vlog -sv -work work +incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I\ Semestre\ 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_reg_write.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:06:45 on May 03,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/testbenches" C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/single-cycle-processor/testbenches/ExtendImmediate_tb.sv 
-# -- Compiling module ExtendImmediate_tb
+# Start time: 23:10:48 on May 04,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_reg_write.sv 
+# -- Compiling module senal_reg_write
 # 
 # Top level modules:
-# 	ExtendImmediate_tb
-# End time: 21:06:45 on May 03,2023, Elapsed time: 0:00:00
+# 	senal_reg_write
+# End time: 23:10:48 on May 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I\ Semestre\ 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_reg_src.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:48 on May 04,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_reg_src.sv 
+# -- Compiling module senal_reg_src
+# 
+# Top level modules:
+# 	senal_reg_src
+# End time: 23:10:48 on May 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I\ Semestre\ 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_mem_write.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:48 on May 04,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_mem_write.sv 
+# -- Compiling module senal_mem_write
+# 
+# Top level modules:
+# 	senal_mem_write
+# End time: 23:10:48 on May 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I\ Semestre\ 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_mem_to_reg.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:48 on May 04,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_mem_to_reg.sv 
+# -- Compiling module senal_mem_to_reg
+# 
+# Top level modules:
+# 	senal_mem_to_reg
+# End time: 23:10:48 on May 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I\ Semestre\ 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_imm_src.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:48 on May 04,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_imm_src.sv 
+# -- Compiling module senal_imm_src
+# 
+# Top level modules:
+# 	senal_imm_src
+# End time: 23:10:48 on May 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I\ Semestre\ 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_ALU_src.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:48 on May 04,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_ALU_src.sv 
+# -- Compiling module senal_ALU_src
+# 
+# Top level modules:
+# 	senal_ALU_src
+# End time: 23:10:48 on May 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I\ Semestre\ 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_ALU_control.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:49 on May 04,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/senal_ALU_control.sv 
+# -- Compiling module senal_ALU_control
+# 
+# Top level modules:
+# 	senal_ALU_control
+# End time: 23:10:50 on May 04,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I\ Semestre\ 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/main_deco.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:50 on May 04,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/main_deco.sv 
+# -- Compiling module main_deco
+# 
+# Top level modules:
+# 	main_deco
+# End time: 23:10:50 on May 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I\ Semestre\ 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/logica_cond.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:50 on May 04,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/logica_cond.sv 
+# -- Compiling module logica_cond
+# 
+# Top level modules:
+# 	logica_cond
+# End time: 23:10:50 on May 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I\ Semestre\ 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/cond_check.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:50 on May 04,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/cond_check.sv 
+# -- Compiling module cond_check
+# 
+# Top level modules:
+# 	cond_check
+# End time: 23:10:50 on May 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I\ Semestre\ 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/ALU_deco.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:50 on May 04,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/ALU_deco.sv 
+# -- Compiling module ALU_deco
+# 
+# Top level modules:
+# 	ALU_deco
+# End time: 23:10:51 on May 04,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ExtendImmediate_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" ExtendImmediate_tb 
-# Start time: 21:06:45 on May 03,2023
+# vlog -sv -work work +incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I\ Semestre\ 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor {C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/unidad_control_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:51 on May 04,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor" C:/Users/DELIA/OneDrive/Documents/TEC/I Semestre 2023/Arqui/Proyectos/Proyecto2/earce_computer_architecture_1_2023_grupal/single-cycle-processor/unidad_control_tb.sv 
+# -- Compiling module unidad_control_tb
+# 
+# Top level modules:
+# 	unidad_control_tb
+# End time: 23:10:51 on May 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  unidad_control_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" unidad_control_tb 
+# Start time: 23:10:51 on May 04,2023
 # Loading sv_std.std
-# Loading work.ExtendImmediate_tb
-# Loading work.ExtendImmediate
-# End time: 21:06:51 on May 03,2023, Elapsed time: 0:00:06
-# Errors: 0, Warnings: 0
+# Loading work.unidad_control_tb
+# Loading work.unidad_control
+# Loading work.ALU_deco
+# Loading work.main_deco
+# Loading work.senal_reg_write
+# Loading work.senal_mem_write
+# Loading work.senal_mem_to_reg
+# Loading work.senal_ALU_src
+# Loading work.senal_imm_src
+# Loading work.senal_reg_src
+# Loading work.senal_ALU_control
+# Loading work.logica_cond
+# Loading work.cond_check
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: DELIA  Hostname: ELIAS-LAPTOP  ProcessID: 19684
+#           Attempting to use alternate WLF file "./wlfthysf4k".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthysf4k
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+add wave -position end  sim:/unidad_control_tb/uut/ad/pcs
+restart
+run 10000
+step
+run 10000
+step
+run 10000
+step
+# Nothing left to do.
+step
+# Nothing left to do.
