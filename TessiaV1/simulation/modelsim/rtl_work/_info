@@ -1,0 +1,449 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/simulation/modelsim
+vAdder
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1683325873
+!i10b 1
+!s100 B;H5:9X^f^:<808JIS<J52
+I`AcWLI9fdOa1S4FeL8PhT0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 Adder_sv_unit
+S1
+R0
+w1683259728
+8C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Adder.sv
+FC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Adder.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1683325873.000000
+!s107 C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Adder.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1
+Z8 tCvgOpt 0
+n@adder
+vALU
+R1
+R2
+!i10b 1
+!s100 V3nTHaaNjFV::TBOYBm?c3
+IkgDfUkfPd5i?1=b0C5[3T3
+R3
+!s105 ALU_sv_unit
+S1
+R0
+w1683322872
+8C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ALU.sv
+FC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ALU.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ALU.sv|
+!i113 1
+R6
+R7
+R8
+n@a@l@u
+vConditionalLogic
+R1
+R2
+!i10b 1
+!s100 TRO=GVOFj8OlMQFN5>mO]2
+ITF[09CWX9R8`5H6>dma:M1
+R3
+!s105 ConditionalLogic_sv_unit
+S1
+R0
+w1683253030
+8C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ConditionalLogic.sv
+FC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ConditionalLogic.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ConditionalLogic.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ConditionalLogic.sv|
+!i113 1
+R6
+R7
+R8
+n@conditional@logic
+vConditionCheck
+R1
+R2
+!i10b 1
+!s100 L1fe<YBJkocETY_?kON?E2
+Il4da0D?H<Wbkab>PnMPz<0
+R3
+!s105 ConditionCheck_sv_unit
+S1
+R0
+w1683252860
+8C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ConditionCheck.sv
+FC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ConditionCheck.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ConditionCheck.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ConditionCheck.sv|
+!i113 1
+R6
+R7
+R8
+n@condition@check
+vControlUnit
+R1
+R2
+!i10b 1
+!s100 3>V5zl2JCAdnh=NV26d1E0
+IFh1>BfWD5lIYcWUW_d;OL3
+R3
+!s105 ControlUnit_sv_unit
+S1
+R0
+w1683324186
+8C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ControlUnit.sv
+FC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ControlUnit.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ControlUnit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ControlUnit.sv|
+!i113 1
+R6
+R7
+R8
+n@control@unit
+vDataMemory
+R1
+R2
+!i10b 1
+!s100 JE:bne^SXA>L`5cSAAFV80
+IoSc1MIb=Zlo]PjFXR1;?l2
+R3
+!s105 DataMemory_sv_unit
+S1
+R0
+w1683258356
+8C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/DataMemory.sv
+FC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/DataMemory.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/DataMemory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/DataMemory.sv|
+!i113 1
+R6
+R7
+R8
+n@data@memory
+vDatapath
+R1
+R2
+!i10b 1
+!s100 O9S9?Zcf;XKm^1AUk4Y:E3
+Ii^STEPfb;jb<Yl>QFcl4g3
+R3
+!s105 Datapath_sv_unit
+S1
+R0
+w1683324165
+8C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv
+FC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv|
+!i113 1
+R6
+R7
+R8
+n@datapath
+vDecoder
+R1
+R2
+!i10b 1
+!s100 JZUTQWmBAGe2k7V3_HAB21
+I`Pfzo8^O7o:WkHFP]TY2Q1
+R3
+!s105 Decoder_sv_unit
+S1
+R0
+w1683324239
+8C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Decoder.sv
+FC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Decoder.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Decoder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Decoder.sv|
+!i113 1
+R6
+R7
+R8
+n@decoder
+vExtendImmediate
+R1
+R2
+!i10b 1
+!s100 bH0EjfmAhobgkTbc9g:N=3
+I8g4bEh0:Z>`cN_jg@f:<02
+R3
+!s105 ExtendImmediate_sv_unit
+S1
+R0
+w1683264802
+8C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ExtendImmediate.sv
+FC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ExtendImmediate.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ExtendImmediate.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/ExtendImmediate.sv|
+!i113 1
+R6
+R7
+R8
+n@extend@immediate
+vflopenr
+R1
+R2
+!i10b 1
+!s100 AgVHjB^`=EODf;?kBPgP=2
+I1G15I4CakTMc3<WhkTh123
+R3
+!s105 flopenr_sv_unit
+S1
+R0
+w1683252468
+8C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/flopenr.sv
+FC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/flopenr.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/flopenr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/flopenr.sv|
+!i113 1
+R6
+R7
+R8
+vflopr
+R1
+R2
+!i10b 1
+!s100 AOcehC1ZUkWdP]XlTQB<10
+Io0M2>6G]=03j5<^Z=bLVZ1
+R3
+!s105 flopr_sv_unit
+S1
+R0
+w1683258653
+8C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/flopr.sv
+FC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/flopr.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/flopr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/flopr.sv|
+!i113 1
+R6
+R7
+R8
+vInstructionMemory
+R1
+R2
+!i10b 1
+!s100 li`X@konHfOKVdIHfFZ>;3
+IHKIaP[hcS2Do;6Nzo2@No1
+R3
+!s105 InstructionMemory_sv_unit
+S1
+R0
+w1683324948
+8C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/InstructionMemory.sv
+FC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/InstructionMemory.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/InstructionMemory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/InstructionMemory.sv|
+!i113 1
+R6
+R7
+R8
+n@instruction@memory
+vMux2to1
+R1
+Z9 !s110 1683325872
+!i10b 1
+!s100 On`]Ja;F_hao2G1PnQ[;H0
+Iold`cH4DD;k_MbfeElb5C3
+R3
+!s105 Mux2to1_sv_unit
+S1
+R0
+w1683251059
+8C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Mux2to1.sv
+FC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Mux2to1.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z10 !s108 1683325872.000000
+!s107 C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Mux2to1.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Mux2to1.sv|
+!i113 1
+R6
+R7
+R8
+n@mux2to1
+vRegisterFile
+R1
+R9
+!i10b 1
+!s100 ^g:JPYo[9n`e6bh@ZnC<N1
+IVC7>^zg8A>X^LFI^;6_hK2
+R3
+!s105 RegisterFile_sv_unit
+S1
+R0
+w1683250536
+8C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/RegisterFile.sv
+FC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/RegisterFile.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/RegisterFile.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/RegisterFile.sv|
+!i113 1
+R6
+R7
+R8
+n@register@file
+vTessia
+R1
+R9
+!i10b 1
+!s100 1DCD60^;RYSIEjoDh90Ba2
+IbCKPH1D[PA@AK8RM?NMJh1
+R3
+!s105 Tessia_sv_unit
+S1
+R0
+w1683324176
+8C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Tessia.sv
+FC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Tessia.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Tessia.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/Tessia.sv|
+!i113 1
+R6
+R7
+R8
+n@tessia
+vtestbench
+R1
+R2
+!i10b 1
+!s100 BdgOJGB?:a=m[mFc8QJoK3
+IACCGk9>O_RE8lE`R`><iJ0
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1683312376
+8C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/testbench.sv
+FC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/testbench.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/testbench.sv|
+!i113 1
+R6
+R7
+R8
+vTOP
+R1
+R9
+!i10b 1
+!s100 N5gB^ln=@4M_:TIR:GcSW3
+I89YYK4PH49CUWmh^NiT>c3
+R3
+!s105 TOP_sv_unit
+S1
+R0
+w1683312322
+8C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/TOP.sv
+FC:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/TOP.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/TOP.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/kevii/OneDrive/Escritorio/earce_computer_architecture_1_2023_grupal/TessiaV1/TOP.sv|
+!i113 1
+R6
+R7
+R8
+n@t@o@p
