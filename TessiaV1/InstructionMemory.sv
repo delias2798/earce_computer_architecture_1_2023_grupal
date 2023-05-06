@@ -10,14 +10,14 @@ module InstructionMemory(input logic [31:0] a,
 
 	 // Initialize ROM with values
 	initial begin
-		ROM[0] = 32'hE04F000F;
-		ROM[1] = 32'hE2802005;
-		ROM[2] = 32'hE280300C;
-		ROM[3] = 32'hE2437009;
-		ROM[4] = 32'hE1874002;
-		ROM[5] = 32'hE0035004;
-		ROM[6] = 32'hE0855004;
-		ROM[7] = 32'hE0558007;
+		ROM[0] = 32'hE3A0204B;
+		ROM[1] = 32'hE04F000F;
+		ROM[2] = 32'hE282300A;
+		ROM[3] = 32'hE3A04055;
+		ROM[4] = 32'hE1530004;
+		ROM[5] = 32'hEA000000;
+		ROM[6] = 32'hE202000A;
+		ROM[7] = 32'hE3A00064;
 		ROM[8] = 32'h0A00000C;
 		ROM[9] = 32'hE0538004;
 		ROM[10] = 32'hAA000000;

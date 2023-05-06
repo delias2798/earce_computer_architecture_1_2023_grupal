@@ -2,7 +2,7 @@ module Decoder(input logic [1:0] Op,
 					input logic [5:0] Funct,
 					input logic [3:0] Rd,
 					output logic [1:0] FlagW,
-					output logic PCS, RegW, MemW,
+					output logic PCS, RegW, MemW, NoWrite,
 					output logic MemtoReg, ALUSrc,
 					output logic [1:0] ImmSrc, RegSrc,
 					output logic [3:0] ALUControl);
@@ -40,18 +40,22 @@ module Decoder(input logic [1:0] Op,
 			case(Funct[4:1])
 				4'b0100: ALUControl = 4'b0000; // ADD
 				4'b0010: ALUControl = 4'b0001; // SUB
-				4'b0000: ALUControl = 4'b0010; // AND
+				4'b0000: ALUControl = 4'b0010; // Multiplication
 				4'b1100: ALUControl = 4'b0011; // ORR
-				default: ALUControl = 4'bx; // unimplemented
+				4'b1101: ALUControl = 4'b0110; // Copy Imm
+				4'b1010: ALUControl = 4'b0001; // Compare Rs1 Rs2
+				default: ALUControl = 4'bx;    // unimplemented
 			endcase
 			
 			// update flags if S bit is set (C & V only for arith)
 			FlagW[1] = Funct[0];
-			FlagW[0] = Funct[0] &
-				(ALUControl == 4'b0000 | ALUControl == 4'b0001);
+			FlagW[0] = Funct[0] & (ALUControl == 4'b0000 | ALUControl == 4'b0001);
+				
+			NoWrite = (Funct[4:1] == 4'b1010);
 		end else begin
 			ALUControl = 4'b0000; // add for non-DP instructions
 			FlagW = 2'b00; // don't update Flags
+			NoWrite = 1'b0;
 		end
 		
 		// PC Logic
