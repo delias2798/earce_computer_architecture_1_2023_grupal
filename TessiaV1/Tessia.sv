@@ -2,9 +2,8 @@
 module Tessia(input logic clk, reset,
 			  input logic [31:0] Instr, ReadData,
 			  output logic MemWrite,
-			  output logic [31:0] PC, ALUResult, WriteData);
-			  
-	logic [3:0] ALUFlags;
+			  output logic [31:0] PC, ALUResult, WriteData,
+			  output logic [3:0] ALUFlags);
 	
 	logic RegWrite, ALUSrc, MemtoReg, PCSrc;
 	

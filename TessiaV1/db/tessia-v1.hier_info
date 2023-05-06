@@ -66,6 +66,10 @@ ALUResult[29] << ALUResult[29].DB_MAX_OUTPUT_PORT_TYPE
 ALUResult[30] << ALUResult[30].DB_MAX_OUTPUT_PORT_TYPE
 ALUResult[31] << ALUResult[31].DB_MAX_OUTPUT_PORT_TYPE
 MemWrite << MemWrite.DB_MAX_OUTPUT_PORT_TYPE
+ALUFlags[0] << Tessia:tess.ALUFlags
+ALUFlags[1] << Tessia:tess.ALUFlags
+ALUFlags[2] << Tessia:tess.ALUFlags
+ALUFlags[3] << Tessia:tess.ALUFlags
 
 
 |TOP|Tessia:tess
@@ -232,6 +236,10 @@ WriteData[28] <= Datapath:dp.port13
 WriteData[29] <= Datapath:dp.port13
 WriteData[30] <= Datapath:dp.port13
 WriteData[31] <= Datapath:dp.port13
+ALUFlags[0] <= ALUFlags[0].DB_MAX_OUTPUT_PORT_TYPE
+ALUFlags[1] <= ALUFlags[1].DB_MAX_OUTPUT_PORT_TYPE
+ALUFlags[2] <= ALUFlags[2].DB_MAX_OUTPUT_PORT_TYPE
+ALUFlags[3] <= ALUFlags[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TOP|Tessia:tess|ControlUnit:c

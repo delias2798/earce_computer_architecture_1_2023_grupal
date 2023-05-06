@@ -15,7 +15,7 @@ module InstructionMemory(input logic [31:0] a,
 		ROM[2] = 32'hE282300A;
 		ROM[3] = 32'hE3A04055;
 		ROM[4] = 32'hE1530004;
-		ROM[5] = 32'hEA000000;
+		ROM[5] = 32'h1A000000;
 		ROM[6] = 32'hE202000A;
 		ROM[7] = 32'hE3A00064;
 		ROM[8] = 32'h0A00000C;

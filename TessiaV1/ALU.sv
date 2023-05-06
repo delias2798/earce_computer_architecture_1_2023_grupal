@@ -21,20 +21,20 @@ module ALU #(parameter N = 8) (
             default: temp_result = 0;
         endcase
         
-        if(temp_result == 0) begin
-            flags = 4'b0001; // Zero flag
-        end else if(temp_result[N-1] == 1) begin
-            flags = 4'b1000; // Sign flag
-        end else begin
-            flags = 4'b0000; // No flags set
-        end
-        
         if(ctrl == 4'b0001 && a[N-1] == 1 && b[N-1] == 0 && temp_result[N-1] == 0) begin
-            flags[1] = 1; // Borrow flag
+            flags[3:0] = 4'b1000; // Negative flag
         end else if(ctrl == 4'b0001 && a[N-1] == 0 && b[N-1] == 1 && temp_result[N-1] == 1) begin
-            flags[1] = 1; // Borrow flag
+            flags[3:0] = 4'b1000; // Negative flag
+        end else if(temp_result == 0) begin
+            flags[3:0] = 4'b0100; // Zero flag
+        end else if(ctrl == 4'b0000 && a[N-1] == 1 && b[N-1] == 1 && temp_result[N-1] == 0) begin
+            flags[3:0] = 4'b0010; // Carry flag
+        end else if(ctrl == 4'b0010 && temp_result[N-1] == 1) begin
+            flags[3:0] = 4'b0010; // Carry flag
+        end else if((a[N-1] == 1 && b[N-1] == 1 && temp_result[N-1] == 0) || (a[N-1] == 0 && b[N-1] == 0 && temp_result[N-1] == 1)) begin
+            flags[3:0] = 4'b0001; // Overflow flag
         end else begin
-            flags[1] = 0; // No borrow flag
+            flags[3:0] = 4'b0000; // No flags set
         end
         
         result = temp_result;
