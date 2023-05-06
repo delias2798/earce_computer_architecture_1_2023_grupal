@@ -53,7 +53,8 @@ module Decoder(input logic [1:0] Op,
 				
 			NoWrite = (Funct[4:1] == 4'b1010);
 		end else begin
-			ALUControl = 4'b0000; // add for non-DP instructions
+			// add or sub for non-DP instructions
+			ALUControl = Funct[5] ? 4'b0000 : 4'b0001;
 			FlagW = 2'b00; // don't update Flags
 			NoWrite = 1'b0;
 		end
