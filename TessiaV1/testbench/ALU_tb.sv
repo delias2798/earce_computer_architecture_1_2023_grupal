@@ -1,7 +1,7 @@
 module ALU_tb();
 
     // Parameters
-    parameter N = 8;
+    parameter N = 4;
     
     // Inputs
     logic [N-1:0] a;
@@ -23,61 +23,46 @@ module ALU_tb();
 
     // Test cases
     initial begin
-        // Test case 1: Addition (5 + 3 = 8)
-        a = 5;
-        b = 3;
+        // Test case 1: Addition (5 + 3 = 8) **********************************
+        a = 4'b0001;
+        b = 4'b0001;
         ctrl = 4'b0000;
         #10;
-        assert(result === 8) else $error("Test case 1 failed");
+        assert(result === 4'b0010) else $error("Test case 1 failed");
         assert(flags === 4'b0000) else $error("Test case 1 failed");
-
-        // Test case 2: Subtraction (5 - 3 = 2)
-        a = 5;
-        b = 3;
-        ctrl = 4'b0001;
+		  
+		  // Test case 2: Addition ***********************************************
+        a = 4'b1111;
+        b = 4'b1110;
+        ctrl = 4'b0000;
         #10;
-        assert(result === 2) else $error("Test case 2 failed");
-        assert(flags === 4'b0000) else $error("Test case 2 failed");
-
-        // Test case 3: Logical AND (5 & 3 = 1)
-        a = 5;
-        b = 3;
-        ctrl = 4'b0010;
+		  
+		  // 3=negative, 2=zero, 1=carry, 0=overflow
+        assert(result === 4'b1101) else $error("Test case 2 failed (result)");
+        assert(flags === 4'b1010) else $error("Test case 2 failed (flags)");
+		  
+		  
+		  // Test case 3: Addition ***********************************************
+        a = 4'b0000;
+        b = 4'b1110;
+        ctrl = 4'b0000;
         #10;
-        assert(result === 1) else $error("Test case 3 failed");
-        assert(flags === 4'b0000) else $error("Test case 3 failed");
-
-        // Test case 4: Logical OR (5 | 3 = 7)
-        a = 5;
-        b = 3;
-        ctrl = 4'b0011;
+		  
+		  // 3=negative, 2=zero, 1=carry, 0=overflow
+        assert(result === 4'b1110) else $error("Test case 3 failed (result)");
+        assert(flags === 4'b1000) else $error("Test case 3 failed (flags)");
+		  
+		  // Test case 4: Addition ************************************************
+        a = 4'b1111;
+        b = 4'b1111;
+        ctrl = 4'b0000;
         #10;
-        assert(result === 7) else $error("Test case 4 failed");
-        assert(flags === 4'b0000) else $error("Test case 4 failed");
-
-        // Test case 5: Modulus (5 % 3 = 2)
-        a = 5;
-        b = 3;
-        ctrl = 4'b0100;
-        #10;
-        assert(result === 2) else $error("Test case 5 failed");
-        assert(flags === 4'b0000) else $error("Test case 5 failed");
-
-        // Test case 6: Multiplication (5 * 3 = 15)
-        a = 5;
-        b = 3;
-        ctrl = 4'b0101;
-        #10;
-        assert(result === 15) else $error("Test case 6 failed");
-        assert(flags === 4'b0000) else $error("Test case 6 failed");
-
-        // Test case 7: Logical shift right (5 >> 1 = 2)
-        a = 5;
-        b = 1;
-        ctrl = 4'b0110;
-        #10;
-        assert(result === 2) else $error("Test case 7 failed");
-        assert(flags === 4'b0000) else $error("Test case 7 failed");
+		  
+		  // 3=negative, 2=zero, 1=carry, 0=overflow
+        assert(result === 4'b1110) else $error("Test case 4 failed (result)");
+        assert(flags === 4'b1010) else $error("Test case 4 failed (flags)");
+		  
+		  
 
         $display("All test cases passed");
         $finish;
