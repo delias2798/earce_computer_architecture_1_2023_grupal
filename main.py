@@ -15,7 +15,7 @@ functionDictionary = {
     'CMPE': '110100',
 }
 
-def romInit(wordSize, depth,  ):
+def romInit(wordSize, depth):
 
     romFile = open("src/ram.mif", "r+")
     romFile.truncate(0)
@@ -58,58 +58,56 @@ def reader():
                 #Instrucciones de branch
                 pass
             elif (line[0:4][3] == 'E'):
-                #Instrucciones especiales MOVE, CMPE && GMME, OMME
                 spec = specialAddressing(line)
                 binaryFile.write(spec + '\n')
-                pass
 
 
 def specialAddressing(syntax):
-
     syntaxString = syntax[6:]
     parts = syntaxString.split(",")
 
     if "[" in parts[1]: 
-        print("ok") #CASO SW Y LW
+        numbers = []
+
+        for char in syntax[6:]:
+            if char.isdigit():
+                numbers.append(int(char))
+
+        rb = bin(numbers[0])[2:].zfill(4)
+        rd = bin(numbers[1])[2:].zfill(4)
+        imm = bin(numbers[2])[2:].zfill(12)
+
+        if(syntax[0] == 'G'):
+            value = '1110' + '01' + '011000' + rb + rd + imm
+        
+        elif(syntax[0] == 'O'):
+            value = '1110' + '01' + '011001' + rb + rd + imm
+        
+        return value
     else: 
+        instruction = syntax[0:4]
+
+        if instruction in functionDictionary:
+            currentFunction = functionDictionary[instruction]
+        else:
+            pass
+
+        numbers = []
+        for element in syntax[6:].split(","):
+            if any(c.isdigit() for c in element):
+                numbers.append(int(''.join(filter(str.isdigit, element))))
+
         if(syntax[0] == 'M'):
-            instruction = syntax[0:4]
-
-            if instruction in functionDictionary:
-                currentFunction = functionDictionary[instruction]
-            else:
-                pass
-
-            numbers = []
-            for element in syntax[6:].split(","):
-                if any(c.isdigit() for c in element):
-                    numbers.append(int(''.join(filter(str.isdigit, element))))
-            
             rb = bin(numbers[0])[2:].zfill(4)
             imm = bin(numbers[1])[2:].zfill(8)
-                
             value = '1110' + '00' + currentFunction + '0000' + rb + '0000' + imm
-            return value
         
         elif(syntax[0] == 'C'):
-
-            instruction = syntax[0:4]
-
-            if instruction in functionDictionary:
-                currentFunction = functionDictionary[instruction]
-            else:
-                pass
-
-            numbers = []
-            for element in syntax[6:].split(","):
-                if any(c.isdigit() for c in element):
-                    numbers.append(int(''.join(filter(str.isdigit, element))))
-            
             rs1 = bin(numbers[0])[2:].zfill(4)
             rs2 = bin(numbers[1])[2:].zfill(4)
-            
             value = '1110' + '00' + currentFunction + rs1 + '0000' + '00000000' + rs2
-            return value
+        
+        return value
 
 
 def registerAddressing(syntax):
