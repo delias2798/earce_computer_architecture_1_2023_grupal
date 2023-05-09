@@ -2,3 +2,5 @@ MULI r12, r15, r2
 MULI r12, r15, 24
 DIVI r2, r15, 22
 MULR r1, r1, r1
+MOVE r2, 40
+CMPE r2, r3

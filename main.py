@@ -11,8 +11,9 @@ functionDictionary = {
     'MODR': '000110',
     'SUMR': '001000',
     'ORRR': '011000',
+    'MOVE': '111010',
+    'CMPE': '110100',
 }
-
 
 def romInit(wordSize, depth,  ):
 
@@ -57,8 +58,58 @@ def reader():
                 #Instrucciones de branch
                 pass
             elif (line[0:4][3] == 'E'):
-                #Instrucciones especiales
+                #Instrucciones especiales MOVE, CMPE && GMME, OMME
+                spec = specialAddressing(line)
+                binaryFile.write(spec + '\n')
                 pass
+
+
+def specialAddressing(syntax):
+
+    syntaxString = syntax[6:]
+    parts = syntaxString.split(",")
+
+    if "[" in parts[1]: 
+        print("ok") #CASO SW Y LW
+    else: 
+        if(syntax[0] == 'M'):
+            instruction = syntax[0:4]
+
+            if instruction in functionDictionary:
+                currentFunction = functionDictionary[instruction]
+            else:
+                pass
+
+            numbers = []
+            for element in syntax[6:].split(","):
+                if any(c.isdigit() for c in element):
+                    numbers.append(int(''.join(filter(str.isdigit, element))))
+            
+            rb = bin(numbers[0])[2:].zfill(4)
+            imm = bin(numbers[1])[2:].zfill(8)
+                
+            value = '1110' + '00' + currentFunction + '0000' + rb + '0000' + imm
+            return value
+        
+        elif(syntax[0] == 'C'):
+
+            instruction = syntax[0:4]
+
+            if instruction in functionDictionary:
+                currentFunction = functionDictionary[instruction]
+            else:
+                pass
+
+            numbers = []
+            for element in syntax[6:].split(","):
+                if any(c.isdigit() for c in element):
+                    numbers.append(int(''.join(filter(str.isdigit, element))))
+            
+            rs1 = bin(numbers[0])[2:].zfill(4)
+            rs2 = bin(numbers[1])[2:].zfill(4)
+            
+            value = '1110' + '00' + currentFunction + rs1 + '0000' + '00000000' + rs2
+            return value
 
 
 def registerAddressing(syntax):
