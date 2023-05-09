@@ -10,7 +10,7 @@
 # @angelortizv          2023-05-09	    Special Addressing
 # 
 # ======================================================================================================
-
+import os
 
 functionDictionary = {
     'MULI': '100000',
@@ -27,7 +27,22 @@ functionDictionary = {
     'ORRR': '011000',
     'MOVE': '111010',
     'CMPE': '110100',
+    'BIGA': '00001000',
+    'BNIA': '00011000',
+    'MAQA': '11001000',
+    'MEQA': '10111000',
+    'AQIA': '10101000',
+    'EQIA': '11011000',
+    'BIGD': '00001010',
+    'BNID': '00011010',
+    'MAQD': '11001010',
+    'MEQD': '10111010',
+    'AQID': '10101010',
+    'EQID': '11011010'
+
 }
+
+branchDictionary = {}
 
 def romInit(wordSize, depth):
 
@@ -37,7 +52,7 @@ def romInit(wordSize, depth):
     romFile.write("--------------------- Tessia v1.0.0 ---------------------\n\n")
 
     romFile.write(f'WIDTH={wordSize};\nDEPTH={depth};\n \n')
-    romFile.write("ADDRESS_RADIX=UNS;\nDATA_RADIX=HEX;\n \n")
+    romFile.write("ADDRESS_RADIX=UNS;\nDATA_RADIX=BIN;\n \n")
     romFile.write("CONTENT BEGIN\n")
     
     counter = 0
@@ -47,34 +62,66 @@ def romInit(wordSize, depth):
     for instruction in binaryFile:
         romFile.write(f'\t{counter}\t :\t {instruction};\n')
         counter += 1
-        
-    romFile.write(f'\t{counter}\t :\t {1};\n')
 
-    counter += 1
     romFile.write(f'\t[{counter}..{depth-1}]\t :\t {0};\n')
     
     romFile.write("END;")
     romFile.write("\n\n--------------------- Tessia v1.0.0 ---------------------\n\n")
     romFile.close()
 
-
-def reader():
+def reader_branches():
+    counter = 0
     with open('src/file.txt', 'r') as f:
+        lines = f.readlines()
+        f.close()
+    with open('src/newfile.txt', 'xt') as f:
+        for line in lines:
+            if(line[-2] == ':'):
+                temp = line[:-2]
+                lnNum = bin(counter)[2:].zfill(24)
+                branchDictionary[temp] = lnNum
+            else:
+                f.write(line)
+                counter += 1
+        f.close()
+            
+def reader():
+    with open('src/newfile.txt', 'r') as f:
+        lastLine = f.readlines()[-1]
+        f.seek(0)
         binaryFile = open('src/binary.txt', 'w')
         for line in f:
             if(line[0:4][3] == 'I'):
                 imm = immediateAddressing(line)
-                binaryFile.write(imm + '\n')
+                binaryFile.write(imm)
             elif (line[0:4][3] == 'R'):
                 reg = registerAddressing(line)
-                binaryFile.write(reg + '\n')
+                binaryFile.write(reg)
             elif (line[0:4][3] == 'A' or line[0:4][3] == 'D'):
-                #Instrucciones de branch
-                pass
+                reg = branchAddressing(line)
+                binaryFile.write(reg)
             elif (line[0:4][3] == 'E'):
                 spec = specialAddressing(line)
-                binaryFile.write(spec + '\n')
+                binaryFile.write(spec)
+            if(line != lastLine):
+                binaryFile.write('\n')
+        f.close()
+    os.remove("src/newfile.txt")
 
+
+
+
+def branchAddressing(syntax):
+    currentFunction = ''
+    instruction = syntax[0:4]    
+    if instruction in functionDictionary:
+        currentFunction = functionDictionary[instruction]
+    else:
+        pass
+    
+    value = currentFunction + branchDictionary[syntax[5:-1]]
+
+    return value
 
 def specialAddressing(syntax):
     syntaxString = syntax[6:]
@@ -167,6 +214,7 @@ def immediateAddressing(syntax):
     
 
 def main():
+    reader_branches()
     reader()
     romInit(32, 256)
 
