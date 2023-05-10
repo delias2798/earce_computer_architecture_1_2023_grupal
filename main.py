@@ -46,7 +46,7 @@ branchDictionary = {}
 
 def romInit(wordSize, depth):
 
-    romFile = open("src/ram.mif", "r+")
+    romFile = open("src/rom_data.mif", "r+")
     romFile.truncate(0)
     
     romFile.write("--------------------- Tessia v1.0.0 ---------------------\n\n")
