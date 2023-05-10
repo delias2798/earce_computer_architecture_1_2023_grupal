@@ -42,6 +42,8 @@ module Decoder(input logic [1:0] Op,
 				4'b0010: ALUControl = 4'b0001; // SUB
 				4'b0000: ALUControl = 4'b0010; // Multiplication
 				4'b1100: ALUControl = 4'b0011; // ORR
+				4'b0001: ALUControl = 4'b1000; // Division
+				4'b0011: ALUControl = 4'b0100; // MOD
 				4'b1101: ALUControl = 4'b0110; // Copy Imm
 				4'b1010: ALUControl = 4'b0001; // Compare Rs1 Rs2
 				default: ALUControl = 4'bx;    // unimplemented

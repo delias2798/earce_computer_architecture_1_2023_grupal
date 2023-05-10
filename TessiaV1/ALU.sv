@@ -18,6 +18,7 @@ module ALU #(parameter N = 8) (
             4'b0101: temp_result = a & b;  // Logical AND
             4'b0110: temp_result = b;      // Copy Imm
             4'b0111: temp_result = a << b; // Logical shift left
+				4'b1000: temp_result = a / b; // Division
             default: temp_result = 0;
         endcase
         
