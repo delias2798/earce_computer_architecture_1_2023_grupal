@@ -2,9 +2,7 @@ module DataMemory(input logic clk, we,
 						input logic [31:0] a, wd,
 						output logic [31:0] rd);
 						
-	logic [31:0] RAM[63:0];
-	assign rd = RAM[a[31:2]]; // word aligned
+		ram dmem(.address(a[11:0]), .clock(clk), .data(wd), .wren(we), .q(rd));
+
 	
-	always_ff @(posedge clk)
-		if (we) RAM[a[31:2]] <= wd;
 endmodule

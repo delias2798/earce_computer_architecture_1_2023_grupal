@@ -12,7 +12,8 @@ module TOP(input logic clk, reset,
 			 .WriteData(WriteData),
 			 .ALUFlags(ALUFlags));
 					
-	InstructionMemory imem(PC, Instr);
+	InstructionMemory imem(.clk(clk), .a(PC), .rd(Instr));
 	
-	DataMemory dmem(clk, MemWrite, ALUResult, WriteData, ReadData);
+	DataMemory dmem(.clk(clk), .we(MemWrite), .a(ALUResult), .wd(WriteData), .rd(ReadData));
+
 endmodule

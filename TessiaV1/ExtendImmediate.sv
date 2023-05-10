@@ -12,7 +12,8 @@ always_comb
 		2'b01: ExtImm = {20'b0, Instruction[11:0]};
 		
 		// 24-bit two's complement shifted branch
-		2'b10: ExtImm = {{6{Instruction[23]}}, Instruction[23:0], 2'b00};
+		2'b10: ExtImm = {8'b0, Instruction[23:0]};
+		
 		
 		default: ExtImm = 32'bx; // Undefined
 	endcase

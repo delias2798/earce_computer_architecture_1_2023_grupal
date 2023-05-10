@@ -1,5 +1,5 @@
 Analysis & Elaboration report for tessia-v1
-Sat May 06 17:31:42 2023
+Tue May 09 21:05:18 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -9,23 +9,29 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Tessia:tess|ControlUnit:c|ConditionalLogic:cl|flopenr:flagreg1
-  5. Parameter Settings for User Entity Instance: Tessia:tess|ControlUnit:c|ConditionalLogic:cl|flopenr:flagreg0
-  6. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|Mux2to1:pcmux
-  7. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|flopr:pcreg
-  8. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|Adder:pcadd1
-  9. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|Adder:pcadd2
- 10. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|Mux2to1:ra1mux
- 11. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|Mux2to1:ra2mux
- 12. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|Mux2to1:resmux
- 13. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|Mux2to1:srcbmux
- 14. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|ALU:alu
- 15. Analysis & Elaboration Settings
- 16. Port Connectivity Checks: "Tessia:tess|Datapath:dp|Mux2to1:ra1mux"
- 17. Port Connectivity Checks: "Tessia:tess|Datapath:dp|Adder:pcadd2"
- 18. Port Connectivity Checks: "Tessia:tess|Datapath:dp|Adder:pcadd1"
- 19. Analysis & Elaboration Messages
- 20. Analysis & Elaboration Suppressed Messages
+  4. Analysis & Elaboration IP Cores Summary
+  5. Source assignments for InstructionMemory:imem|rom:imem|altsyncram:altsyncram_component|altsyncram_pcg1:auto_generated
+  6. Source assignments for DataMemory:dmem|ram:dmem|altsyncram:altsyncram_component|altsyncram_nno1:auto_generated
+  7. Parameter Settings for User Entity Instance: Tessia:tess|ControlUnit:c|ConditionalLogic:cl|flopenr:flagreg1
+  8. Parameter Settings for User Entity Instance: Tessia:tess|ControlUnit:c|ConditionalLogic:cl|flopenr:flagreg0
+  9. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|Mux2to1:pcmux
+ 10. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|flopr:pcreg
+ 11. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|Adder:pcadd1
+ 12. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|Adder:pcadd2
+ 13. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|Mux2to1:ra1mux
+ 14. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|Mux2to1:ra2mux
+ 15. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|Mux2to1:resmux
+ 16. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|Mux2to1:srcbmux
+ 17. Parameter Settings for User Entity Instance: Tessia:tess|Datapath:dp|ALU:alu
+ 18. Parameter Settings for User Entity Instance: InstructionMemory:imem|rom:imem|altsyncram:altsyncram_component
+ 19. Parameter Settings for User Entity Instance: DataMemory:dmem|ram:dmem|altsyncram:altsyncram_component
+ 20. altsyncram Parameter Settings by Entity Instance
+ 21. Analysis & Elaboration Settings
+ 22. Port Connectivity Checks: "Tessia:tess|Datapath:dp|Mux2to1:ra1mux"
+ 23. Port Connectivity Checks: "Tessia:tess|Datapath:dp|Adder:pcadd2"
+ 24. Port Connectivity Checks: "Tessia:tess|Datapath:dp|Adder:pcadd1"
+ 25. Analysis & Elaboration Messages
+ 26. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -51,7 +57,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sat May 06 17:31:42 2023       ;
+; Analysis & Elaboration Status ; Successful - Tue May 09 21:05:17 2023       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; tessia-v1                                   ;
 ; Top-level Entity Name         ; TOP                                         ;
@@ -71,8 +77,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -80,6 +86,34 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 +----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration IP Cores Summary                                                                                ;
++--------+--------------+---------+--------------+--------------+--------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                      ; IP Include File ;
++--------+--------------+---------+--------------+--------------+--------------------------------------+-----------------+
+; Altera ; RAM: 1-PORT  ; 18.1    ; N/A          ; N/A          ; |TOP|DataMemory:dmem|ram:dmem        ; ram.v           ;
+; Altera ; ROM: 1-PORT  ; 18.1    ; N/A          ; N/A          ; |TOP|InstructionMemory:imem|rom:imem ; rom.v           ;
++--------+--------------+---------+--------------+--------------+--------------------------------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Source assignments for InstructionMemory:imem|rom:imem|altsyncram:altsyncram_component|altsyncram_pcg1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                      ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                       ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Source assignments for DataMemory:dmem|ram:dmem|altsyncram:altsyncram_component|altsyncram_nno1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                               ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                ;
++---------------------------------+--------------------+------+--------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------+
@@ -192,6 +226,159 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: InstructionMemory:imem|rom:imem|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                             ;
++------------------------------------+----------------------+--------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                          ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                   ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                          ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                          ;
+; WIDTH_A                            ; 32                   ; Signed Integer                                   ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                                   ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                                   ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                          ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                          ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                          ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                          ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                          ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                          ;
+; WIDTH_B                            ; 1                    ; Untyped                                          ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                          ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                          ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                          ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                          ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                          ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                          ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                          ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                          ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                          ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                          ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                          ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                          ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                          ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                          ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                   ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                          ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                          ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                          ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                          ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                          ;
+; INIT_FILE                          ; rom_data.mif         ; Untyped                                          ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                          ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                          ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                          ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                          ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                          ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                          ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                          ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                          ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                          ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                          ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                          ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                          ;
+; CBXI_PARAMETER                     ; altsyncram_pcg1      ; Untyped                                          ;
++------------------------------------+----------------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DataMemory:dmem|ram:dmem|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                      ;
++------------------------------------+----------------------+-------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                   ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                            ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                   ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                   ;
+; WIDTH_A                            ; 32                   ; Signed Integer                            ;
+; WIDTHAD_A                          ; 12                   ; Signed Integer                            ;
+; NUMWORDS_A                         ; 2813                 ; Signed Integer                            ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                   ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                   ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                   ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                   ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                   ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                   ;
+; WIDTH_B                            ; 1                    ; Untyped                                   ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                   ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                   ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                   ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                   ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                   ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                   ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                   ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                   ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                   ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                   ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                   ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                   ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                   ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                   ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                            ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                   ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                   ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                   ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                   ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                   ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                   ;
+; INIT_FILE                          ; ram_data.mif         ; Untyped                                   ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                   ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                   ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                   ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                   ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                   ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                   ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                   ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                   ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                   ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                   ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                   ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                   ;
+; CBXI_PARAMETER                     ; altsyncram_nno1      ; Untyped                                   ;
++------------------------------------+----------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                            ;
++-------------------------------------------+-----------------------------------------------------------------+
+; Name                                      ; Value                                                           ;
++-------------------------------------------+-----------------------------------------------------------------+
+; Number of entity instances                ; 2                                                               ;
+; Entity Instance                           ; InstructionMemory:imem|rom:imem|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                             ;
+;     -- WIDTH_A                            ; 32                                                              ;
+;     -- NUMWORDS_A                         ; 256                                                             ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                    ;
+;     -- WIDTH_B                            ; 1                                                               ;
+;     -- NUMWORDS_B                         ; 1                                                               ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                          ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                    ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                            ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                       ;
+; Entity Instance                           ; DataMemory:dmem|ram:dmem|altsyncram:altsyncram_component        ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                     ;
+;     -- WIDTH_A                            ; 32                                                              ;
+;     -- NUMWORDS_A                         ; 2813                                                            ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                    ;
+;     -- WIDTH_B                            ; 1                                                               ;
+;     -- NUMWORDS_B                         ; 1                                                               ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                          ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                    ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                            ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                       ;
++-------------------------------------------+-----------------------------------------------------------------+
+
+
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -293,9 +480,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+------------------------------------+
 ; Port     ; Type  ; Severity ; Details                            ;
 +----------+-------+----------+------------------------------------+
-; b[31..3] ; Input ; Info     ; Stuck at GND                       ;
-; b[1..0]  ; Input ; Info     ; Stuck at GND                       ;
-; b[2]     ; Input ; Info     ; Stuck at VCC                       ;
+; b[31..1] ; Input ; Info     ; Stuck at GND                       ;
+; b[0]     ; Input ; Info     ; Stuck at VCC                       ;
 +----------+-------+----------+------------------------------------+
 
 
@@ -304,9 +490,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+------------------------------------+
 ; Port     ; Type  ; Severity ; Details                            ;
 +----------+-------+----------+------------------------------------+
-; b[31..3] ; Input ; Info     ; Stuck at GND                       ;
-; b[1..0]  ; Input ; Info     ; Stuck at GND                       ;
-; b[2]     ; Input ; Info     ; Stuck at VCC                       ;
+; b[31..1] ; Input ; Info     ; Stuck at GND                       ;
+; b[0]     ; Input ; Info     ; Stuck at VCC                       ;
 +----------+-------+----------+------------------------------------+
 
 
@@ -316,83 +501,123 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat May 06 17:31:27 2023
+    Info: Processing started: Tue May 09 21:04:20 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tessia-v1 -c tessia-v1 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file testbench/extendimmediate_tb.sv
-    Info (12023): Found entity 1: ExtendImmediate_tb File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/testbench/ExtendImmediate_tb.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file testbench/alu_tb.sv
-    Info (12023): Found entity 1: ALU_tb File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/testbench/ALU_tb.sv Line: 1
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file vga_clk.sv
-    Info (12023): Found entity 1: vga_clk File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/vga_clk.sv Line: 40
+    Info (12023): Found entity 1: vga_clk File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/vga_clk.sv Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file vga.sv
-    Info (12023): Found entity 1: VGA File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/VGA.sv Line: 1
+    Info (12023): Found entity 1: VGA File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/VGA.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top.sv
-    Info (12023): Found entity 1: TOP File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/TOP.sv Line: 1
+    Info (12023): Found entity 1: TOP File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/TOP.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
-    Info (12023): Found entity 1: testbench File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/testbench.sv Line: 1
+    Info (12023): Found entity 1: testbench File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/testbench.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file tessia.sv
-    Info (12023): Found entity 1: Tessia File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/Tessia.sv Line: 2
+    Info (12023): Found entity 1: Tessia File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Tessia.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file registerfile.sv
-    Info (12023): Found entity 1: RegisterFile File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/RegisterFile.sv Line: 1
+    Info (12023): Found entity 1: RegisterFile File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/RegisterFile.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2to1.sv
-    Info (12023): Found entity 1: Mux2to1 File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/Mux2to1.sv Line: 1
+    Info (12023): Found entity 1: Mux2to1 File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Mux2to1.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file instructionmemory.sv
-    Info (12023): Found entity 1: InstructionMemory File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/InstructionMemory.sv Line: 1
+    Info (12023): Found entity 1: InstructionMemory File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/InstructionMemory.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flopr.sv
-    Info (12023): Found entity 1: flopr File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/flopr.sv Line: 1
+    Info (12023): Found entity 1: flopr File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/flopr.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flopenr.sv
-    Info (12023): Found entity 1: flopenr File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/flopenr.sv Line: 1
+    Info (12023): Found entity 1: flopenr File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/flopenr.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file extendimmediate.sv
-    Info (12023): Found entity 1: ExtendImmediate File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/ExtendImmediate.sv Line: 1
+    Info (12023): Found entity 1: ExtendImmediate File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/ExtendImmediate.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder.sv
-    Info (12023): Found entity 1: Decoder File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/Decoder.sv Line: 1
+    Info (12023): Found entity 1: Decoder File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Decoder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.sv
-    Info (12023): Found entity 1: Datapath File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv Line: 1
+    Info (12023): Found entity 1: Datapath File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datamemory.sv
-    Info (12023): Found entity 1: DataMemory File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/DataMemory.sv Line: 1
+    Info (12023): Found entity 1: DataMemory File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/DataMemory.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file controlunit.sv
-    Info (12023): Found entity 1: ControlUnit File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/ControlUnit.sv Line: 1
+    Info (12023): Found entity 1: ControlUnit File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/ControlUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file conditioncheck.sv
-    Info (12023): Found entity 1: ConditionCheck File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/ConditionCheck.sv Line: 1
+    Info (12023): Found entity 1: ConditionCheck File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/ConditionCheck.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file conditionallogic.sv
-    Info (12023): Found entity 1: ConditionalLogic File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/ConditionalLogic.sv Line: 1
+    Info (12023): Found entity 1: ConditionalLogic File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/ConditionalLogic.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: ALU File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/ALU.sv Line: 1
+    Info (12023): Found entity 1: ALU File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/ALU.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
-    Info (12023): Found entity 1: Adder File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/Adder.sv Line: 1
+    Info (12023): Found entity 1: Adder File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Adder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ram.v
+    Info (12023): Found entity 1: ram File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/ram.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file rom.v
+    Info (12023): Found entity 1: rom File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/rom.v Line: 39
 Info (12127): Elaborating entity "TOP" for the top level hierarchy
-Info (12128): Elaborating entity "Tessia" for hierarchy "Tessia:tess" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/TOP.sv Line: 13
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "Tessia:tess|ControlUnit:c" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/Tessia.sv Line: 17
-Info (12128): Elaborating entity "Decoder" for hierarchy "Tessia:tess|ControlUnit:c|Decoder:dec" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/ControlUnit.sv Line: 17
-Info (12128): Elaborating entity "ConditionalLogic" for hierarchy "Tessia:tess|ControlUnit:c|ConditionalLogic:cl" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/ControlUnit.sv Line: 21
-Info (12128): Elaborating entity "flopenr" for hierarchy "Tessia:tess|ControlUnit:c|ConditionalLogic:cl|flopenr:flagreg1" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/ConditionalLogic.sv Line: 11
-Info (12128): Elaborating entity "ConditionCheck" for hierarchy "Tessia:tess|ControlUnit:c|ConditionalLogic:cl|ConditionCheck:cc" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/ConditionalLogic.sv Line: 15
-Info (12128): Elaborating entity "Datapath" for hierarchy "Tessia:tess|Datapath:dp" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/Tessia.sv Line: 24
-Info (12128): Elaborating entity "Mux2to1" for hierarchy "Tessia:tess|Datapath:dp|Mux2to1:pcmux" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv Line: 20
-Info (12128): Elaborating entity "flopr" for hierarchy "Tessia:tess|Datapath:dp|flopr:pcreg" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv Line: 22
-Info (12128): Elaborating entity "Adder" for hierarchy "Tessia:tess|Datapath:dp|Adder:pcadd1" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv Line: 24
-Info (12128): Elaborating entity "Mux2to1" for hierarchy "Tessia:tess|Datapath:dp|Mux2to1:ra1mux" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv Line: 29
-Info (12128): Elaborating entity "RegisterFile" for hierarchy "Tessia:tess|Datapath:dp|RegisterFile:rf" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv Line: 35
-Info (12128): Elaborating entity "ExtendImmediate" for hierarchy "Tessia:tess|Datapath:dp|ExtendImmediate:ext" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv Line: 39
-Info (12128): Elaborating entity "ALU" for hierarchy "Tessia:tess|Datapath:dp|ALU:alu" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv Line: 44
-Info (12128): Elaborating entity "InstructionMemory" for hierarchy "InstructionMemory:imem" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/TOP.sv Line: 15
-Warning (10030): Net "ROM.data_a" at InstructionMemory.sv(9) has no driver or initial value, using a default initial value '0' File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/InstructionMemory.sv Line: 9
-Warning (10030): Net "ROM.waddr_a" at InstructionMemory.sv(9) has no driver or initial value, using a default initial value '0' File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/InstructionMemory.sv Line: 9
-Warning (10030): Net "ROM.we_a" at InstructionMemory.sv(9) has no driver or initial value, using a default initial value '0' File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/InstructionMemory.sv Line: 9
-Info (12128): Elaborating entity "DataMemory" for hierarchy "DataMemory:dmem" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/TOP.sv Line: 17
-Info (144001): Generated suppressed messages file C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/tessia-v1.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4773 megabytes
-    Info: Processing ended: Sat May 06 17:31:42 2023
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:07
+Info (12128): Elaborating entity "Tessia" for hierarchy "Tessia:tess" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/TOP.sv Line: 13
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "Tessia:tess|ControlUnit:c" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Tessia.sv Line: 17
+Info (12128): Elaborating entity "Decoder" for hierarchy "Tessia:tess|ControlUnit:c|Decoder:dec" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/ControlUnit.sv Line: 17
+Info (12128): Elaborating entity "ConditionalLogic" for hierarchy "Tessia:tess|ControlUnit:c|ConditionalLogic:cl" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/ControlUnit.sv Line: 21
+Info (12128): Elaborating entity "flopenr" for hierarchy "Tessia:tess|ControlUnit:c|ConditionalLogic:cl|flopenr:flagreg1" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/ConditionalLogic.sv Line: 11
+Info (12128): Elaborating entity "ConditionCheck" for hierarchy "Tessia:tess|ControlUnit:c|ConditionalLogic:cl|ConditionCheck:cc" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/ConditionalLogic.sv Line: 15
+Info (12128): Elaborating entity "Datapath" for hierarchy "Tessia:tess|Datapath:dp" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Tessia.sv Line: 24
+Info (12128): Elaborating entity "Mux2to1" for hierarchy "Tessia:tess|Datapath:dp|Mux2to1:pcmux" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv Line: 20
+Info (12128): Elaborating entity "flopr" for hierarchy "Tessia:tess|Datapath:dp|flopr:pcreg" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv Line: 22
+Info (12128): Elaborating entity "Adder" for hierarchy "Tessia:tess|Datapath:dp|Adder:pcadd1" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv Line: 24
+Info (12128): Elaborating entity "Mux2to1" for hierarchy "Tessia:tess|Datapath:dp|Mux2to1:ra1mux" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv Line: 29
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "Tessia:tess|Datapath:dp|RegisterFile:rf" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv Line: 35
+Info (12128): Elaborating entity "ExtendImmediate" for hierarchy "Tessia:tess|Datapath:dp|ExtendImmediate:ext" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv Line: 39
+Info (12128): Elaborating entity "ALU" for hierarchy "Tessia:tess|Datapath:dp|ALU:alu" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Datapath.sv Line: 44
+Info (12128): Elaborating entity "InstructionMemory" for hierarchy "InstructionMemory:imem" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/TOP.sv Line: 15
+Info (12128): Elaborating entity "rom" for hierarchy "InstructionMemory:imem|rom:imem" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/InstructionMemory.sv Line: 5
+Info (12128): Elaborating entity "altsyncram" for hierarchy "InstructionMemory:imem|rom:imem|altsyncram:altsyncram_component" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/rom.v Line: 81
+Info (12130): Elaborated megafunction instantiation "InstructionMemory:imem|rom:imem|altsyncram:altsyncram_component" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/rom.v Line: 81
+Info (12133): Instantiated megafunction "InstructionMemory:imem|rom:imem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/rom.v Line: 81
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "rom_data.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_pcg1.tdf
+    Info (12023): Found entity 1: altsyncram_pcg1 File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/db/altsyncram_pcg1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_pcg1" for hierarchy "InstructionMemory:imem|rom:imem|altsyncram:altsyncram_component|altsyncram_pcg1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "DataMemory" for hierarchy "DataMemory:dmem" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/TOP.sv Line: 17
+Info (12128): Elaborating entity "ram" for hierarchy "DataMemory:dmem|ram:dmem" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/DataMemory.sv Line: 5
+Info (12128): Elaborating entity "altsyncram" for hierarchy "DataMemory:dmem|ram:dmem|altsyncram:altsyncram_component" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/ram.v Line: 85
+Info (12130): Elaborated megafunction instantiation "DataMemory:dmem|ram:dmem|altsyncram:altsyncram_component" File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/ram.v Line: 85
+Info (12133): Instantiated megafunction "DataMemory:dmem|ram:dmem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/ram.v Line: 85
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "ram_data.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "2813"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "12"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_nno1.tdf
+    Info (12023): Found entity 1: altsyncram_nno1 File: C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/db/altsyncram_nno1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_nno1" for hierarchy "DataMemory:dmem|ram:dmem|altsyncram:altsyncram_component|altsyncram_nno1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (144001): Generated suppressed messages file C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/tessia-v1.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4798 megabytes
+    Info: Processing ended: Tue May 09 21:05:18 2023
+    Info: Elapsed time: 00:00:58
+    Info: Total CPU time (on all processors): 00:00:51
 
 
 +--------------------------------------------+
 ; Analysis & Elaboration Suppressed Messages ;
 +--------------------------------------------+
-The suppressed messages can be found in C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaV1/tessia-v1.map.smsg.
+The suppressed messages can be found in C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/tessia-v1.map.smsg.
 
 
