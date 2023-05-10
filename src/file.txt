@@ -11,3 +11,4 @@ GMME r2, [r3, 4]
 CMPE r2, r3
 MAQA START
 OMME r1, [r2, 5]
+DIVI r2, r15, 22

@@ -83,9 +83,9 @@ def reader_branches():
             else:
                 f.write(line)
                 counter += 1
-        f.close()
-            
+        f.close()            
 def reader():
+    counter = 0
     with open('src/newfile.txt', 'r') as f:
         lastLine = f.readlines()[-1]
         f.seek(0)
@@ -98,20 +98,21 @@ def reader():
                 reg = registerAddressing(line)
                 binaryFile.write(reg)
             elif (line[0:4][3] == 'A' or line[0:4][3] == 'D'):
-                reg = branchAddressing(line)
+                reg = branchAddressing(line, counter)
                 binaryFile.write(reg)
             elif (line[0:4][3] == 'E'):
                 spec = specialAddressing(line)
                 binaryFile.write(spec)
             if(line != lastLine):
                 binaryFile.write('\n')
+            counter += 1
         f.close()
     os.remove("src/newfile.txt")
 
 
 
 
-def branchAddressing(syntax):
+def branchAddressing(syntax, counter):
     currentFunction = ''
     instruction = syntax[0:4]    
     if instruction in functionDictionary:
@@ -119,8 +120,20 @@ def branchAddressing(syntax):
     else:
         pass
     
-    value = currentFunction + branchDictionary[syntax[5:-1]]
+    value = currentFunction
 
+    if(instruction[3] == 'D'):
+        tempcount = int(branchDictionary[syntax[5:-1]], 2) - counter - 2
+        
+        jump = bin(tempcount)[2:].zfill(24)
+        value = value + jump 
+    else:
+        tempcount = int(branchDictionary[syntax[5:-1]], 2) + counter + 2
+        
+        jump = bin(tempcount)[2:].zfill(24)
+        value = value + jump
+        
+    
     return value
 
 def specialAddressing(syntax):
