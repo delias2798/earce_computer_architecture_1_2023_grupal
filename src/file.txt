@@ -1,14 +1,19 @@
 START:
-MULI r12, r15, 2
-MULI r12, r15, 24
-CMPE r2, r3
-BIGD END
-DIVI r2, r15, 22
-MULR r1, r1, r1
-MOVE r2, 40
+MOVE r0, 0
+MOVE r2, 8
+GMME r0, [r2, 0]
+CMPE r0, r2
+BNID LOOP
+PRELOOPP:
+MOVE r0, 0
+MOVE r2, 8
+LOOP:
+SUMI r0, r0, 1
+CMPE r0, r2
+MEQA LOOP
 END:
-GMME r2, [r3, 4]
-CMPE r2, r3
-MAQA START
-OMME r1, [r2, 5]
-DIVI r2, r15, 22
+MULR r1, r0, r2
+MOVE r0, 1
+GMME r0, [r1, 0]
+MOVE r1, 0
+OMME r1, [r0, 0]

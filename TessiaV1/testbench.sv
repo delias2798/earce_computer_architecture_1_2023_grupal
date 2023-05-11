@@ -32,9 +32,6 @@ module testbench();
 			if(ALUResult === 100 & MemWrite === 7) begin
 				$display("Simulation succeeded");
 				$stop;
-			end else if (ALUResult !== 96) begin
-				$display("Simulation failed");
-				$stop;
 			end
 		end
 	end

@@ -46,7 +46,7 @@ branchDictionary = {}
 
 def romInit(wordSize, depth):
 
-    romFile = open("src/rom_data.mif", "r+")
+    romFile = open("TessiaV1/rom_data.mif", "r+")
     romFile.truncate(0)
     
     romFile.write("--------------------- Tessia v1.0.0 ---------------------\n\n")
@@ -58,9 +58,10 @@ def romInit(wordSize, depth):
     counter = 0
 
     binaryFile = open('src/binary.txt', 'r')
-    
+    lastLine = binaryFile.readlines()[-1]
+    binaryFile.seek(0)
     for instruction in binaryFile:
-        romFile.write(f'\t{counter}\t :\t {instruction};\n')
+        romFile.write(f'\t{counter}\t :\t {instruction[:-1]};\n')
         counter += 1
 
     romFile.write(f'\t[{counter}..{depth-1}]\t :\t {0};\n')
@@ -103,14 +104,10 @@ def reader():
             elif (line[0:4][3] == 'E'):
                 spec = specialAddressing(line)
                 binaryFile.write(spec)
-            if(line != lastLine):
-                binaryFile.write('\n')
+            binaryFile.write('\n')
             counter += 1
         f.close()
     os.remove("src/newfile.txt")
-
-
-
 
 def branchAddressing(syntax, counter):
     currentFunction = ''
@@ -128,7 +125,7 @@ def branchAddressing(syntax, counter):
         jump = bin(tempcount)[2:].zfill(24)
         value = value + jump 
     else:
-        tempcount = int(branchDictionary[syntax[5:-1]], 2) + counter + 2
+        tempcount = counter + 2 - int(branchDictionary[syntax[5:-1]], 2)
         
         jump = bin(tempcount)[2:].zfill(24)
         value = value + jump
@@ -179,7 +176,7 @@ def specialAddressing(syntax):
         elif(syntax[0] == 'C'):
             rs1 = bin(numbers[0])[2:].zfill(4)
             rs2 = bin(numbers[1])[2:].zfill(4)
-            value = '1110' + '00' + currentFunction + rs1 + '0000' + '00000000' + rs2
+            value = '1110' + '00' + '010101' + rs1 + '0000' + '00000000' + rs2
         
         return value
 
