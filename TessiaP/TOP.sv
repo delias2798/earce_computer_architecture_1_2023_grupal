@@ -5,17 +5,15 @@ module TOP(
     output logic [3:0] ALUFlags
 );
 			  
-	logic [31:0] PC, ReadData, Instr;
+	logic [31:0] PC;
 	
-	// instantiate Tessia processor and memories		
-	Tessia tess(.clk(clk), .reset(reset),
-			  .Instr(Instr), .ReadData(ReadData),
-			 .MemWrite(MemWrite),
-			 .PC(PC), .ALUResult(ALUResult),
-			 .WriteData(WriteData),
-			 .ALUFlags(ALUFlags));
+	// instantiate Tessia processor	
+	Tessia tess(.clk(clk), 
+					.reset(reset),
+					.PCF(PC), 
+					.ALUResult(ALUResult), 
+					.WriteData(WriteData),
+					.ALUFlags(ALUFlags));
 					
-	InstructionMemory imem(PC, Instr);
-	
-	DataMemory dmem(clk, MemWrite, ALUResult, WriteData, ReadData);
+
 endmodule

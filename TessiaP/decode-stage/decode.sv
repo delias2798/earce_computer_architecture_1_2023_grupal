@@ -1,7 +1,7 @@
-module decode #(parameter WIDTH= 8)(
+module decode #(parameter WIDTH=8)(
     input logic clk, reset, RegWriteW,
     input logic [1:0] RegSrcD, ImmSrcD,
-    input logic [3:0] WA3W
+    input logic [3:0] WA3W,
     input logic [WIDTH-1:0] InstructionD, ResultW, PCPlus8D,
     output logic [WIDTH-1:0] RD1, RD2, ExtImmD
 );
