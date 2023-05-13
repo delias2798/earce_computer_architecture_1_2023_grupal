@@ -14,11 +14,11 @@
 /*.jdi
 /*.rdb
 
-# Quartus settings file
-*.qsf
+# # Quartus settings file
+# *.qsf
 
-# Quartus project file
-*.qpf
+# # Quartus project file
+# *.qpf
 
 # Quartus project database file
 *.qdb
