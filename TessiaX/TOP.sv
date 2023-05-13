@@ -1,7 +1,6 @@
 module TOP(
     input logic clk, reset,
     output logic [31:0] WriteData, ALUResult,
-    output logic MemWrite, 
     output logic [3:0] ALUFlags
 );
 			  

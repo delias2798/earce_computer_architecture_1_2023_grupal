@@ -39,11 +39,12 @@ module Tessia(
     logic [31:0] ALUOutM, WriteDataM, ReadDataM;
     logic [3:0] WA3M;
 
-    assign MemWrite = MemWriteM;
     logic MemToRegW;
     logic [31:0] ReadDataW, ALUOutW;
 
     logic [1:0] ForwardAE, ForwardBE;
+
+    logic StallF, StallD, FlushE;
 
     //***************************** FETCH STAGE ***********************************
     InstructionMemory imem(
@@ -54,7 +55,8 @@ module Tessia(
     fetch #(32) Fetch(
         .clk(clk), 
         .reset(reset),
-        .PCSrcW(PCSrcW), 
+        .PCSrcW(PCSrcW),
+        .enablePCFlipFlop(StallF), 
         .ResultW(ResultW), 
         .PCF(PCF), 
         .PCPlus4F(PCPlus4)
@@ -63,7 +65,7 @@ module Tessia(
     flopenrc #(32) FetchDecodeFlipFlop(
         .clk(clk), 
         .reset(reset), 
-        .en(1), 
+        .en(StallD), 
         .d({InstructionF}), 
         .q(InstructionD)
     );
@@ -108,7 +110,7 @@ module Tessia(
     // Decode - Execute Flip Flop
     flopenrc #(129) DecodeExecuteFlipFlop(
         .clk(clk), 
-        .reset(reset), 
+        .reset(FlushE), 
         .en(1), 
         .d({
             PCSrcD,
@@ -190,10 +192,15 @@ module Tessia(
         .Match_1E_W(RA1E == WA3W ? 1'b1 : 1'b0),
         .Match_2E_M(RA2E == WA3M ? 1'b1 : 1'b0),
         .Match_2E_W(RA2E == WA3W ? 1'b1 : 1'b0),
+        .Match_12D_E((RA1D == WA3E) || (RA2D == WA3E)),
         .RegWriteM(RegWriteM), 
         .RegWriteW(RegWriteW),
         .ForwardAE(ForwardAE), 
-        .ForwardBE(ForwardBE)
+        .ForwardBE(ForwardBE),
+        .MemToRegE(MemToRegE),
+        .StallF(StallF),
+        .StallD(StallD),
+        .FlushE(FlushE)
     );
 
     execute #(32) Execute(

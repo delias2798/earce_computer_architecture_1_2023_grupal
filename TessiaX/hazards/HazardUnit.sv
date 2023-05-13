@@ -3,9 +3,15 @@ module HazardUnit(
     input logic Match_1E_W,
     input logic Match_2E_M,
     input logic Match_2E_W,
-    input logic RegWriteM, RegWriteW,
-    output logic [1:0] ForwardAE, ForwardBE
+	input logic Match_12D_E,
+    input logic RegWriteM, RegWriteW, MemToRegE,
+    output logic [1:0] ForwardAE, ForwardBE,
+	output logic StallF,
+	output logic StallD,
+	output logic FlushE
 );
+
+	logic LDRStall;
 	
 	always_comb begin
 		// Forwarding Logic
@@ -29,6 +35,12 @@ module HazardUnit(
 			    ForwardBE = 2'b10;
 			end
 		end 
+
+		// Stalls Logic
+		LDRStall = Match_12D_E && MemToRegE;
+		StallF = LDRStall;
+		StallD = LDRStall;
+		FlushE = LDRStall;
 	end
 	
 endmodule 
