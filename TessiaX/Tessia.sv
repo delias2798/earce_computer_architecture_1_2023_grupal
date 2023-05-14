@@ -1,18 +1,34 @@
 module Tessia(
     input logic clk, reset,
-	output logic [31:0] PCF, ALUResult,
-	output logic [3:0] ALUFlags
+	output logic [31:0] ALUResultE,
+	output logic [3:0] ALUFlags,
+    output logic [31:0] Instruction,
+    output logic [31:0] WriteData,
+    output logic RegWrite, MemToReg,
+    output logic [3:0] A3,
+    output logic [31:0] WD3, ResultWB,
+    output logic [31:0] SrcA, SrcB,
+    output logic [1:0] ForwardA, ForwardB
 );
 
     logic [31:0] InstructionF, InstructionD, ReadData;
     logic [31:0] ResultW;
     logic PCSrcW;
-    logic [32:0] PCPlus4;
+    logic [31:0] PCPlus4;
+
+    assign Instruction = InstructionD;
+
+    logic [31:0] PCF;
 
     logic RegWriteW;
     logic [1:0] RegSrcD;
-    logic [31:0] WA3W;
+    logic [3:0] WA3W;
     logic [31:0] RD1, RD2, ExtImmD;
+
+    assign RegWrite = RegWriteW;
+    assign A3 = WA3W;
+    assign WD3 = ResultW;
+    assign ResultWB = ResultW;
 
     logic PCSrcD, RegWriteD, MemToRegD, MemWriteD;
     logic BranchD, ALUSrcD, NoWriteD;
@@ -32,20 +48,27 @@ module Tessia(
 
 
     logic PCSrcEout, RegWriteEout, MemWriteEout;
-    logic [31:0] ALUResultE;
-    assign ALUResult = ALUResultE;
+    //logic [31:0] ALUResultE;
+
 
     logic PCSrcM, RegWriteM, MemWriteM, MemToRegM;
     logic [31:0] ALUOutM, WriteDataM, ReadDataM;
     logic [3:0] WA3M;
 
+    assign WriteData = WriteDataE;
+    assign SrcA = SrcAE;
+
     logic MemToRegW;
+    assign MemToReg = MemToRegW;
     logic [31:0] ReadDataW, ALUOutW;
 
     logic [1:0] ForwardAE, ForwardBE;
 
     logic StallF, StallD, FlushD, FlushE;
     logic BranchTakenE;
+
+    assign ForwardA = ForwardAE;
+    assign ForwardB = ForwardBE;
 
     //***************************** FETCH STAGE ***********************************
     InstructionMemory imem(
@@ -57,7 +80,7 @@ module Tessia(
         .clk(clk), 
         .reset(reset),
         .PCSrcW(PCSrcW),
-        .enablePCFlipFlop(StallF), 
+        .enablePCFlipFlop(!StallF), 
         .ResultW(ResultW),
         .ALUResultE(ALUResultE),
         .PCF(PCF), 
@@ -68,7 +91,7 @@ module Tessia(
     flopenrc #(32) FetchDecodeFlipFlop(
         .clk(clk), 
         .reset(FlushD), 
-        .en(StallD), 
+        .en(!StallD), 
         .d({InstructionF}), 
         .q(InstructionD)
     );
@@ -114,7 +137,7 @@ module Tessia(
     flopenrc #(129) DecodeExecuteFlipFlop(
         .clk(clk), 
         .reset(FlushE), 
-        .en(1), 
+        .en(1'b1), 
         .d({
             PCSrcD,
             RegWriteD,
@@ -218,7 +241,8 @@ module Tessia(
         .reset(reset), 
         .ALUSrcE(ALUSrcE),
         .ALUControlE(ALUControlE),
-        .SrcAE(SrcAE), 
+        .SrcAE(SrcAE),
+        .SrcBE(SrcB),
         .WriteDataE(WriteDataE), 
         .ExtImmE(ExtImmE),
         .ALUResultE(ALUResultE),
@@ -228,7 +252,7 @@ module Tessia(
     flopenrc #(72) ExecuteMemoryFlipFlop(
         .clk(clk), 
         .reset(reset), 
-        .en(1), 
+        .en(1'b1), 
         .d({
             PCSrcEout,
             RegWriteEout,
@@ -260,7 +284,7 @@ module Tessia(
     flopenrc #(71) MemoryWriteBackFlipFlop(
         .clk(clk), 
         .reset(reset), 
-        .en(1), 
+        .en(1'b1), 
         .d({
             PCSrcM,
             RegWriteM,

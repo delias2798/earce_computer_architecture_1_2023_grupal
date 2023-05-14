@@ -3,10 +3,11 @@ module execute #(parameter WIDTH= 8)(
     input logic [3:0] ALUControlE,
     input logic [WIDTH-1:0] SrcAE, WriteDataE, ExtImmE,
     output logic [WIDTH-1:0] ALUResultE,
-    output logic [3:0] ALUFlags
+    output logic [3:0] ALUFlags,
+    output logic [WIDTH-1:0] SrcBE
 );
 
-    logic [WIDTH-1:0] SrcBE;
+    
 
     // Src BE Multiplexer
     mux2to1 #(32) srcbmux(.d0(WriteDataE), .d1(ExtImmE),

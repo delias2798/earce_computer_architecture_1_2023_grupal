@@ -8,15 +8,15 @@ module decode #(parameter WIDTH=8)(
 );
 
     // RA1 Multiplexer
-    mux2to1 #(WIDTH) ra1mux(.d0(InstructionD[19:16]), .d1(15),
+    mux2to1 #(4) ra1mux(.d0(InstructionD[19:16]), .d1(4'b1111),
                          .selection(RegSrcD[0]), .result(RA1D));
 
     // RA2 Multiplexer
-    mux2to1 #(WIDTH) ra2mux(.d0(InstructionD[3:0]), .d1(InstructionD[15:12]),
+    mux2to1 #(4) ra2mux(.d0(InstructionD[3:0]), .d1(InstructionD[15:12]),
                          .selection(RegSrcD[1]), .result(RA2D));
 
     // Register File
-    RegisterFile RF(.clk(clk), .we3(RegWriteW),
+    RegisterFile RF(.clk(!clk), .we3(RegWriteW),
                         .ra1(RA1D), .ra2(RA2D), .ra3(WA3W),
                         .wd3(ResultW), .r15(PCPlus8D),
                         .rd1(RD1), .rd2(RD2));

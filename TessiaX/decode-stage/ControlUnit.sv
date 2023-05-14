@@ -54,7 +54,7 @@ module ControlUnit #(parameter WIDTH=8)(
 			
 			// update flags if S bit is set (C & V only for arith)
 			FlagWriteD[1] = Funct[0];
-			FlagWriteD[0] = Funct[0] & (ALUControlD == 4'b0000 | ALUControlD == 4'b0001);
+			FlagWriteD[0] = Funct[0] & (ALUControlD == 4'b0000 | ALUControlD == 4'b0001 | ALUControlD == 4'b0110);
 				
 			NoWrite = (Funct[4:1] == 4'b1010);
         end 
