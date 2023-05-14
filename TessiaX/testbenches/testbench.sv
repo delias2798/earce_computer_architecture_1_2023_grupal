@@ -2,11 +2,11 @@ module testbench();
 
 	logic clk;
 	logic reset;
-	logic [31:0] WriteData, ALUResult;
+	logic [31:0] ALUResult;
 	logic [3:0] ALUFlags;
 	
 	// instantiate device to be tested
-	TOP dut(clk, reset, WriteData, ALUResult, ALUFlags);
+	TOP dut(clk, reset, ALUResult, ALUFlags);
 	
 	// initialize test
 	initial

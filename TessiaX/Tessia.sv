@@ -1,6 +1,6 @@
 module Tessia(
     input logic clk, reset,
-	output logic [31:0] PCF, ALUResult, WriteData,
+	output logic [31:0] PCF, ALUResult,
 	output logic [3:0] ALUFlags
 );
 
@@ -44,7 +44,8 @@ module Tessia(
 
     logic [1:0] ForwardAE, ForwardBE;
 
-    logic StallF, StallD, FlushE;
+    logic StallF, StallD, FlushD, FlushE;
+    logic BranchTakenE;
 
     //***************************** FETCH STAGE ***********************************
     InstructionMemory imem(
@@ -57,14 +58,16 @@ module Tessia(
         .reset(reset),
         .PCSrcW(PCSrcW),
         .enablePCFlipFlop(StallF), 
-        .ResultW(ResultW), 
+        .ResultW(ResultW),
+        .ALUResultE(ALUResultE),
         .PCF(PCF), 
-        .PCPlus4F(PCPlus4)
+        .PCPlus4F(PCPlus4),
+        .BranchTakenE(BranchTakenE)
     );
 
     flopenrc #(32) FetchDecodeFlipFlop(
         .clk(clk), 
-        .reset(reset), 
+        .reset(FlushD), 
         .en(StallD), 
         .d({InstructionF}), 
         .q(InstructionD)
@@ -167,7 +170,8 @@ module Tessia(
         .PCSrcEout(PCSrcEout), 
         .RegWriteEout(RegWriteEout), 
         .MemWriteEout(MemWriteEout),
-        .Flags(Flags));
+        .Flags(Flags),
+        .BranchTakenE(BranchTakenE));
 
     // Forwading Multiplexer for SrcAE
     mux3to1 #(32) forwmulA(
@@ -195,11 +199,17 @@ module Tessia(
         .Match_12D_E((RA1D == WA3E) || (RA2D == WA3E)),
         .RegWriteM(RegWriteM), 
         .RegWriteW(RegWriteW),
+        .PCSrcD(PCSrcD),
+        .PCSrcE(PCSrcE),
+        .PCSrcM(PCSrcM),
+        .PCSrcW(PCSrcW),
+        .BranchTakenE(BranchTakenE),
         .ForwardAE(ForwardAE), 
         .ForwardBE(ForwardBE),
         .MemToRegE(MemToRegE),
         .StallF(StallF),
         .StallD(StallD),
+        .FlushD(FlushD),
         .FlushE(FlushE)
     );
 

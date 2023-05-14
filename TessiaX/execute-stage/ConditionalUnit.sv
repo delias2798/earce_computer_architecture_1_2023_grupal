@@ -4,7 +4,8 @@ module ConditionalUnit(
     input [3:0] CondE, FlagsE, ALUFlags,
     input logic [1:0] FlagWriteE,
     output logic PCSrcEout, RegWriteEout, MemWriteEout,
-    output logic [3:0] Flags
+    output logic [3:0] Flags,
+    output logic BranchTakenE
 );
 
     logic CondExE;
@@ -19,10 +20,9 @@ module ConditionalUnit(
 
     // Define the Outputs
     assign FlagWrite = FlagWriteE & {2{CondExE}};
-    assign wPC = PCSrcE & CondExE;
-    assign wBranch = BranchE & CondExE;
-    assign PCSrcEout = wPC | wBranch;
+    assign PCSrcEout = PCSrcE & CondExE;
     assign RegWriteEout = RegWriteE & CondExE & ~NoWrite;
 	assign MemWriteEout = MemWriteE & CondExE;
+    assign BranchTakenE = BranchE & CondExE;
 
 endmodule

@@ -5,13 +5,16 @@ module HazardUnit(
     input logic Match_2E_W,
 	input logic Match_12D_E,
     input logic RegWriteM, RegWriteW, MemToRegE,
+	input logic PCSrcD, PCSrcE, PCSrcM, PCSrcW,
+	input logic BranchTakenE,
     output logic [1:0] ForwardAE, ForwardBE,
 	output logic StallF,
 	output logic StallD,
-	output logic FlushE
+	output logic FlushD, FlushE
 );
 
 	logic LDRStall;
+	logic PCWrPendingF;
 	
 	always_comb begin
 		// Forwarding Logic
@@ -38,9 +41,12 @@ module HazardUnit(
 
 		// Stalls Logic
 		LDRStall = Match_12D_E && MemToRegE;
-		StallF = LDRStall;
+		PCWrPendingF = PCSrcD || PCSrcE || PCSrcM;
+
 		StallD = LDRStall;
-		FlushE = LDRStall;
+		StallF = LDRStall || PCWrPendingF;
+		FlushE = LDRStall || PCWrPendingF;
+		FlushD = PCWrPendingF || PCSrcW || BranchTakenE;
 	end
 	
 endmodule 
