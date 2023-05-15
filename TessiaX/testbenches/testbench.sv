@@ -1,5 +1,4 @@
 module testbench();
-
 	logic clk;
 	logic reset;
 	logic RegWrite, MemToReg;
@@ -39,16 +38,10 @@ module testbench();
 	begin
 		reset <= 1; # 100; reset <= 0;
 	end
-	
-	// generate clock to sequence tests
-	always
-	begin
-		clk <= 1; # 5; clk <= 0; # 5;
-	end
 
 	integer clk_count = 0;
 	always begin
-		if (clk_count < 200) begin
+		if (clk_count < 1500) begin
 			clk <= 1; #5;
 			clk <= 0; #5;
 			clk_count = clk_count + 1;

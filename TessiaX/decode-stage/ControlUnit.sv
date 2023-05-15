@@ -47,7 +47,7 @@ module ControlUnit #(parameter WIDTH=8)(
 				4'b0010: ALUControlD = 4'b0001; // SUB
 				4'b0000: ALUControlD = 4'b0010; // Multiplication
 				4'b1100: ALUControlD = 4'b0011; // ORR
-				4'b1101: ALUControlD = 4'b0110; // Copy Imm
+				4'b1101: ALUControlD = 4'b0110; // MOV
 				4'b1010: ALUControlD = 4'b0001; // Compare Rs1 Rs2
 				default: ALUControlD = 4'bx;    // unimplemented
 			endcase
