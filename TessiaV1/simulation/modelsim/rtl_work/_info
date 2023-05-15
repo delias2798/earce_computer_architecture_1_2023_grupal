@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/simulation/modelsim
 vAdder
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1684176177
+Z2 !s110 1684194551
 !i10b 1
 !s100 B;H5:9X^f^:<808JIS<J52
 I86@]lHgJ6n];B5IS_@NF_0
@@ -26,7 +26,7 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1684176177.000000
+Z6 !s108 1684194551.000000
 !s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Adder.sv|
 !i113 1
@@ -38,13 +38,13 @@ vALU
 R1
 R2
 !i10b 1
-!s100 a:ghWiWLQWRB?;I:aSC2P1
-Io>`hzGA0O?XLaNXaLbHZc1
+!s100 lb039kbV;_O5eSJb52A5j1
+Iie6f6G4HmJKB;oO5z;S0d2
 R3
 !s105 ALU_sv_unit
 S1
 R0
-w1684133419
+w1684192722
 8C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/ALU.sv
 FC:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/ALU.sv
 L0 1
@@ -114,7 +114,7 @@ R9
 n@condition@check
 vControlUnit
 R1
-Z10 !s110 1684176176
+Z10 !s110 1684194550
 !i10b 1
 !s100 _dfhOOZ]?Ag1G^ZRV1f]C0
 I`05jKRA2hXR7]DZbZ6nX?2
@@ -130,7 +130,7 @@ R5
 r1
 !s85 0
 31
-Z11 !s108 1684176176.000000
+Z11 !s108 1684194550.000000
 !s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/ControlUnit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/ControlUnit.sv|
 !i113 1
@@ -194,13 +194,13 @@ vDecoder
 R1
 R10
 !i10b 1
-!s100 4gHFACkAo7^TIe;KJJRAh1
-I>YLC?K[eVl=o>j]MeAO^;0
+!s100 T[bRKzBOj6D7YGVa7Rgdz2
+IcDY`ON04Gc_d83Al?6jCE3
 R3
 !s105 Decoder_sv_unit
 S1
 R0
-w1684133415
+w1684187821
 8C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Decoder.sv
 FC:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Decoder.sv
 L0 1
@@ -244,7 +244,7 @@ R9
 n@extend@immediate
 vflopenr
 R1
-Z12 !s110 1684176175
+R10
 !i10b 1
 !s100 AgVHjB^`=EODf;?kBPgP=2
 IzXkfWa@cPcjmclIkzUP;F0
@@ -260,7 +260,7 @@ R5
 r1
 !s85 0
 31
-Z13 !s108 1684176175.000000
+R11
 !s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/flopenr.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/flopenr.sv|
 !i113 1
@@ -269,7 +269,7 @@ R8
 R9
 vflopr
 R1
-R12
+R10
 !i10b 1
 !s100 AOcehC1ZUkWdP]XlTQB<10
 I<no=;i^Bg<a:`0?H1WDAi1
@@ -285,7 +285,7 @@ R5
 r1
 !s85 0
 31
-R13
+R11
 !s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/flopr.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/flopr.sv|
 !i113 1
@@ -294,7 +294,7 @@ R8
 R9
 vInstructionMemory
 R1
-Z14 !s110 1684176174
+R10
 !i10b 1
 !s100 LTOiADCQDnok66K<;MPOY1
 IG_cJY2zmG5kol7]0g@3WO1
@@ -310,7 +310,7 @@ R5
 r1
 !s85 0
 31
-Z15 !s108 1684176174.000000
+R11
 !s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/InstructionMemory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/InstructionMemory.sv|
 !i113 1
@@ -320,7 +320,7 @@ R9
 n@instruction@memory
 vMux2to1
 R1
-R14
+R10
 !i10b 1
 !s100 On`]Ja;F_hao2G1PnQ[;H0
 IP@_>hehMHOK73X8[:gM5E1
@@ -336,7 +336,7 @@ R5
 r1
 !s85 0
 31
-R15
+R11
 !s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Mux2to1.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Mux2to1.sv|
 !i113 1
@@ -346,7 +346,7 @@ R9
 n@mux2to1
 vRegisterFile
 R1
-R14
+R10
 !i10b 1
 !s100 i_Aeh83^8U0_@f0BAT;Y73
 IcRUAE;h=[z45@0g8IgTDl3
@@ -362,7 +362,7 @@ R5
 r1
 !s85 0
 31
-R15
+Z12 !s108 1684194549.000000
 !s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/RegisterFile.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/RegisterFile.sv|
 !i113 1
@@ -371,7 +371,7 @@ R8
 R9
 n@register@file
 vrom
-R14
+Z13 !s110 1684194549
 !i10b 1
 !s100 Ta55k;6VQIXYc<>PVH:6;1
 IH6QD0kO5SNLnTaGdEWGEA1
@@ -385,7 +385,7 @@ R5
 r1
 !s85 0
 31
-R15
+R12
 !s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/rom.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/rom.v|
 !i113 1
@@ -394,7 +394,7 @@ o-vlog01compat -work work
 R9
 vTessia
 R1
-R14
+R13
 !i10b 1
 !s100 4O==S7P?X_X2UdE2mfZ^z2
 IU3Ek`5Q1=WAn74eAVJD[W0
@@ -410,7 +410,7 @@ R5
 r1
 !s85 0
 31
-R15
+R12
 !s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Tessia.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/Tessia.sv|
 !i113 1
@@ -420,7 +420,7 @@ R9
 n@tessia
 vtestbench
 R1
-!s110 1684176178
+R2
 !i10b 1
 !s100 ^C@EF_ECh1iaAd<;7Mc9A1
 IkcZIRaz_W?I[;]T5<47_82
@@ -445,7 +445,7 @@ R8
 R9
 vTOP
 R1
-R14
+R13
 !i10b 1
 !s100 W[U^?CHL=dFYAYz_NhZZ12
 Ik3faj2_fLGjS3j@6AEIIg0
@@ -461,7 +461,7 @@ R5
 r1
 !s85 0
 31
-R15
+R12
 !s107 C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/TOP.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1|C:/Users/Usuario/Desktop/Git Arqui/earce_computer_architecture_1_2023_grupal/TessiaV1/TOP.sv|
 !i113 1
