@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/simulation/modelsim
 vadder
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1684048841
+Z2 !s110 1684109730
 !i10b 1
 !s100 o4;LCWk3zROaid=4[Yfh@2
 I1DTXAjf8W0KE_H0P<K6R;1
@@ -26,7 +26,7 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1684048841.000000
+Z6 !s108 1684109730.000000
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/utils/adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/utils|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/utils/adder.sv|
 !i113 1
@@ -35,7 +35,7 @@ Z8 !s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_c
 Z9 tCvgOpt 0
 vALU
 R1
-Z10 !s110 1684048840
+Z10 !s110 1684109729
 !i10b 1
 !s100 fEm9k?Uf7Ref>YEj=S^Tc1
 IKMN<gOmALEH2<7a:2KY7e0
@@ -51,7 +51,7 @@ R5
 r1
 !s85 0
 31
-Z12 !s108 1684048840.000000
+Z12 !s108 1684109729.000000
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/ALU.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/ALU.sv|
 !i113 1
@@ -63,13 +63,13 @@ vConditionalUnit
 R1
 R10
 !i10b 1
-!s100 7V04L2lgV54^cNJaedbZd3
-ITGC0^fF[:8]=kA3FeMaCk3
+!s100 N]0@;H8HDIfVdc7<`4?T11
+IW>fHXW^Pbgf0N^ili7;z33
 R3
 !s105 ConditionalUnit_sv_unit
 S1
 R0
-w1684021638
+w1684109308
 8C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/ConditionalUnit.sv
 FC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/ConditionalUnit.sv
 L0 1
@@ -115,13 +115,13 @@ vControlUnit
 R1
 R10
 !i10b 1
-!s100 MEBN3`B5UikbIoKg5J>KZ3
-I8=5ZOa1l6N_B?>=UO=LfV3
+!s100 TNGdh;^^TIj1d=JUYWkKo2
+I7:]_e5KLnU8KWgFPK6[bK0
 R3
 !s105 ControlUnit_sv_unit
 S1
 R0
-w1684040368
+w1684109473
 8C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage/ControlUnit.sv
 FC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage/ControlUnit.sv
 L0 1
@@ -139,7 +139,7 @@ R9
 n@control@unit
 vDataMemory
 R1
-R2
+R10
 !i10b 1
 !s100 mc92Rz5Qm<[?nI:lYUcHE1
 IOiIS6MgiG0kh7Ke6ShEPC3
@@ -155,7 +155,7 @@ R5
 r1
 !s85 0
 31
-R6
+R12
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/memory/DataMemory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/memory|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/memory/DataMemory.sv|
 !i113 1
@@ -241,7 +241,7 @@ R9
 n@extend@immediate
 vfetch
 R1
-R2
+R10
 !i10b 1
 !s100 U_5]0>=7a70<2O<[ejRmj0
 IIM1[G>;EeAUe@iTWJ0Yk12
@@ -249,7 +249,7 @@ R3
 !s105 fetch_sv_unit
 S1
 R0
-w1684021811
+w1684101169
 8C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/fetch-stage/fetch.sv
 FC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/fetch-stage/fetch.sv
 L0 1
@@ -257,37 +257,12 @@ R5
 r1
 !s85 0
 31
-R6
+R12
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/fetch-stage/fetch.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/fetch-stage|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/fetch-stage/fetch.sv|
 !i113 1
 R7
 !s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/fetch-stage
-R9
-vflopenr
-R1
-R2
-!i10b 1
-!s100 AgVHjB^`=EODf;?kBPgP=2
-I`UXDf9UoX[MBPMZ8J7Gh21
-R3
-!s105 flopenr_sv_unit
-S1
-R0
-R4
-8C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/utils/flopenr.sv
-FC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/utils/flopenr.sv
-L0 1
-R5
-r1
-!s85 0
-31
-R6
-!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/utils/flopenr.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/utils|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/utils/flopenr.sv|
-!i113 1
-R7
-R8
 R9
 vflopenrc
 R1
@@ -316,15 +291,15 @@ R8
 R9
 vHazardUnit
 R1
-R2
+R10
 !i10b 1
-!s100 lEDFG]^F0G]YjLz33EF=C3
-IhANeEJ3PN0l8:MPl^P?>C2
+!s100 =AjV7OCQ49oVBBn[hCS8J2
+I`HYaT5gbgnB4lN[DQiSe11
 R3
 !s105 HazardUnit_sv_unit
 S1
 R0
-w1684048826
+w1684106619
 8C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/hazards/HazardUnit.sv
 FC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/hazards/HazardUnit.sv
 L0 1
@@ -332,7 +307,7 @@ R5
 r1
 !s85 0
 31
-R6
+R12
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/hazards/HazardUnit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/hazards|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/hazards/HazardUnit.sv|
 !i113 1
@@ -342,15 +317,15 @@ R9
 n@hazard@unit
 vInstructionMemory
 R1
-R2
+R10
 !i10b 1
-!s100 Q<caH]0fA<gSQWe0JSDDF2
-IkkSN;i3kUXa0Cf1;MI=L[2
+!s100 ZQc?BXBk[KKiVn9O8_>Lj3
+IO@_K>YoEhIAMLhT:2X7>Q1
 R3
 !s105 InstructionMemory_sv_unit
 S1
 R0
-w1684039122
+w1684109679
 8C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/memory/InstructionMemory.sv
 FC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/memory/InstructionMemory.sv
 L0 1
@@ -358,7 +333,7 @@ R5
 r1
 !s85 0
 31
-R6
+R12
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/memory/InstructionMemory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/memory|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/memory/InstructionMemory.sv|
 !i113 1
@@ -409,7 +384,7 @@ R5
 r1
 !s85 0
 31
-R6
+R12
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/utils/mux3to1.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/utils|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/utils/mux3to1.sv|
 !i113 1
@@ -418,7 +393,7 @@ R8
 R9
 vRegisterFile
 R1
-R10
+!s110 1684109728
 !i10b 1
 !s100 IQ?]ca16?gk4^V4Sga<230
 IaGGLC0MAU4D8k3BVaH?YZ1
@@ -434,7 +409,7 @@ R5
 r1
 !s85 0
 31
-R12
+!s108 1684109728.000000
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage/RegisterFile.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage/RegisterFile.sv|
 !i113 1
@@ -446,13 +421,13 @@ vTessia
 R1
 R2
 !i10b 1
-!s100 IBl86:2PfAW5>;P2jCJ5D2
-IE96I3zUb;o0BeiAiz[QGN0
+!s100 3fPZMRBVf<nj0MBIgLgBj2
+I]_0>Pm=64N[UVzETWB2TJ0
 R3
 !s105 Tessia_sv_unit
 S1
 R0
-w1684044838
+w1684109525
 8C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/Tessia.sv
 FC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/Tessia.sv
 L0 1
@@ -472,13 +447,13 @@ vtestbench
 R1
 R2
 !i10b 1
-!s100 l615ezK9QT7g8@LFVY`Bo2
-I996b6z5Ba9loAfZ]iVNF71
+!s100 KHXd;C@F9=CQ3aPj5EL4=1
+IWNYgGZ]L:leS1PilRdMo=2
 R3
 !s105 testbench_sv_unit
 S1
 R0
-w1684046743
+w1684104957
 8C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/testbenches/testbench.sv
 FC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/testbenches/testbench.sv
 L0 1
@@ -497,13 +472,13 @@ vTOP
 R1
 R2
 !i10b 1
-!s100 I6b2njjXL[WP6R:<LKBA31
-IY;jBPjD6iF@<oV@[P^aHC3
+!s100 :h;A=>hR[l3eHj=NG0j6l0
+IHaO[2878Om``UKSzef^XB1
 R3
 !s105 TOP_sv_unit
 S1
 R0
-w1684044821
+w1684104947
 8C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/TOP.sv
 FC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/TOP.sv
 L0 1

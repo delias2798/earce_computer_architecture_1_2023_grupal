@@ -10,7 +10,10 @@ module TOP(
 	output logic MemToReg,
 	output logic [31:0] ResultWB,
 	output logic [31:0] SrcA, SrcB,
-	output logic [1:0] ForwardA, ForwardB
+	output logic [1:0] ForwardA, ForwardB,
+	output logic [3:0] ALUOP,
+	output logic BranchTaken,
+	output logic [3:0] ALUFlagsE0
 );
 			  
 	// instantiate Tessia processor	
@@ -18,7 +21,7 @@ module TOP(
 		.clk(clk), 
 		.reset(reset),
 		.ALUResultE(ALUResult), 
-		.ALUFlags(ALUFlags),
+		.ALUFlagsE(ALUFlags),
 		.Instruction(Instruction),
 		.WriteData(WriteData),
 		.RegWrite(RegWrite),
@@ -29,7 +32,10 @@ module TOP(
 		.SrcA(SrcA),
 		.SrcB(SrcB),
 		.ForwardA(ForwardA), 
-		.ForwardB(ForwardB));
+		.ForwardB(ForwardB),
+		.ALUOP(ALUOP),
+		.BranchTaken(BranchTaken),
+		.ALUFlagsE0(ALUFlagsE0));
 					
 
 endmodule

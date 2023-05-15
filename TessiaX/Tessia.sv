@@ -1,20 +1,24 @@
 module Tessia(
     input logic clk, reset,
 	output logic [31:0] ALUResultE,
-	output logic [3:0] ALUFlags,
+	output logic [3:0] ALUFlagsE,
     output logic [31:0] Instruction,
     output logic [31:0] WriteData,
     output logic RegWrite, MemToReg,
     output logic [3:0] A3,
     output logic [31:0] WD3, ResultWB,
     output logic [31:0] SrcA, SrcB,
-    output logic [1:0] ForwardA, ForwardB
+    output logic [1:0] ForwardA, ForwardB,
+    output logic [3:0] ALUOP,
+    output logic BranchTaken,
+    output logic [3:0] ALUFlagsE0
 );
 
     logic [31:0] InstructionF, InstructionD, ReadData;
     logic [31:0] ResultW;
     logic PCSrcW;
     logic [31:0] PCPlus4;
+    logic [3:0] ALUFlags;
 
     assign Instruction = InstructionD;
 
@@ -33,14 +37,13 @@ module Tessia(
     logic PCSrcD, RegWriteD, MemToRegD, MemWriteD;
     logic BranchD, ALUSrcD, NoWriteD;
     logic [3:0] ALUControlD;
-    logic [1:0] ImmSrcD, FlagWriteD;
+    logic [1:0] ImmSrcD;
     logic [3:0] Flags;
 
 
     logic PCSrcE, RegWriteE, MemToRegE, MemWriteE;
     logic BranchE, ALUSrcE, NoWriteE;
     logic [3:0] ALUControlE, WA3E;
-    logic [1:0] FlagWriteE;
     logic [3:0] FlagsE, CondE;
     logic [31:0] RD1E, RD2E;
     logic [3:0] RA1D, RA2D, RA1E, RA2E;
@@ -69,6 +72,10 @@ module Tessia(
 
     assign ForwardA = ForwardAE;
     assign ForwardB = ForwardBE;
+    assign ALUOP = ALUControlE;
+    assign BranchTaken = BranchTakenE;
+    assign ALUFlagsE = FlagsE;
+    assign ALUFlagsE0 = ALUFlags;
 
     //***************************** FETCH STAGE ***********************************
     InstructionMemory imem(
@@ -112,7 +119,6 @@ module Tessia(
         .NoWrite(NoWriteD),
         .ALUControlD(ALUControlD),
         .ImmSrcD(ImmSrcD), 
-        .FlagWriteD(FlagWriteD),
         .RegSrcD(RegSrcD)
     );
 
@@ -134,7 +140,7 @@ module Tessia(
     );
 
     // Decode - Execute Flip Flop
-    flopenrc #(129) DecodeExecuteFlipFlop(
+    flopenrc #(127) DecodeExecuteFlipFlop(
         .clk(clk), 
         .reset(FlushE), 
         .en(1'b1), 
@@ -147,9 +153,8 @@ module Tessia(
             BranchD,
             ALUSrcD,
             NoWriteD,
-            FlagWriteD,
             InstructionD[31:28],
-            Flags,
+            ALUControlE == 4'b0001 ? ALUFlags : 4'b0000,
             RD1,
             RD2,
             InstructionD[15:12],
@@ -166,7 +171,6 @@ module Tessia(
             BranchE,
             ALUSrcE,
             NoWriteE,
-            FlagWriteE,
             CondE,
             FlagsE,
             RD1E,
@@ -188,12 +192,9 @@ module Tessia(
         .NoWrite(NoWriteE),
         .CondE(CondE), 
         .FlagsE(FlagsE), 
-        .ALUFlags(ALUFlags),
-        .FlagWriteE(FlagWriteE),
         .PCSrcEout(PCSrcEout), 
         .RegWriteEout(RegWriteEout), 
         .MemWriteEout(MemWriteEout),
-        .Flags(Flags),
         .BranchTakenE(BranchTakenE));
 
     // Forwading Multiplexer for SrcAE

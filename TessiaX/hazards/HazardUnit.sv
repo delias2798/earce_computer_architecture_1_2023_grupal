@@ -43,10 +43,20 @@ module HazardUnit(
 		LDRStall = Match_12D_E && MemToRegE;
 		PCWrPendingF = PCSrcD || PCSrcE || PCSrcM;
 
+		// StallD = LDRStall;
+		// StallF = LDRStall || PCWrPendingF;
+		// FlushE = LDRStall || BranchTakenE;
+		// FlushD = BranchTakenE || PCWrPendingF || PCSrcW;
+
 		StallD = LDRStall;
 		StallF = LDRStall || PCWrPendingF;
 		FlushE = LDRStall || BranchTakenE;
-		FlushD = PCWrPendingF || PCSrcW || BranchTakenE;
+		FlushD = BranchTakenE || PCWrPendingF || PCSrcW;
+
+		// StallD = LDRStall;
+		// StallF = LDRStall;
+		// FlushE = LDRStall || BranchTakenE;
+		// FlushD = BranchTakenE;
 
 	end
 	

@@ -6,7 +6,7 @@ module ControlUnit #(parameter WIDTH=8)(
     output logic PCSrcD, RegWriteD,
     MemToRegD, MemWriteD, BranchD, ALUSrcD, NoWrite,
     output logic [3:0] ALUControlD,
-    output logic [1:0] ImmSrcD, FlagWriteD, RegSrcD
+    output logic [1:0] ImmSrcD, RegSrcD
 );
 	logic [9:0] controls;
 	logic Branch, ALUOp;
@@ -52,16 +52,11 @@ module ControlUnit #(parameter WIDTH=8)(
 				default: ALUControlD = 4'bx;    // unimplemented
 			endcase
 			
-			// update flags if S bit is set (C & V only for arith)
-			FlagWriteD[1] = Funct[0];
-			FlagWriteD[0] = Funct[0] & (ALUControlD == 4'b0000 | ALUControlD == 4'b0001 | ALUControlD == 4'b0110);
-				
 			NoWrite = (Funct[4:1] == 4'b1010);
         end 
         else begin
 			// add or sub for non-DP instructions
 			ALUControlD = Funct[5] ? 4'b0000 : 4'b0001;
-			FlagWriteD = 2'b00; // don't update Flags
 			NoWrite = 1'b0;
 		end
 		
