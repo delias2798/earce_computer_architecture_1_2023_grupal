@@ -1,0 +1,22 @@
+module ImageRAM(
+  input logic clk,
+  input logic [17:0] address,
+  output logic [31:0] pixel
+);
+
+  logic [31:0] RAM [0:89999]; // 300x300 pixels, 8 bits per pixel
+
+  // Read from memory
+  always_ff @(posedge clk) begin
+    if (address < 90000)
+      pixel <= RAM[address];
+    else
+      pixel <= 0; // Default value if address is out of range
+  end
+
+  // Initialize memory contents
+  initial begin
+    $readmemb("tessia.dat", RAM); // Read memory values from text file
+  end
+
+endmodule
