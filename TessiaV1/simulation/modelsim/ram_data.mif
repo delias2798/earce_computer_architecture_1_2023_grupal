@@ -18,8 +18,14 @@ WIDTH=32;
 DEPTH=2813;
 
 ADDRESS_RADIX=UNS;
-DATA_RADIX=HEX;
+DATA_RADIX=UNS;
 
 CONTENT BEGIN
-	[0..2812]  :   00000000;
+	[0..16]  :   0;
+	17    :   255;
+	18    :   83526;
+	19    :   120;
+	20    :   118;
+	21    :   1;
+	[22..2812]  :   0;
 END;

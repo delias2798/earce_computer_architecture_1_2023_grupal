@@ -19,12 +19,15 @@ functionDictionary = {
     'MODI': '100110',
     'SUMI': '101000',
     'ORRI': '111000',
+    'ANDI': '101110',
     'MULR': '000000',
     'DIVR': '000010',
     'RESR': '000100',
     'MODR': '000110',
     'SUMR': '001000',
     'ORRR': '011000',
+    'DEIR': '001010',
+    'DEDR': '001100',
     'MOVE': '111010',
     'CMPE': '110100',
     'BIGA': '00001000',
@@ -84,7 +87,8 @@ def reader_branches():
             else:
                 f.write(line)
                 counter += 1
-        f.close()            
+        f.close()
+        
 def reader():
     counter = 0
     with open('src/newfile.txt', 'r') as f:
@@ -92,6 +96,7 @@ def reader():
         f.seek(0)
         binaryFile = open('src/binary.txt', 'w')
         for line in f:
+            print(line)
             if(line[0:4][3] == 'I'):
                 imm = immediateAddressing(line)
                 binaryFile.write(imm)
@@ -140,19 +145,18 @@ def specialAddressing(syntax):
     if "[" in parts[1]: 
         numbers = []
 
-        for char in syntax[6:]:
-            if char.isdigit():
-                numbers.append(int(char))
-
-        rb = bin(numbers[0])[2:].zfill(4)
-        rd = bin(numbers[1])[2:].zfill(4)
+        for element in syntax[6:].split(","):
+            if any(c.isdigit() for c in element):
+                numbers.append(int(''.join(filter(str.isdigit, element))))
+        rd = bin(numbers[0])[2:].zfill(4)
+        rb = bin(numbers[1])[2:].zfill(4)
         imm = bin(numbers[2])[2:].zfill(12)
 
         if(syntax[0] == 'G'):
-            value = '1110' + '01' + '011000' + rb + rd + imm
+            value = '1110' + '01' + '111000' + rb + rd + imm
         
         elif(syntax[0] == 'O'):
-            value = '1110' + '01' + '011001' + rb + rd + imm
+            value = '1110' + '01' + '111001' + rb + rd + imm
         
         return value
     else: 
@@ -215,8 +219,8 @@ def immediateAddressing(syntax):
         if any(c.isdigit() for c in element):
             numbers.append(int(''.join(filter(str.isdigit, element))))
 
-    rb = bin(numbers[0])[2:].zfill(4)
-    rd = bin(numbers[1])[2:].zfill(4)
+    rd = bin(numbers[0])[2:].zfill(4)
+    rb = bin(numbers[1])[2:].zfill(4)
     imm = bin(numbers[2])[2:].zfill(8)
 
     value = '1110' + '00' + currentFunction + rb + rd + '0000' + imm
