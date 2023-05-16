@@ -1,5 +1,5 @@
 Flow report for TOP
-Tue May 16 05:28:52 2023
+Tue May 16 05:41:57 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Tue May 16 05:28:52 2023       ;
+; Flow Status                 ; Successful - Tue May 16 05:41:57 2023       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; TOP                                         ;
 ; Top-level Entity Name       ; TOP                                         ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/16/2023 05:28:43 ;
+; Start date & time ; 05/16/2023 05:41:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; TOP                 ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 1096413552599.168423652215928          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 1096413552599.168423730716100          ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ALU_tb         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; testbench      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                              ; --            ; --          ; eda_simulation ;
@@ -103,8 +103,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:10     ; 1.0                     ; 4786 MB             ; 00:00:06                           ;
-; Total                  ; 00:00:10     ; --                      ; --                  ; 00:00:06                           ;
+; Analysis & Elaboration ; 00:00:10     ; 1.0                     ; 4786 MB             ; 00:00:08                           ;
+; Total                  ; 00:00:10     ; --                      ; --                  ; 00:00:08                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

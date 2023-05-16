@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/simulation/modelsim
 vadder
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1684236543
+Z2 !s110 1684237329
 !i10b 1
 !s100 o4;LCWk3zROaid=4[Yfh@2
 I1DTXAjf8W0KE_H0P<K6R;1
@@ -26,7 +26,7 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1684236543.000000
+Z6 !s108 1684237329.000000
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/utils/adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/utils|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/utils/adder.sv|
 !i113 1
@@ -35,15 +35,15 @@ Z8 !s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_c
 Z9 tCvgOpt 0
 vALU
 R1
-Z10 !s110 1684236542
+Z10 !s110 1684237328
 !i10b 1
-!s100 fEm9k?Uf7Ref>YEj=S^Tc1
-IKMN<gOmALEH2<7a:2KY7e0
+!s100 hiWT@g:fiW;4QWP7gEVOc2
+IUinD_9USYf];D5jKPUF@L0
 R3
 !s105 ALU_sv_unit
 S1
 R0
-w1684223598
+Z11 w1684237188
 8C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/ALU.sv
 FC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/ALU.sv
 L0 1
@@ -51,12 +51,12 @@ R5
 r1
 !s85 0
 31
-Z11 !s108 1684236542.000000
+Z12 !s108 1684237328.000000
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/ALU.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/ALU.sv|
 !i113 1
 R7
-Z12 !s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage
+Z13 !s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage
 R9
 n@a@l@u
 vConditionalUnit
@@ -77,25 +77,25 @@ R5
 r1
 !s85 0
 31
-R11
+R12
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/ConditionalUnit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/ConditionalUnit.sv|
 !i113 1
 R7
-R12
+R13
 R9
 n@conditional@unit
 vConditionCheck
 R1
 R10
 !i10b 1
-!s100 0_0h9mgDQnd9FUAZ@PVHR3
-Ij<@[>h6fkHI[iz7ngRE@U0
+!s100 >@[gd@k?m2nDRdN@co=cY1
+IkH^U>Y2ESbn9V5GKRbVBb0
 R3
 !s105 ConditionCheck_sv_unit
 S1
 R0
-R4
+R11
 8C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/ConditionCheck.sv
 FC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/ConditionCheck.sv
 L0 1
@@ -103,25 +103,25 @@ R5
 r1
 !s85 0
 31
-R11
+R12
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/ConditionCheck.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/ConditionCheck.sv|
 !i113 1
 R7
-R12
+R13
 R9
 n@condition@check
 vControlUnit
 R1
 R10
 !i10b 1
-!s100 =Gnh6RP@MZA0SDN31DZRL3
-ICZ^Z<4Q4O?m>e0_lk8oW`3
+!s100 h[209N?^=KZMbke_Ja;D71
+IHo@7NVdeb>LMNZLB>1[j62
 R3
 !s105 ControlUnit_sv_unit
 S1
 R0
-w1684232882
+w1684236839
 8C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage/ControlUnit.sv
 FC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage/ControlUnit.sv
 L0 1
@@ -129,12 +129,12 @@ R5
 r1
 !s85 0
 31
-R11
+R12
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage/ControlUnit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage/ControlUnit.sv|
 !i113 1
 R7
-Z13 !s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage
+Z14 !s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage
 R9
 n@control@unit
 vDataMemory
@@ -160,7 +160,7 @@ R6
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/memory|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/memory/DataMemory.sv|
 !i113 1
 R7
-Z14 !s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/memory
+Z15 !s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/memory
 R9
 n@data@memory
 vdecode
@@ -181,12 +181,12 @@ R5
 r1
 !s85 0
 31
-R11
+R12
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage/decode.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage/decode.sv|
 !i113 1
 R7
-R13
+R14
 R9
 vexecute
 R1
@@ -206,12 +206,12 @@ R5
 r1
 !s85 0
 31
-R11
+R12
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/execute.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/execute.sv|
 !i113 1
 R7
-R12
+R13
 R9
 vExtendImmediate
 R1
@@ -231,12 +231,12 @@ R5
 r1
 !s85 0
 31
-R11
+R12
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage/ExtendImmediate.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage/ExtendImmediate.sv|
 !i113 1
 R7
-R13
+R14
 R9
 n@extend@immediate
 vfetch
@@ -257,7 +257,7 @@ R5
 r1
 !s85 0
 31
-R11
+R12
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/fetch-stage/fetch.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/fetch-stage|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/fetch-stage/fetch.sv|
 !i113 1
@@ -319,13 +319,13 @@ vInstructionMemory
 R1
 R2
 !i10b 1
-!s100 =VT5E05UW5XMEB0i;oi383
-IzDSR^mFd1Oia^c:acglKg2
+!s100 >[njGH:[EQao1ASak;jcS0
+IUP@9Po`N8?:I@G:KVzW?H1
 R3
 !s105 InstructionMemory_sv_unit
 S1
 R0
-w1684228252
+w1684236656
 8C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/memory/InstructionMemory.sv
 FC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/memory/InstructionMemory.sv
 L0 1
@@ -338,7 +338,7 @@ R6
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/memory|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/memory/InstructionMemory.sv|
 !i113 1
 R7
-R14
+R15
 R9
 n@instruction@memory
 vmux2to1
@@ -409,12 +409,12 @@ R5
 r1
 !s85 0
 31
-R11
+R12
 !s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage/RegisterFile.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/decode-stage/RegisterFile.sv|
 !i113 1
 R7
-R13
+R14
 R9
 n@register@file
 vTessia
@@ -440,7 +440,7 @@ R6
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/Tessia.sv|
 !i113 1
 R7
-Z15 !s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX
+Z16 !s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX
 R9
 n@tessia
 vtestbench
@@ -453,7 +453,7 @@ R3
 !s105 testbench_sv_unit
 S1
 R0
-w1684233095
+w1684237246
 8C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/testbenches/testbench.sv
 FC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/testbenches/testbench.sv
 L0 1
@@ -478,7 +478,7 @@ R3
 !s105 TOP_sv_unit
 S1
 R0
-w1684236518
+w1684236609
 8C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/TOP.sv
 FC:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/TOP.sv
 L0 1
@@ -491,7 +491,7 @@ R6
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX|C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/TOP.sv|
 !i113 1
 R7
-R15
+R16
 R9
 n@t@o@p
 vWriteBack
