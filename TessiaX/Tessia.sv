@@ -1,7 +1,7 @@
 module Tessia(
     input logic clk, reset,
-	output logic [31:0] ALUResultE,
-	output logic [3:0] ALUFlagsE,
+    output logic [31:0] ALUResultE,
+    output logic [3:0] ALUFlagsE,
     output logic [31:0] Instruction,
     output logic [31:0] WriteData,
     output logic RegWrite, MemToReg,
@@ -11,7 +11,9 @@ module Tessia(
     output logic [1:0] ForwardA, ForwardB,
     output logic [3:0] ALUOP,
     output logic BranchTaken,
-    output logic [3:0] ALUFlagsE0
+    output logic [3:0] ALUFlagsE0,
+	output logic imageSelector,
+	output logic enableVGAX
 );
 
     logic [31:0] InstructionF, InstructionD, ReadData;
@@ -51,7 +53,7 @@ module Tessia(
 
 
     logic PCSrcEout, RegWriteEout, MemWriteEout;
-    //logic [31:0] ALUResultE;
+
 
 
     logic PCSrcM, RegWriteM, MemWriteM, MemToRegM;
@@ -119,7 +121,9 @@ module Tessia(
         .NoWrite(NoWriteD),
         .ALUControlD(ALUControlD),
         .ImmSrcD(ImmSrcD), 
-        .RegSrcD(RegSrcD)
+        .RegSrcD(RegSrcD),
+        .imageSelector(imageSelector),
+        .enableVGAX(enableVGAX)
     );
 
     decode #(32) Decode(

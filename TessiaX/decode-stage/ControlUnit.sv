@@ -6,7 +6,9 @@ module ControlUnit #(parameter WIDTH=8)(
     output logic PCSrcD, RegWriteD,
     MemToRegD, MemWriteD, BranchD, ALUSrcD, NoWrite,
     output logic [3:0] ALUControlD,
-    output logic [1:0] ImmSrcD, RegSrcD
+    output logic [1:0] ImmSrcD, RegSrcD,
+	output logic imageSelector,
+	output logic enableVGAX
 );
 	logic [9:0] controls;
 	logic Branch, ALUOp;
@@ -31,13 +33,35 @@ module ControlUnit #(parameter WIDTH=8)(
                 // B
                 controls = 10'b0110100010;
 
-            // Unimplemented
-            default:
-                 controls = 10'bx;
+            // VGAX
+            2'b11:
+                controls = 10'b0000000000;
 		endcase
 		
 	assign {RegSrcD, ImmSrcD, ALUSrcD, MemToRegD,
 	RegWriteD, MemWriteD, BranchD, ALUOp} = controls;
+
+
+// Execution stage
+  always_ff @(posedge clk) begin
+    if (reset) begin
+      imageSelector <= 0;
+	  enableVGAX <= 0;
+
+    end else begin
+
+      if (Op == 2'b11) begin
+			// Toggle Image Selector
+			if (~Funct[5] && ~Funct[0]) begin 
+				imageSelector <= ~imageSelector;
+			end
+			// Toggle VGA enable
+			if (Funct[5] && Funct[0]) begin
+				enableVGAX <=  ~enableVGAX;
+			end
+    	end
+    end
+  end
 
 	// ALU Decoder ***********************************************************************************
 	always_comb

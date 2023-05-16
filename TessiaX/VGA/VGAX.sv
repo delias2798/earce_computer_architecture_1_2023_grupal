@@ -1,6 +1,7 @@
 module VGAX(
 	input logic clk_50,
 	input logic imageSelector,
+	input logic enable,
 	output logic [7:0] VGA_R,           // VGA Red
 	output logic [7:0] VGA_G,           // VGA Green
 	output logic [7:0] VGA_B,           // VGA Blue
@@ -62,6 +63,7 @@ module VGAX(
 	PixelFetcher pixelfetcher(
 		.clk(VGA_CLK),
 		.imageSelector(imageSelector),
+		.enable(enable),
 		.v_counter(y),
 		.h_counter(x),
 		.video_on(video_on),

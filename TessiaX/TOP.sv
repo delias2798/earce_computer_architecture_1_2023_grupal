@@ -13,7 +13,9 @@ module TOP(
 	output logic [1:0] ForwardA, ForwardB,
 	output logic [3:0] ALUOP,
 	output logic BranchTaken,
-	output logic [3:0] ALUFlagsE0
+	output logic [3:0] ALUFlagsE0,
+	output logic imageSelector,
+	output logic enableVGAX
 );
 			  
 	// instantiate Tessia processor	
@@ -35,7 +37,9 @@ module TOP(
 		.ForwardB(ForwardB),
 		.ALUOP(ALUOP),
 		.BranchTaken(BranchTaken),
-		.ALUFlagsE0(ALUFlagsE0));
+		.ALUFlagsE0(ALUFlagsE0),
+		.imageSelector(imageSelector),
+		.enableVGAX(enableVGAX));
 					
 
 endmodule

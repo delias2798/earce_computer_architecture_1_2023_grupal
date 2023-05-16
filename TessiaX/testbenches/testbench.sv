@@ -11,6 +11,8 @@ module testbench();
 	logic [3:0] ALUOP;
 	logic BranchTaken;
 	logic [3:0] ALUFlagsE0;
+	logic imageSelector;
+	logic enableVGAX;
 	
 	// instantiate device to be tested
 	TOP DUT(
@@ -31,7 +33,9 @@ module testbench();
 		.ForwardB(ForwardB),
 		.ALUOP(ALUOP),
 		.BranchTaken(BranchTaken),
-		.ALUFlagsE0(ALUFlagsE0));
+		.ALUFlagsE0(ALUFlagsE0),
+		.imageSelector(imageSelector),
+		.enableVGAX(enableVGAX));
 	
 	// initialize test
 	initial
@@ -51,8 +55,6 @@ module testbench();
 		end
 	end
 
-	
-	// check that 7 gets written to address 0x64
 	// at end of program
 	always @(negedge clk)
 	begin
@@ -61,19 +63,8 @@ module testbench();
 			$display("Decode {Reg to Write: %d, Value: %d}", A3, WD3);
 		end
 			$display("Execute {Operation: %b, SrcA: %d, SrcB: %d, ALUResult: %d, ALUFlagsE0: %b ALUFlagsE: %b, BranchTaken: %d}",ALUOP, SrcA, SrcB, ALUResult,ALUFlagsE0, ALUFlags, BranchTaken);
+			$display("VGAX {Enable: %d, Image: %d}", enableVGAX, imageSelector);
 			//$display("WriteBack {MemToReg: %d, ResultW: %d}", MemToReg, ResultWB);
 			$display("\n \n");
-
-
-		//end
-		// if() begin
-		// 	if(ALUResult === 100) begin
-		// 		$display("Simulation succeeded");
-		// 		$stop;
-		// 	end else if (ALUResult !== 96) begin
-		// 		$display("Simulation failed");
-		// 		$stop;
-		// 	end
-		// end
 	end
 endmodule

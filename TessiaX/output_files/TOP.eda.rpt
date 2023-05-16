@@ -1,5 +1,5 @@
 EDA Netlist Writer report for TOP
-Tue May 16 00:22:33 2023
+Tue May 16 05:17:29 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,9 +36,9 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue May 16 00:22:33 2023 ;
+; EDA Netlist Writer Status ; Successful - Tue May 16 05:17:29 2023 ;
 ; Revision Name             ; TOP                                   ;
-; Top-level Entity Name     ; VGAX                                  ;
+; Top-level Entity Name     ; NewTop                                ;
 ; Family                    ; Cyclone V                             ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -81,15 +81,15 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue May 16 00:22:15 2023
+    Info: Processing started: Tue May 16 05:17:27 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off tessia-x -c TOP
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Warning (10905): Generated the EDA functional simulation netlist because it is the only supported netlist type for this device.
 Info (204019): Generated file TOP.svo in folder "C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 5273 megabytes
-    Info: Processing ended: Tue May 16 00:22:34 2023
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 4773 megabytes
+    Info: Processing ended: Tue May 16 05:17:29 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
