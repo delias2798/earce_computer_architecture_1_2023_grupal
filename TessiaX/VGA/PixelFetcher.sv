@@ -1,7 +1,6 @@
 module PixelFetcher(
   input logic clk,
   input logic imageSelector,
-  input logic enable,
   input logic [9:0] v_counter,
   input logic [9:0] h_counter,
   input logic video_on,
@@ -40,7 +39,7 @@ module PixelFetcher(
 
   // Fetch pixel value based on the address
   always_ff @(posedge clk) begin
-    if (video_on && enable) begin
+    if (video_on) begin
       case (col_counter % 4)
         0: begin
           VGA_R <= pixel[7:0];

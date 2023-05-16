@@ -2,100 +2,84 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'frequencyDivider:fd|C_1Hz'
-Slack : -81.869
-TNS   : -7579.728
+Type  : Slow 1100mV 85C Model Setup 'clk_divider|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : -4.863
+TNS   : -121.464
 
-Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -6.480
-TNS   : -120.020
-
-Type  : Slow 1100mV 85C Model Hold 'frequencyDivider:fd|C_1Hz'
-Slack : 0.309
+Type  : Slow 1100mV 85C Model Hold 'clk_divider|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.301
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.378
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_divider|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'frequencyDivider:fd|C_1Hz'
-Slack : -2.174
-TNS   : -403.051
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.524
-TNS   : -13.900
-
-Type  : Slow 1100mV 0C Model Setup 'frequencyDivider:fd|C_1Hz'
-Slack : -82.718
-TNS   : -7583.735
-
-Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -6.704
-TNS   : -121.172
-
-Type  : Slow 1100mV 0C Model Hold 'frequencyDivider:fd|C_1Hz'
-Slack : 0.281
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_50'
+Slack : 9.900
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.376
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_divider|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 19.282
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'frequencyDivider:fd|C_1Hz'
-Slack : -2.174
-TNS   : -397.120
+Type  : Slow 1100mV 0C Model Setup 'clk_divider|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : -5.184
+TNS   : -129.514
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.508
-TNS   : -15.056
-
-Type  : Fast 1100mV 85C Model Setup 'frequencyDivider:fd|C_1Hz'
-Slack : -45.946
-TNS   : -4289.374
-
-Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -3.629
-TNS   : -56.773
-
-Type  : Fast 1100mV 85C Model Hold 'frequencyDivider:fd|C_1Hz'
-Slack : 0.119
+Type  : Slow 1100mV 0C Model Hold 'clk_divider|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.283
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.201
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_divider|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'frequencyDivider:fd|C_1Hz'
-Slack : -2.174
-TNS   : -174.141
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.460
-TNS   : -2.715
-
-Type  : Fast 1100mV 0C Model Setup 'frequencyDivider:fd|C_1Hz'
-Slack : -42.773
-TNS   : -3940.888
-
-Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -3.323
-TNS   : -51.047
-
-Type  : Fast 1100mV 0C Model Hold 'frequencyDivider:fd|C_1Hz'
-Slack : 0.102
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_50'
+Slack : 9.926
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.189
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_divider|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 19.230
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'frequencyDivider:fd|C_1Hz'
-Slack : -2.174
-TNS   : -162.552
+Type  : Fast 1100mV 85C Model Setup 'clk_divider|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 13.585
+TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.450
-TNS   : -2.722
+Type  : Fast 1100mV 85C Model Hold 'clk_divider|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.172
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_divider|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_50'
+Slack : 9.643
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_divider|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 19.542
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clk_divider|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 15.697
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk_divider|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.159
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_divider|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_50'
+Slack : 9.632
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_divider|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 19.534
+TNS   : 0.000
 
 ------------------------------------------------------------
