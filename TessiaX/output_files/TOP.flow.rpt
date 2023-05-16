@@ -1,5 +1,5 @@
 Flow report for TOP
-Mon May 15 03:15:31 2023
+Mon May 15 12:17:03 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -37,29 +37,24 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Flow Summary                                                                  ;
-+---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon May 15 03:15:31 2023       ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                   ; TOP                                         ;
-; Top-level Entity Name           ; VGA                                         ;
-; Family                          ; Cyclone V                                   ;
-; Device                          ; 5CSEMA5F31C6                                ;
-; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 11,164 / 32,070 ( 35 % )                    ;
-; Total registers                 ; 56                                          ;
-; Total pins                      ; 30 / 457 ( 7 % )                            ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
-; Total DSP Blocks                ; 3 / 87 ( 3 % )                              ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 1 / 6 ( 17 % )                              ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Flow Summary                                                              ;
++-----------------------------+---------------------------------------------+
+; Flow Status                 ; Successful - Mon May 15 12:17:03 2023       ;
+; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name               ; TOP                                         ;
+; Top-level Entity Name       ; ALU                                         ;
+; Family                      ; Cyclone V                                   ;
+; Device                      ; 5CSEMA5F31C6                                ;
+; Timing Models               ; Final                                       ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/15/2023 02:52:10 ;
+; Start date & time ; 05/15/2023 12:16:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; TOP                 ;
 +-------------------+---------------------+
@@ -78,63 +73,55 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 193662137318782.168414073023828        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 193662137318782.168417461020916        ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ALU_tb         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; testbench      ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                              ; --            ; --          ; eda_simulation ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; ALU_tb                                 ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --             ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; testbenches/ALU_tb.sv                  ; --            ; --          ; ALU_tb         ;
 ; EDA_TEST_BENCH_FILE                  ; testbenches/testbench.sv               ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ALU_tb                                 ; --            ; --          ; ALU_tb         ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; testbench                              ; --            ; --          ; testbench      ;
 ; EDA_TEST_BENCH_NAME                  ; testbench                              ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; ALU_tb                                 ; --            ; --          ; eda_simulation ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; VGA         ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; VGA         ; Top            ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; VGA         ; Top            ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; ALU         ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; ALU         ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; ALU         ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                     ; VGA                                    ; TOP           ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; ALU                                    ; TOP           ; --          ; --             ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:10:54     ; 1.0                     ; 5243 MB             ; 00:10:46                           ;
-; Fitter               ; 00:11:38     ; 1.4                     ; 8072 MB             ; 00:17:59                           ;
-; Assembler            ; 00:00:10     ; 1.0                     ; 4945 MB             ; 00:00:10                           ;
-; Timing Analyzer      ; 00:00:24     ; 11.5                    ; 5508 MB             ; 00:00:41                           ;
-; EDA Netlist Writer   ; 00:00:08     ; 1.0                     ; 5003 MB             ; 00:00:07                           ;
-; Total                ; 00:23:14     ; --                      ; --                  ; 00:29:43                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                          ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Elaboration ; 00:00:14     ; 1.0                     ; 4787 MB             ; 00:00:09                           ;
+; Total                  ; 00:00:14     ; --                      ; --                  ; 00:00:09                           ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+---------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                       ;
-+----------------------+---------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname    ; OS Name    ; OS Version ; Processor type ;
-+----------------------+---------------------+------------+------------+----------------+
-; Analysis & Synthesis ; ACEVEDO-001-PRIMARY ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; ACEVEDO-001-PRIMARY ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; ACEVEDO-001-PRIMARY ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; ACEVEDO-001-PRIMARY ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; ACEVEDO-001-PRIMARY ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+---------------------+------------+------------+----------------+
++-----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                         ;
++------------------------+---------------------+------------+------------+----------------+
+; Module Name            ; Machine Hostname    ; OS Name    ; OS Version ; Processor type ;
++------------------------+---------------------+------------+------------+----------------+
+; Analysis & Elaboration ; ACEVEDO-001-PRIMARY ; Windows 10 ; 10.0       ; x86_64         ;
++------------------------+---------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off tessia-x -c TOP
-quartus_fit --read_settings_files=off --write_settings_files=off tessia-x -c TOP
-quartus_asm --read_settings_files=off --write_settings_files=off tessia-x -c TOP
-quartus_sta tessia-x -c TOP
-quartus_eda --read_settings_files=off --write_settings_files=off tessia-x -c TOP
+quartus_map --read_settings_files=on --write_settings_files=off tessia-x -c TOP --analysis_and_elaboration
 
 
 

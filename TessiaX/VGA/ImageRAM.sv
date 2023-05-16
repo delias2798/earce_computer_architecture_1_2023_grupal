@@ -16,7 +16,7 @@ module ImageRAM(
 
   // Initialize memory contents
   initial begin
-    $readmemb("tessia.dat", RAM); // Read memory values from text file
+    $readmemh("tessia.mif", RAM); // Read memory values from .mif file
   end
 
 endmodule
