@@ -30,6 +30,8 @@ functionDictionary = {
     'DEDR': '001100',
     'MOVE': '111010',
     'CMPE': '110100',
+    'TEVE': '101001',
+    'TISE': '001000',
     'BIGA': '00001000',
     'BNIA': '00011000',
     'MAQA': '11001000',
@@ -111,7 +113,7 @@ def reader():
             binaryFile.write('\n')
             counter += 1
         f.close()
-#    os.remove("src/newfile.txt")
+    os.remove("src/newfile.txt")
 
 def branchAddressing(syntax, counter):
     currentFunction = ''
@@ -180,6 +182,16 @@ def specialAddressing(syntax):
             rs1 = bin(numbers[0])[2:].zfill(4)
             rs2 = bin(numbers[1])[2:].zfill(4)
             value = '1110' + '00' + '010101' + rs1 + '0000' + '00000000' + rs2
+        elif(instruction == 'TEVE'):
+            rb = bin(numbers[0])[2:].zfill(4)
+            rs1 = bin(numbers[1])[2:].zfill(4)
+            rs2 = bin(numbers[2])[2:].zfill(4)
+            value = '1110' + '11' + currentFunction + rs1 + rb + '00000000' + rs2
+        elif(instruction == 'TISE'):
+            rb = bin(numbers[0])[2:].zfill(4)
+            rs1 = bin(numbers[1])[2:].zfill(4)
+            rs2 = bin(numbers[2])[2:].zfill(4)
+            value = '1110' + '00' + currentFunction + rs1 + rb + '00000000' + rs2
         
         return value
 
