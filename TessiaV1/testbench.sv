@@ -1,4 +1,4 @@
-`timescale 1ns / 1ns
+`timescale 1ns / 1ps
 module testbench();
 
 	logic clk;
@@ -29,7 +29,7 @@ module testbench();
 		//$display("The instruction is %h", Instr);
 		$display("The ALU result is: %d and the ALU FLags are %b", ALUResult, ALUFlags);
 		if(MemWrite) begin
-			if(ALUResult === 100 & MemWrite === 7) begin
+			if(ALUResult === 45600) begin
 				$display("Simulation succeeded");
 				$stop;
 			end

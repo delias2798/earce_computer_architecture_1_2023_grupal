@@ -96,7 +96,6 @@ def reader():
         f.seek(0)
         binaryFile = open('src/binary.txt', 'w')
         for line in f:
-            print(line)
             if(line[0:4][3] == 'I'):
                 imm = immediateAddressing(line)
                 binaryFile.write(imm)
@@ -112,7 +111,7 @@ def reader():
             binaryFile.write('\n')
             counter += 1
         f.close()
-    os.remove("src/newfile.txt")
+#    os.remove("src/newfile.txt")
 
 def branchAddressing(syntax, counter):
     currentFunction = ''

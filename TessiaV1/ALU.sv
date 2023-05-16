@@ -1,8 +1,8 @@
 module ALU #(parameter N = 8) (
-    input logic [N-1:0] a,
-    input logic [N-1:0] b,
+    input logic signed [N-1:0] a,
+    input logic signed [N-1:0] b,
     input logic [3:0] ctrl,
-    output logic [N-1:0] result,
+    output logic signed [N-1:0] result,
     output logic [3:0] flags
 );
 

@@ -1,73 +1,61 @@
-import numpy
-from PIL import Image
+import cv2
+import numpy as np
+ 
+def dec_to_bin_concat(pixel_array):
+    # Convert each decimal number to a hexadecimal string with 2 digits
+    bin_N1 = bin(pixel_array[0])[2:].zfill(8)
+    bin_N2 = bin(pixel_array[1])[2:].zfill(8)
+    bin_N3 = bin(pixel_array[2])[2:].zfill(8)
+    bin_N4 = bin(pixel_array[3])[2:].zfill(8)
 
+    # Concatenate the hexadecimal strings
+    bin_concat = bin_N1 + bin_N2 + bin_N3 + bin_N4
 
-def matriz_to_array(imagen_matriz):
-    """
-    Esta funcion recibe una matriz con los pixeles de una imagen y retorna
-    un array de elementos, donde cada elemento es la representacion RGB de 24 bits
-    de un pixel de la imagen
-    """
-    imagen_array = []
-    for fila in imagen_matriz:
-        for pixel in fila:
-            R = pixel[0]
-            G = pixel[1]
-            B = pixel[2]
-            decimal_rgb = (R * 256 * 256) + (G * 256) + B
-            imagen_array.append(decimal_rgb)
-    return imagen_array
-
-def imagen_pixeles(image_path, ancho, alto):
-    """
-    Esta funcion recibe la ruta de una imagen y retorna una array conteniendo
-    a todos los pixeles RGB
-    """
-    image = Image.open(image_path, "r")
-    # Cambair la resolucion de la imagen
-    image = image.resize((ancho,alto))
-    width, height = image.size
-    pixel_values = list(image.getdata())
-    if image.mode == "RGB":
-        channels = 3
-    else:
-        print(f'Unknown mode: {image.mode}')
-        return None
-    pixel_values = numpy.array(pixel_values).reshape((height, width, channels))
-    imagen_array = matriz_to_array(pixel_values)
-    return imagen_array
-
-def crear_rom_init(tam_palabra, profundidad, ancho, alto, img):
+    # Return the concatenated hexadecimal string
+    return bin_concat
+ 
+def create_mem_file(word=32, deep=45100, image_file1="tessia1.jpg"):
     """
     Esta funcion se encarga de crear un archivo de inicialización de una memoria ROM
     conteniendo los pixeles de una imagen.
     """
     # abrir o crear un nuevo archivo de texto en modo append
-    archivo_rom = open("ram_init.mif", "a")
-    
-    # Agregar la estructura inicial del archivo .mif
-    archivo_rom.write("-- Brrr real hasta la muerte bebecita....\n")
-    archivo_rom.write("-- Mc Kevinho\n \n")
-    archivo_rom.write(f'WIDTH={tam_palabra};\nDEPTH={profundidad};\n \n')
-    archivo_rom.write("ADDRESS_RADIX=UNS;\nDATA_RADIX=UNS;\n \n")
-    archivo_rom.write("CONTENT BEGIN\n")
-    
-    # Dejar 5 posiciones de memoria libres
-    archivo_rom.write(f'\t{0}\t :\t {0};\n')
-    contador = 1
-    for pixel in img:
-        archivo_rom.write(f'\t{contador}\t :\t {pixel};\n')
-        contador += 1
-        
-    # Escribir un 1 para indicar el fin de los pixeles de la imagen
-    archivo_rom.write(f'\t{contador}\t :\t {1};\n')
-    # Llenar los espacios vacios con ceros
-    contador += 1
-    archivo_rom.write(f'\t[{contador}..{profundidad-1}]\t :\t {0};\n')
-    
-    archivo_rom.write("END;")
-    archivo_rom.close()
-        
-imagen = imagen_pixeles("baby.jpg", 200, 120)
-crear_rom_init(24, 64000, 200, 120, imagen)
+    file = open("TessiaV1/ram_data.txt", "r+")
 
+    # Agregar la estructura inicial del archivo .txt
+    # Write 100 words with 0
+    for i in range(94):
+        file.write("00000000000000000000000000000000\n")
+        if(i == 15):
+            file.write("00000000000000000101100001001000\n")
+            file.write("00000000000000000000000011111111\n")
+            file.write("00000000000000010100011001000110\n")
+            file.write("00000000000000000000000001111000\n")
+            file.write("00000000000000000000000001110110\n")
+            file.write("00000000000000000000000000000001\n")
+
+    # Read the image 1 and convert it to Gray Scale
+    A = cv2.imread(image_file1, cv2.IMREAD_GRAYSCALE)
+    A = cv2.resize(A, (300, 300))
+    A = A.flatten()
+    # Loop the image 1 row and colums
+    quarter_counter = 1
+    quarter_pixels = []
+    max_value = len(A)
+    for i in range(0, max_value):
+        quarter_pixels.append(A[i])
+        if (quarter_counter == 4):
+            quarter_pixels = quarter_pixels[::-1]
+            string_to_write = dec_to_bin_concat(quarter_pixels)
+            file.write(f'{string_to_write}')
+            file.write('\n')
+            quarter_counter = 1
+            quarter_pixels = []
+        else:
+            quarter_counter += 1
+              
+    for i in range(22500):
+        file.write("00000000000000000000000000000000\n")
+    file.close()
+        
+create_mem_file(word=32, deep=45100, image_file1="tessia1.jpg")
