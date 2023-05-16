@@ -1,5 +1,6 @@
-|VGA
+|VGAX
 clk_50 => clk_50.IN1
+imageSelector => imageSelector.IN1
 VGA_R[0] <= PixelFetcher:pixelfetcher.VGA_R
 VGA_R[1] <= PixelFetcher:pixelfetcher.VGA_R
 VGA_R[2] <= PixelFetcher:pixelfetcher.VGA_R
@@ -31,7 +32,7 @@ VGA_VS <= VGAController:VGA.VGA_VS
 VGA_HS <= VGAController:VGA.VGA_HS
 
 
-|VGA|horizontal_counter:HC
+|VGAX|horizontal_counter:HC
 clk_25 => enable_v_counter~reg0.CLK
 clk_25 => h_counter[0]~reg0.CLK
 clk_25 => h_counter[1]~reg0.CLK
@@ -56,7 +57,7 @@ h_counter[8] <= h_counter[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 h_counter[9] <= h_counter[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|VGA|vertical_counter:VC
+|VGAX|vertical_counter:VC
 clk_25 => v_counter[0]~reg0.CLK
 clk_25 => v_counter[1]~reg0.CLK
 clk_25 => v_counter[2]~reg0.CLK
@@ -89,12 +90,12 @@ v_counter[8] <= v_counter[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 v_counter[9] <= v_counter[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|VGA|vga_clk:clk_divider
+|VGAX|vga_clk:clk_divider
 inclk0 => sub_wire1[0].IN1
 c0 <= altpll:altpll_component.clk
 
 
-|VGA|vga_clk:clk_divider|altpll:altpll_component
+|VGAX|vga_clk:clk_divider|altpll:altpll_component
 inclk[0] => vga_clk_altpll:auto_generated.inclk[0]
 inclk[1] => vga_clk_altpll:auto_generated.inclk[1]
 fbin => ~NO_FANOUT~
@@ -154,7 +155,7 @@ fref <= <GND>
 icdrclk <= <GND>
 
 
-|VGA|vga_clk:clk_divider|altpll:altpll_component|vga_clk_altpll:auto_generated
+|VGAX|vga_clk:clk_divider|altpll:altpll_component|vga_clk_altpll:auto_generated
 clk[0] <= generic_pll1.O_OUTCLK
 clk[1] <= <GND>
 clk[2] <= <GND>
@@ -166,7 +167,7 @@ inclk[1] => ~NO_FANOUT~
 locked <= generic_pll1.LOCKED
 
 
-|VGA|VGAController:VGA
+|VGAX|VGAController:VGA
 rst => VGA_BLANK_N~reg0.ACLR
 rst => VGA_VS~reg0.ACLR
 rst => VGA_HS~reg0.ACLR
@@ -240,7 +241,7 @@ VGA_SYNC_N <= <GND>
 video_on <= VGA_BLANK_N~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|VGA|ImageRAM:mem
+|VGAX|ImageRAM:mem
 clk => pixel[0]~reg0.CLK
 clk => pixel[1]~reg0.CLK
 clk => pixel[2]~reg0.CLK
@@ -306,7 +307,6 @@ address[14] => RAM.RADDR14
 address[15] => LessThan0.IN21
 address[15] => RAM.RADDR15
 address[16] => LessThan0.IN20
-address[16] => RAM.RADDR16
 address[17] => LessThan0.IN19
 pixel[0] <= pixel[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 pixel[1] <= pixel[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -342,7 +342,7 @@ pixel[30] <= pixel[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 pixel[31] <= pixel[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|VGA|PixelFetcher:pixelfetcher
+|VGAX|PixelFetcher:pixelfetcher
 clk => VGA_B[0]~reg0.CLK
 clk => VGA_B[1]~reg0.CLK
 clk => VGA_B[2]~reg0.CLK
@@ -367,6 +367,25 @@ clk => VGA_R[4]~reg0.CLK
 clk => VGA_R[5]~reg0.CLK
 clk => VGA_R[6]~reg0.CLK
 clk => VGA_R[7]~reg0.CLK
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
+imageSelector => address.OUTPUTSELECT
 v_counter[0] => Mult0.IN18
 v_counter[1] => Mult0.IN17
 v_counter[2] => Mult0.IN16
@@ -395,58 +414,58 @@ video_on => VGA_R.OUTPUTSELECT
 video_on => VGA_R.OUTPUTSELECT
 video_on => VGA_R.OUTPUTSELECT
 video_on => VGA_R.OUTPUTSELECT
-pixel[0] => VGA_R.DATAB
-pixel[1] => VGA_R.DATAB
-pixel[2] => VGA_R.DATAB
-pixel[3] => VGA_R.DATAB
-pixel[4] => VGA_R.DATAB
-pixel[5] => VGA_R.DATAB
-pixel[6] => VGA_R.DATAB
-pixel[7] => VGA_R.DATAB
-pixel[8] => ~NO_FANOUT~
-pixel[9] => ~NO_FANOUT~
-pixel[10] => ~NO_FANOUT~
-pixel[11] => ~NO_FANOUT~
-pixel[12] => ~NO_FANOUT~
-pixel[13] => ~NO_FANOUT~
-pixel[14] => ~NO_FANOUT~
-pixel[15] => ~NO_FANOUT~
-pixel[16] => ~NO_FANOUT~
-pixel[17] => ~NO_FANOUT~
-pixel[18] => ~NO_FANOUT~
-pixel[19] => ~NO_FANOUT~
-pixel[20] => ~NO_FANOUT~
-pixel[21] => ~NO_FANOUT~
-pixel[22] => ~NO_FANOUT~
-pixel[23] => ~NO_FANOUT~
-pixel[24] => ~NO_FANOUT~
-pixel[25] => ~NO_FANOUT~
-pixel[26] => ~NO_FANOUT~
-pixel[27] => ~NO_FANOUT~
-pixel[28] => ~NO_FANOUT~
-pixel[29] => ~NO_FANOUT~
-pixel[30] => ~NO_FANOUT~
-pixel[31] => ~NO_FANOUT~
-address[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[8] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[9] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[10] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[11] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[12] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[13] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[14] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[15] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[16] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[17] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[18] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-address[19] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+pixel[0] => Mux7.IN3
+pixel[1] => Mux6.IN3
+pixel[2] => Mux5.IN3
+pixel[3] => Mux4.IN3
+pixel[4] => Mux3.IN3
+pixel[5] => Mux2.IN3
+pixel[6] => Mux1.IN3
+pixel[7] => Mux0.IN3
+pixel[8] => Mux7.IN2
+pixel[9] => Mux6.IN2
+pixel[10] => Mux5.IN2
+pixel[11] => Mux4.IN2
+pixel[12] => Mux3.IN2
+pixel[13] => Mux2.IN2
+pixel[14] => Mux1.IN2
+pixel[15] => Mux0.IN2
+pixel[16] => Mux7.IN1
+pixel[17] => Mux6.IN1
+pixel[18] => Mux5.IN1
+pixel[19] => Mux4.IN1
+pixel[20] => Mux3.IN1
+pixel[21] => Mux2.IN1
+pixel[22] => Mux1.IN1
+pixel[23] => Mux0.IN1
+pixel[24] => Mux7.IN0
+pixel[25] => Mux6.IN0
+pixel[26] => Mux5.IN0
+pixel[27] => Mux4.IN0
+pixel[28] => Mux3.IN0
+pixel[29] => Mux2.IN0
+pixel[30] => Mux1.IN0
+pixel[31] => Mux0.IN0
+address[0] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[1] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[2] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[3] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[4] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[5] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[6] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[7] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[8] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[9] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[10] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[11] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[12] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[13] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[14] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[15] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[16] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[17] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[18] <= address.DB_MAX_OUTPUT_PORT_TYPE
+address[19] <= <GND>
 address[20] <= <GND>
 address[21] <= <GND>
 VGA_R[0] <= VGA_R[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
