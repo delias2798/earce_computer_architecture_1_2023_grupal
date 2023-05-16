@@ -53,7 +53,7 @@ module ALU_tb();
         ctrl = 4'b0000;
         #10;
         $display("ADD: %d + %d = %d and the flags are {neg %b, zero %b, carry %b, overflow %b}",
-                 a, b, result, flags[3], flags[2], flags[1], f11lags[0]);
+                 a, b, result, flags[3], flags[2], flags[1], flags[0]);
 
         $stop;
     end

@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY ALU
+set_global_assignment -name TOP_LEVEL_ENTITY VGAX
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:34:00  MAY 13, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -85,12 +85,19 @@ set_location_assignment PIN_F10 -to VGA_BLANK_N
 set_location_assignment PIN_C10 -to VGA_SYNC_N
 set_location_assignment PIN_D11 -to VGA_VS
 set_location_assignment PIN_AF14 -to clk_50
-set_global_assignment -name SYSTEMVERILOG_FILE testbenches/ALU_tb.sv
+set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/testbench.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_NAME ALU_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ALU_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ALU_tb -section_id ALU_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/ALU_tb.sv -section_id ALU_tb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LICENSE_FILE tessia.dat
-set_global_assignment -name SYSTEMVERILOG_FILE VGA/ImageReader.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/VGAX.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testbenches/ALU_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE VGA/VGAController.sv
 set_global_assignment -name SYSTEMVERILOG_FILE VGA/vga_clk.sv
-set_global_assignment -name SYSTEMVERILOG_FILE VGA/VGA.sv
 set_global_assignment -name SYSTEMVERILOG_FILE VGA/vertical_counter.sv
 set_global_assignment -name SYSTEMVERILOG_FILE VGA/horizontal_counter.sv
 set_global_assignment -name SYSTEMVERILOG_FILE "decode-stage/RegisterFile.sv"
@@ -117,12 +124,4 @@ set_global_assignment -name SYSTEMVERILOG_FILE TOP.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Tessia.sv
 set_global_assignment -name SYSTEMVERILOG_FILE VGA/PixelFetcher.sv
 set_global_assignment -name SYSTEMVERILOG_FILE VGA/ImageRAM.sv
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/testbench.sv -section_id testbench
-set_global_assignment -name EDA_TEST_BENCH_NAME ALU_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ALU_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ALU_tb -section_id ALU_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/ALU_tb.sv -section_id ALU_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,5 +1,5 @@
-Analysis & Elaboration report for TOP
-Mon May 15 12:17:03 2023
+Analysis & Synthesis report for TOP
+Mon May 15 19:31:41 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -7,12 +7,27 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Top-level Entity: |ALU
-  5. Analysis & Elaboration Settings
-  6. Analysis & Elaboration Messages
-  7. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: vga_clk:clk_divider|altpll:altpll_component
+ 12. Parameter Settings for User Entity Instance: VGAController:VGA
+ 13. Parameter Settings for User Entity Instance: PixelFetcher:pixelfetcher
+ 14. Parameter Settings for Inferred Entity Instance: PixelFetcher:pixelfetcher|lpm_divide:Div0
+ 15. Parameter Settings for Inferred Entity Instance: PixelFetcher:pixelfetcher|lpm_divide:Div1
+ 16. altpll Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "PixelFetcher:pixelfetcher"
+ 18. Port Connectivity Checks: "VGAController:VGA"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+ 22. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -35,57 +50,36 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Mon May 15 12:17:03 2023       ;
-; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                 ; TOP                                         ;
-; Top-level Entity Name         ; ALU                                         ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |ALU ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; N              ; 8     ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon May 15 19:31:41 2023       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; TOP                                         ;
+; Top-level Entity Name           ; VGAX                                        ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 56                                          ;
+; Total pins                      ; 31                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 3                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 1                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; ALU                ; TOP                ;
+; Top-level entity name                                                           ; VGAX               ; TOP                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -166,25 +160,701 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                           ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
+; tessia.dat                       ; yes             ; User Unspecified File        ; C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/tessia.dat                 ;         ;
+; VGA/VGAX.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/VGAX.sv                ;         ;
+; VGA/VGAController.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/VGAController.sv       ;         ;
+; VGA/vga_clk.sv                   ; yes             ; User Wizard-Generated File   ; C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/vga_clk.sv             ;         ;
+; VGA/vertical_counter.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/vertical_counter.sv    ;         ;
+; VGA/horizontal_counter.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/horizontal_counter.sv  ;         ;
+; VGA/PixelFetcher.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/PixelFetcher.sv        ;         ;
+; VGA/ImageRAM.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/ImageRAM.sv            ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf                                                      ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                  ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_pll.inc                                                 ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratixii_pll.inc                                               ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                               ;         ;
+; db/vga_clk_altpll.v              ; yes             ; Auto-Generated Megafunction  ; C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/db/vga_clk_altpll.v        ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                  ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc                                                 ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                             ;         ;
+; db/lpm_divide_sbm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/db/lpm_divide_sbm.tdf      ;         ;
+; db/sign_div_unsign_2mh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/db/sign_div_unsign_2mh.tdf ;         ;
+; db/alt_u_div_a0f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/db/alt_u_div_a0f.tdf       ;         ;
+; db/lpm_divide_4dm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/db/lpm_divide_4dm.tdf      ;         ;
+; db/sign_div_unsign_anh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/db/sign_div_unsign_anh.tdf ;         ;
+; db/alt_u_div_q2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/db/alt_u_div_q2f.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                          ;
++---------------------------------------------+----------------------------------------+
+; Resource                                    ; Usage                                  ;
++---------------------------------------------+----------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 7055                                   ;
+;                                             ;                                        ;
+; Combinational ALUT usage for logic          ; 8008                                   ;
+;     -- 7 input functions                    ; 1646                                   ;
+;     -- 6 input functions                    ; 4453                                   ;
+;     -- 5 input functions                    ; 677                                    ;
+;     -- 4 input functions                    ; 729                                    ;
+;     -- <=3 input functions                  ; 503                                    ;
+;                                             ;                                        ;
+; Dedicated logic registers                   ; 56                                     ;
+;                                             ;                                        ;
+; I/O pins                                    ; 31                                     ;
+;                                             ;                                        ;
+; Total DSP Blocks                            ; 3                                      ;
+;                                             ;                                        ;
+; Total PLLs                                  ; 1                                      ;
+;     -- PLLs                                 ; 1                                      ;
+;                                             ;                                        ;
+; Maximum fan-out node                        ; PixelFetcher:pixelfetcher|address[1]~3 ;
+; Maximum fan-out                             ; 4261                                   ;
+; Total fan-out                               ; 46125                                  ;
+; Average fan-out                             ; 5.67                                   ;
++---------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                       ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |VGAX                                     ; 8008 (0)            ; 56 (0)                    ; 0                 ; 3          ; 31   ; 0            ; |VGAX                                                                                                                           ; VGAX                ; work         ;
+;    |ImageRAM:mem|                         ; 7445 (7445)         ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAX|ImageRAM:mem                                                                                                              ; ImageRAM            ; work         ;
+;    |PixelFetcher:pixelfetcher|            ; 535 (53)            ; 24 (24)                   ; 0                 ; 3          ; 0    ; 0            ; |VGAX|PixelFetcher:pixelfetcher                                                                                                 ; PixelFetcher        ; work         ;
+;       |lpm_divide:Div0|                   ; 240 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAX|PixelFetcher:pixelfetcher|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_sbm:auto_generated|  ; 240 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAX|PixelFetcher:pixelfetcher|lpm_divide:Div0|lpm_divide_sbm:auto_generated                                                   ; lpm_divide_sbm      ; work         ;
+;             |sign_div_unsign_2mh:divider| ; 240 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAX|PixelFetcher:pixelfetcher|lpm_divide:Div0|lpm_divide_sbm:auto_generated|sign_div_unsign_2mh:divider                       ; sign_div_unsign_2mh ; work         ;
+;                |alt_u_div_a0f:divider|    ; 240 (240)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAX|PixelFetcher:pixelfetcher|lpm_divide:Div0|lpm_divide_sbm:auto_generated|sign_div_unsign_2mh:divider|alt_u_div_a0f:divider ; alt_u_div_a0f       ; work         ;
+;       |lpm_divide:Div1|                   ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAX|PixelFetcher:pixelfetcher|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_4dm:auto_generated|  ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAX|PixelFetcher:pixelfetcher|lpm_divide:Div1|lpm_divide_4dm:auto_generated                                                   ; lpm_divide_4dm      ; work         ;
+;             |sign_div_unsign_anh:divider| ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAX|PixelFetcher:pixelfetcher|lpm_divide:Div1|lpm_divide_4dm:auto_generated|sign_div_unsign_anh:divider                       ; sign_div_unsign_anh ; work         ;
+;                |alt_u_div_q2f:divider|    ; 242 (242)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAX|PixelFetcher:pixelfetcher|lpm_divide:Div1|lpm_divide_4dm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_q2f:divider ; alt_u_div_q2f       ; work         ;
+;    |VGAController:VGA|                    ; 4 (4)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAX|VGAController:VGA                                                                                                         ; VGAController       ; work         ;
+;    |horizontal_counter:HC|                ; 12 (12)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |VGAX|horizontal_counter:HC                                                                                                     ; horizontal_counter  ; work         ;
+;    |vertical_counter:VC|                  ; 12 (12)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |VGAX|vertical_counter:VC                                                                                                       ; vertical_counter    ; work         ;
+;    |vga_clk:clk_divider|                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAX|vga_clk:clk_divider                                                                                                       ; vga_clk             ; work         ;
+;       |altpll:altpll_component|           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAX|vga_clk:clk_divider|altpll:altpll_component                                                                               ; altpll              ; work         ;
+;          |vga_clk_altpll:auto_generated|  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGAX|vga_clk:clk_divider|altpll:altpll_component|vga_clk_altpll:auto_generated                                                 ; vga_clk_altpll      ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Two Independent 18x18           ; 2           ;
+; Independent 18x18 plus 36       ; 1           ;
+; Total number of DSP blocks      ; 3           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 3           ;
++---------------------------------+-------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 56    ;
+; Number of registers using Synchronous Clear  ; 52    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |VGAX|PixelFetcher:pixelfetcher|VGA_G[5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |VGAX|PixelFetcher:pixelfetcher|VGA_B[1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |VGAX|PixelFetcher:pixelfetcher|VGA_R[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga_clk:clk_divider|altpll:altpll_component ;
++-------------------------------+---------------------------+------------------------------+
+; Parameter Name                ; Value                     ; Type                         ;
++-------------------------------+---------------------------+------------------------------+
+; OPERATION_MODE                ; NORMAL                    ; Untyped                      ;
+; PLL_TYPE                      ; AUTO                      ; Untyped                      ;
+; LPM_HINT                      ; CBX_MODULE_PREFIX=vga_clk ; Untyped                      ;
+; QUALIFY_CONF_DONE             ; OFF                       ; Untyped                      ;
+; COMPENSATE_CLOCK              ; CLK0                      ; Untyped                      ;
+; SCAN_CHAIN                    ; LONG                      ; Untyped                      ;
+; PRIMARY_CLOCK                 ; INCLK0                    ; Untyped                      ;
+; INCLK0_INPUT_FREQUENCY        ; 20000                     ; Signed Integer               ;
+; INCLK1_INPUT_FREQUENCY        ; 0                         ; Untyped                      ;
+; GATE_LOCK_SIGNAL              ; NO                        ; Untyped                      ;
+; GATE_LOCK_COUNTER             ; 0                         ; Untyped                      ;
+; LOCK_HIGH                     ; 1                         ; Untyped                      ;
+; LOCK_LOW                      ; 1                         ; Untyped                      ;
+; VALID_LOCK_MULTIPLIER         ; 1                         ; Untyped                      ;
+; INVALID_LOCK_MULTIPLIER       ; 5                         ; Untyped                      ;
+; SWITCH_OVER_ON_LOSSCLK        ; OFF                       ; Untyped                      ;
+; SWITCH_OVER_ON_GATED_LOCK     ; OFF                       ; Untyped                      ;
+; ENABLE_SWITCH_OVER_COUNTER    ; OFF                       ; Untyped                      ;
+; SKIP_VCO                      ; OFF                       ; Untyped                      ;
+; SWITCH_OVER_COUNTER           ; 0                         ; Untyped                      ;
+; SWITCH_OVER_TYPE              ; AUTO                      ; Untyped                      ;
+; FEEDBACK_SOURCE               ; EXTCLK0                   ; Untyped                      ;
+; BANDWIDTH                     ; 0                         ; Untyped                      ;
+; BANDWIDTH_TYPE                ; AUTO                      ; Untyped                      ;
+; SPREAD_FREQUENCY              ; 0                         ; Untyped                      ;
+; DOWN_SPREAD                   ; 0                         ; Untyped                      ;
+; SELF_RESET_ON_GATED_LOSS_LOCK ; OFF                       ; Untyped                      ;
+; SELF_RESET_ON_LOSS_LOCK       ; OFF                       ; Untyped                      ;
+; CLK9_MULTIPLY_BY              ; 0                         ; Untyped                      ;
+; CLK8_MULTIPLY_BY              ; 0                         ; Untyped                      ;
+; CLK7_MULTIPLY_BY              ; 0                         ; Untyped                      ;
+; CLK6_MULTIPLY_BY              ; 0                         ; Untyped                      ;
+; CLK5_MULTIPLY_BY              ; 1                         ; Untyped                      ;
+; CLK4_MULTIPLY_BY              ; 1                         ; Untyped                      ;
+; CLK3_MULTIPLY_BY              ; 1                         ; Untyped                      ;
+; CLK2_MULTIPLY_BY              ; 1                         ; Untyped                      ;
+; CLK1_MULTIPLY_BY              ; 1                         ; Untyped                      ;
+; CLK0_MULTIPLY_BY              ; 1                         ; Signed Integer               ;
+; CLK9_DIVIDE_BY                ; 0                         ; Untyped                      ;
+; CLK8_DIVIDE_BY                ; 0                         ; Untyped                      ;
+; CLK7_DIVIDE_BY                ; 0                         ; Untyped                      ;
+; CLK6_DIVIDE_BY                ; 0                         ; Untyped                      ;
+; CLK5_DIVIDE_BY                ; 1                         ; Untyped                      ;
+; CLK4_DIVIDE_BY                ; 1                         ; Untyped                      ;
+; CLK3_DIVIDE_BY                ; 1                         ; Untyped                      ;
+; CLK2_DIVIDE_BY                ; 1                         ; Untyped                      ;
+; CLK1_DIVIDE_BY                ; 1                         ; Untyped                      ;
+; CLK0_DIVIDE_BY                ; 2                         ; Signed Integer               ;
+; CLK9_PHASE_SHIFT              ; 0                         ; Untyped                      ;
+; CLK8_PHASE_SHIFT              ; 0                         ; Untyped                      ;
+; CLK7_PHASE_SHIFT              ; 0                         ; Untyped                      ;
+; CLK6_PHASE_SHIFT              ; 0                         ; Untyped                      ;
+; CLK5_PHASE_SHIFT              ; 0                         ; Untyped                      ;
+; CLK4_PHASE_SHIFT              ; 0                         ; Untyped                      ;
+; CLK3_PHASE_SHIFT              ; 0                         ; Untyped                      ;
+; CLK2_PHASE_SHIFT              ; 0                         ; Untyped                      ;
+; CLK1_PHASE_SHIFT              ; 0                         ; Untyped                      ;
+; CLK0_PHASE_SHIFT              ; 0                         ; Untyped                      ;
+; CLK5_TIME_DELAY               ; 0                         ; Untyped                      ;
+; CLK4_TIME_DELAY               ; 0                         ; Untyped                      ;
+; CLK3_TIME_DELAY               ; 0                         ; Untyped                      ;
+; CLK2_TIME_DELAY               ; 0                         ; Untyped                      ;
+; CLK1_TIME_DELAY               ; 0                         ; Untyped                      ;
+; CLK0_TIME_DELAY               ; 0                         ; Untyped                      ;
+; CLK9_DUTY_CYCLE               ; 50                        ; Untyped                      ;
+; CLK8_DUTY_CYCLE               ; 50                        ; Untyped                      ;
+; CLK7_DUTY_CYCLE               ; 50                        ; Untyped                      ;
+; CLK6_DUTY_CYCLE               ; 50                        ; Untyped                      ;
+; CLK5_DUTY_CYCLE               ; 50                        ; Untyped                      ;
+; CLK4_DUTY_CYCLE               ; 50                        ; Untyped                      ;
+; CLK3_DUTY_CYCLE               ; 50                        ; Untyped                      ;
+; CLK2_DUTY_CYCLE               ; 50                        ; Untyped                      ;
+; CLK1_DUTY_CYCLE               ; 50                        ; Untyped                      ;
+; CLK0_DUTY_CYCLE               ; 50                        ; Signed Integer               ;
+; CLK9_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                      ;
+; CLK8_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                      ;
+; CLK7_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                      ;
+; CLK6_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                      ;
+; CLK5_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                      ;
+; CLK4_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                      ;
+; CLK3_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                      ;
+; CLK2_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                      ;
+; CLK1_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                      ;
+; CLK0_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                      ;
+; CLK9_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                      ;
+; CLK8_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                      ;
+; CLK7_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                      ;
+; CLK6_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                      ;
+; CLK5_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                      ;
+; CLK4_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                      ;
+; CLK3_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                      ;
+; CLK2_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                      ;
+; CLK1_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                      ;
+; CLK0_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                      ;
+; LOCK_WINDOW_UI                ;  0.05                     ; Untyped                      ;
+; LOCK_WINDOW_UI_BITS           ; UNUSED                    ; Untyped                      ;
+; VCO_RANGE_DETECTOR_LOW_BITS   ; UNUSED                    ; Untyped                      ;
+; VCO_RANGE_DETECTOR_HIGH_BITS  ; UNUSED                    ; Untyped                      ;
+; DPA_MULTIPLY_BY               ; 0                         ; Untyped                      ;
+; DPA_DIVIDE_BY                 ; 1                         ; Untyped                      ;
+; DPA_DIVIDER                   ; 0                         ; Untyped                      ;
+; EXTCLK3_MULTIPLY_BY           ; 1                         ; Untyped                      ;
+; EXTCLK2_MULTIPLY_BY           ; 1                         ; Untyped                      ;
+; EXTCLK1_MULTIPLY_BY           ; 1                         ; Untyped                      ;
+; EXTCLK0_MULTIPLY_BY           ; 1                         ; Untyped                      ;
+; EXTCLK3_DIVIDE_BY             ; 1                         ; Untyped                      ;
+; EXTCLK2_DIVIDE_BY             ; 1                         ; Untyped                      ;
+; EXTCLK1_DIVIDE_BY             ; 1                         ; Untyped                      ;
+; EXTCLK0_DIVIDE_BY             ; 1                         ; Untyped                      ;
+; EXTCLK3_PHASE_SHIFT           ; 0                         ; Untyped                      ;
+; EXTCLK2_PHASE_SHIFT           ; 0                         ; Untyped                      ;
+; EXTCLK1_PHASE_SHIFT           ; 0                         ; Untyped                      ;
+; EXTCLK0_PHASE_SHIFT           ; 0                         ; Untyped                      ;
+; EXTCLK3_TIME_DELAY            ; 0                         ; Untyped                      ;
+; EXTCLK2_TIME_DELAY            ; 0                         ; Untyped                      ;
+; EXTCLK1_TIME_DELAY            ; 0                         ; Untyped                      ;
+; EXTCLK0_TIME_DELAY            ; 0                         ; Untyped                      ;
+; EXTCLK3_DUTY_CYCLE            ; 50                        ; Untyped                      ;
+; EXTCLK2_DUTY_CYCLE            ; 50                        ; Untyped                      ;
+; EXTCLK1_DUTY_CYCLE            ; 50                        ; Untyped                      ;
+; EXTCLK0_DUTY_CYCLE            ; 50                        ; Untyped                      ;
+; VCO_MULTIPLY_BY               ; 0                         ; Untyped                      ;
+; VCO_DIVIDE_BY                 ; 0                         ; Untyped                      ;
+; SCLKOUT0_PHASE_SHIFT          ; 0                         ; Untyped                      ;
+; SCLKOUT1_PHASE_SHIFT          ; 0                         ; Untyped                      ;
+; VCO_MIN                       ; 0                         ; Untyped                      ;
+; VCO_MAX                       ; 0                         ; Untyped                      ;
+; VCO_CENTER                    ; 0                         ; Untyped                      ;
+; PFD_MIN                       ; 0                         ; Untyped                      ;
+; PFD_MAX                       ; 0                         ; Untyped                      ;
+; M_INITIAL                     ; 0                         ; Untyped                      ;
+; M                             ; 0                         ; Untyped                      ;
+; N                             ; 1                         ; Untyped                      ;
+; M2                            ; 1                         ; Untyped                      ;
+; N2                            ; 1                         ; Untyped                      ;
+; SS                            ; 1                         ; Untyped                      ;
+; C0_HIGH                       ; 0                         ; Untyped                      ;
+; C1_HIGH                       ; 0                         ; Untyped                      ;
+; C2_HIGH                       ; 0                         ; Untyped                      ;
+; C3_HIGH                       ; 0                         ; Untyped                      ;
+; C4_HIGH                       ; 0                         ; Untyped                      ;
+; C5_HIGH                       ; 0                         ; Untyped                      ;
+; C6_HIGH                       ; 0                         ; Untyped                      ;
+; C7_HIGH                       ; 0                         ; Untyped                      ;
+; C8_HIGH                       ; 0                         ; Untyped                      ;
+; C9_HIGH                       ; 0                         ; Untyped                      ;
+; C0_LOW                        ; 0                         ; Untyped                      ;
+; C1_LOW                        ; 0                         ; Untyped                      ;
+; C2_LOW                        ; 0                         ; Untyped                      ;
+; C3_LOW                        ; 0                         ; Untyped                      ;
+; C4_LOW                        ; 0                         ; Untyped                      ;
+; C5_LOW                        ; 0                         ; Untyped                      ;
+; C6_LOW                        ; 0                         ; Untyped                      ;
+; C7_LOW                        ; 0                         ; Untyped                      ;
+; C8_LOW                        ; 0                         ; Untyped                      ;
+; C9_LOW                        ; 0                         ; Untyped                      ;
+; C0_INITIAL                    ; 0                         ; Untyped                      ;
+; C1_INITIAL                    ; 0                         ; Untyped                      ;
+; C2_INITIAL                    ; 0                         ; Untyped                      ;
+; C3_INITIAL                    ; 0                         ; Untyped                      ;
+; C4_INITIAL                    ; 0                         ; Untyped                      ;
+; C5_INITIAL                    ; 0                         ; Untyped                      ;
+; C6_INITIAL                    ; 0                         ; Untyped                      ;
+; C7_INITIAL                    ; 0                         ; Untyped                      ;
+; C8_INITIAL                    ; 0                         ; Untyped                      ;
+; C9_INITIAL                    ; 0                         ; Untyped                      ;
+; C0_MODE                       ; BYPASS                    ; Untyped                      ;
+; C1_MODE                       ; BYPASS                    ; Untyped                      ;
+; C2_MODE                       ; BYPASS                    ; Untyped                      ;
+; C3_MODE                       ; BYPASS                    ; Untyped                      ;
+; C4_MODE                       ; BYPASS                    ; Untyped                      ;
+; C5_MODE                       ; BYPASS                    ; Untyped                      ;
+; C6_MODE                       ; BYPASS                    ; Untyped                      ;
+; C7_MODE                       ; BYPASS                    ; Untyped                      ;
+; C8_MODE                       ; BYPASS                    ; Untyped                      ;
+; C9_MODE                       ; BYPASS                    ; Untyped                      ;
+; C0_PH                         ; 0                         ; Untyped                      ;
+; C1_PH                         ; 0                         ; Untyped                      ;
+; C2_PH                         ; 0                         ; Untyped                      ;
+; C3_PH                         ; 0                         ; Untyped                      ;
+; C4_PH                         ; 0                         ; Untyped                      ;
+; C5_PH                         ; 0                         ; Untyped                      ;
+; C6_PH                         ; 0                         ; Untyped                      ;
+; C7_PH                         ; 0                         ; Untyped                      ;
+; C8_PH                         ; 0                         ; Untyped                      ;
+; C9_PH                         ; 0                         ; Untyped                      ;
+; L0_HIGH                       ; 1                         ; Untyped                      ;
+; L1_HIGH                       ; 1                         ; Untyped                      ;
+; G0_HIGH                       ; 1                         ; Untyped                      ;
+; G1_HIGH                       ; 1                         ; Untyped                      ;
+; G2_HIGH                       ; 1                         ; Untyped                      ;
+; G3_HIGH                       ; 1                         ; Untyped                      ;
+; E0_HIGH                       ; 1                         ; Untyped                      ;
+; E1_HIGH                       ; 1                         ; Untyped                      ;
+; E2_HIGH                       ; 1                         ; Untyped                      ;
+; E3_HIGH                       ; 1                         ; Untyped                      ;
+; L0_LOW                        ; 1                         ; Untyped                      ;
+; L1_LOW                        ; 1                         ; Untyped                      ;
+; G0_LOW                        ; 1                         ; Untyped                      ;
+; G1_LOW                        ; 1                         ; Untyped                      ;
+; G2_LOW                        ; 1                         ; Untyped                      ;
+; G3_LOW                        ; 1                         ; Untyped                      ;
+; E0_LOW                        ; 1                         ; Untyped                      ;
+; E1_LOW                        ; 1                         ; Untyped                      ;
+; E2_LOW                        ; 1                         ; Untyped                      ;
+; E3_LOW                        ; 1                         ; Untyped                      ;
+; L0_INITIAL                    ; 1                         ; Untyped                      ;
+; L1_INITIAL                    ; 1                         ; Untyped                      ;
+; G0_INITIAL                    ; 1                         ; Untyped                      ;
+; G1_INITIAL                    ; 1                         ; Untyped                      ;
+; G2_INITIAL                    ; 1                         ; Untyped                      ;
+; G3_INITIAL                    ; 1                         ; Untyped                      ;
+; E0_INITIAL                    ; 1                         ; Untyped                      ;
+; E1_INITIAL                    ; 1                         ; Untyped                      ;
+; E2_INITIAL                    ; 1                         ; Untyped                      ;
+; E3_INITIAL                    ; 1                         ; Untyped                      ;
+; L0_MODE                       ; BYPASS                    ; Untyped                      ;
+; L1_MODE                       ; BYPASS                    ; Untyped                      ;
+; G0_MODE                       ; BYPASS                    ; Untyped                      ;
+; G1_MODE                       ; BYPASS                    ; Untyped                      ;
+; G2_MODE                       ; BYPASS                    ; Untyped                      ;
+; G3_MODE                       ; BYPASS                    ; Untyped                      ;
+; E0_MODE                       ; BYPASS                    ; Untyped                      ;
+; E1_MODE                       ; BYPASS                    ; Untyped                      ;
+; E2_MODE                       ; BYPASS                    ; Untyped                      ;
+; E3_MODE                       ; BYPASS                    ; Untyped                      ;
+; L0_PH                         ; 0                         ; Untyped                      ;
+; L1_PH                         ; 0                         ; Untyped                      ;
+; G0_PH                         ; 0                         ; Untyped                      ;
+; G1_PH                         ; 0                         ; Untyped                      ;
+; G2_PH                         ; 0                         ; Untyped                      ;
+; G3_PH                         ; 0                         ; Untyped                      ;
+; E0_PH                         ; 0                         ; Untyped                      ;
+; E1_PH                         ; 0                         ; Untyped                      ;
+; E2_PH                         ; 0                         ; Untyped                      ;
+; E3_PH                         ; 0                         ; Untyped                      ;
+; M_PH                          ; 0                         ; Untyped                      ;
+; C1_USE_CASC_IN                ; OFF                       ; Untyped                      ;
+; C2_USE_CASC_IN                ; OFF                       ; Untyped                      ;
+; C3_USE_CASC_IN                ; OFF                       ; Untyped                      ;
+; C4_USE_CASC_IN                ; OFF                       ; Untyped                      ;
+; C5_USE_CASC_IN                ; OFF                       ; Untyped                      ;
+; C6_USE_CASC_IN                ; OFF                       ; Untyped                      ;
+; C7_USE_CASC_IN                ; OFF                       ; Untyped                      ;
+; C8_USE_CASC_IN                ; OFF                       ; Untyped                      ;
+; C9_USE_CASC_IN                ; OFF                       ; Untyped                      ;
+; CLK0_COUNTER                  ; G0                        ; Untyped                      ;
+; CLK1_COUNTER                  ; G0                        ; Untyped                      ;
+; CLK2_COUNTER                  ; G0                        ; Untyped                      ;
+; CLK3_COUNTER                  ; G0                        ; Untyped                      ;
+; CLK4_COUNTER                  ; G0                        ; Untyped                      ;
+; CLK5_COUNTER                  ; G0                        ; Untyped                      ;
+; CLK6_COUNTER                  ; E0                        ; Untyped                      ;
+; CLK7_COUNTER                  ; E1                        ; Untyped                      ;
+; CLK8_COUNTER                  ; E2                        ; Untyped                      ;
+; CLK9_COUNTER                  ; E3                        ; Untyped                      ;
+; L0_TIME_DELAY                 ; 0                         ; Untyped                      ;
+; L1_TIME_DELAY                 ; 0                         ; Untyped                      ;
+; G0_TIME_DELAY                 ; 0                         ; Untyped                      ;
+; G1_TIME_DELAY                 ; 0                         ; Untyped                      ;
+; G2_TIME_DELAY                 ; 0                         ; Untyped                      ;
+; G3_TIME_DELAY                 ; 0                         ; Untyped                      ;
+; E0_TIME_DELAY                 ; 0                         ; Untyped                      ;
+; E1_TIME_DELAY                 ; 0                         ; Untyped                      ;
+; E2_TIME_DELAY                 ; 0                         ; Untyped                      ;
+; E3_TIME_DELAY                 ; 0                         ; Untyped                      ;
+; M_TIME_DELAY                  ; 0                         ; Untyped                      ;
+; N_TIME_DELAY                  ; 0                         ; Untyped                      ;
+; EXTCLK3_COUNTER               ; E3                        ; Untyped                      ;
+; EXTCLK2_COUNTER               ; E2                        ; Untyped                      ;
+; EXTCLK1_COUNTER               ; E1                        ; Untyped                      ;
+; EXTCLK0_COUNTER               ; E0                        ; Untyped                      ;
+; ENABLE0_COUNTER               ; L0                        ; Untyped                      ;
+; ENABLE1_COUNTER               ; L0                        ; Untyped                      ;
+; CHARGE_PUMP_CURRENT           ; 2                         ; Untyped                      ;
+; LOOP_FILTER_R                 ;  1.000000                 ; Untyped                      ;
+; LOOP_FILTER_C                 ; 5                         ; Untyped                      ;
+; CHARGE_PUMP_CURRENT_BITS      ; 9999                      ; Untyped                      ;
+; LOOP_FILTER_R_BITS            ; 9999                      ; Untyped                      ;
+; LOOP_FILTER_C_BITS            ; 9999                      ; Untyped                      ;
+; VCO_POST_SCALE                ; 0                         ; Untyped                      ;
+; CLK2_OUTPUT_FREQUENCY         ; 0                         ; Untyped                      ;
+; CLK1_OUTPUT_FREQUENCY         ; 0                         ; Untyped                      ;
+; CLK0_OUTPUT_FREQUENCY         ; 0                         ; Untyped                      ;
+; INTENDED_DEVICE_FAMILY        ; Cyclone IV E              ; Untyped                      ;
+; PORT_CLKENA0                  ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLKENA1                  ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLKENA2                  ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLKENA3                  ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLKENA4                  ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLKENA5                  ; PORT_UNUSED               ; Untyped                      ;
+; PORT_EXTCLKENA0               ; PORT_CONNECTIVITY         ; Untyped                      ;
+; PORT_EXTCLKENA1               ; PORT_CONNECTIVITY         ; Untyped                      ;
+; PORT_EXTCLKENA2               ; PORT_CONNECTIVITY         ; Untyped                      ;
+; PORT_EXTCLKENA3               ; PORT_CONNECTIVITY         ; Untyped                      ;
+; PORT_EXTCLK0                  ; PORT_UNUSED               ; Untyped                      ;
+; PORT_EXTCLK1                  ; PORT_UNUSED               ; Untyped                      ;
+; PORT_EXTCLK2                  ; PORT_UNUSED               ; Untyped                      ;
+; PORT_EXTCLK3                  ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLKBAD0                  ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLKBAD1                  ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLK0                     ; PORT_USED                 ; Untyped                      ;
+; PORT_CLK1                     ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLK2                     ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLK3                     ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLK4                     ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLK5                     ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLK6                     ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLK7                     ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLK8                     ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLK9                     ; PORT_UNUSED               ; Untyped                      ;
+; PORT_SCANDATA                 ; PORT_UNUSED               ; Untyped                      ;
+; PORT_SCANDATAOUT              ; PORT_UNUSED               ; Untyped                      ;
+; PORT_SCANDONE                 ; PORT_UNUSED               ; Untyped                      ;
+; PORT_SCLKOUT1                 ; PORT_CONNECTIVITY         ; Untyped                      ;
+; PORT_SCLKOUT0                 ; PORT_CONNECTIVITY         ; Untyped                      ;
+; PORT_ACTIVECLOCK              ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLKLOSS                  ; PORT_UNUSED               ; Untyped                      ;
+; PORT_INCLK1                   ; PORT_UNUSED               ; Untyped                      ;
+; PORT_INCLK0                   ; PORT_USED                 ; Untyped                      ;
+; PORT_FBIN                     ; PORT_UNUSED               ; Untyped                      ;
+; PORT_PLLENA                   ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CLKSWITCH                ; PORT_UNUSED               ; Untyped                      ;
+; PORT_ARESET                   ; PORT_UNUSED               ; Untyped                      ;
+; PORT_PFDENA                   ; PORT_UNUSED               ; Untyped                      ;
+; PORT_SCANCLK                  ; PORT_UNUSED               ; Untyped                      ;
+; PORT_SCANACLR                 ; PORT_UNUSED               ; Untyped                      ;
+; PORT_SCANREAD                 ; PORT_UNUSED               ; Untyped                      ;
+; PORT_SCANWRITE                ; PORT_UNUSED               ; Untyped                      ;
+; PORT_ENABLE0                  ; PORT_CONNECTIVITY         ; Untyped                      ;
+; PORT_ENABLE1                  ; PORT_CONNECTIVITY         ; Untyped                      ;
+; PORT_LOCKED                   ; PORT_UNUSED               ; Untyped                      ;
+; PORT_CONFIGUPDATE             ; PORT_UNUSED               ; Untyped                      ;
+; PORT_FBOUT                    ; PORT_CONNECTIVITY         ; Untyped                      ;
+; PORT_PHASEDONE                ; PORT_UNUSED               ; Untyped                      ;
+; PORT_PHASESTEP                ; PORT_UNUSED               ; Untyped                      ;
+; PORT_PHASEUPDOWN              ; PORT_UNUSED               ; Untyped                      ;
+; PORT_SCANCLKENA               ; PORT_UNUSED               ; Untyped                      ;
+; PORT_PHASECOUNTERSELECT       ; PORT_UNUSED               ; Untyped                      ;
+; PORT_VCOOVERRANGE             ; PORT_CONNECTIVITY         ; Untyped                      ;
+; PORT_VCOUNDERRANGE            ; PORT_CONNECTIVITY         ; Untyped                      ;
+; M_TEST_SOURCE                 ; 5                         ; Untyped                      ;
+; C0_TEST_SOURCE                ; 5                         ; Untyped                      ;
+; C1_TEST_SOURCE                ; 5                         ; Untyped                      ;
+; C2_TEST_SOURCE                ; 5                         ; Untyped                      ;
+; C3_TEST_SOURCE                ; 5                         ; Untyped                      ;
+; C4_TEST_SOURCE                ; 5                         ; Untyped                      ;
+; C5_TEST_SOURCE                ; 5                         ; Untyped                      ;
+; C6_TEST_SOURCE                ; 5                         ; Untyped                      ;
+; C7_TEST_SOURCE                ; 5                         ; Untyped                      ;
+; C8_TEST_SOURCE                ; 5                         ; Untyped                      ;
+; C9_TEST_SOURCE                ; 5                         ; Untyped                      ;
+; CBXI_PARAMETER                ; vga_clk_altpll            ; Untyped                      ;
+; VCO_FREQUENCY_CONTROL         ; AUTO                      ; Untyped                      ;
+; VCO_PHASE_SHIFT_STEP          ; 0                         ; Untyped                      ;
+; WIDTH_CLOCK                   ; 5                         ; Signed Integer               ;
+; WIDTH_PHASECOUNTERSELECT      ; 4                         ; Untyped                      ;
+; USING_FBMIMICBIDIR_PORT       ; OFF                       ; Untyped                      ;
+; DEVICE_FAMILY                 ; Cyclone V                 ; Untyped                      ;
+; SCAN_CHAIN_MIF_FILE           ; UNUSED                    ; Untyped                      ;
+; SIM_GATE_LOCK_DEVICE_BEHAVIOR ; OFF                       ; Untyped                      ;
+; AUTO_CARRY_CHAINS             ; ON                        ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS          ; OFF                       ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS           ; ON                        ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS        ; OFF                       ; IGNORE_CASCADE               ;
++-------------------------------+---------------------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGAController:VGA ;
++----------------+------------+----------------------------------+
+; Parameter Name ; Value      ; Type                             ;
++----------------+------------+----------------------------------+
+; H_TOTAL        ; 1100100000 ; Unsigned Binary                  ;
+; V_TOTAL        ; 1000001101 ; Unsigned Binary                  ;
++----------------+------------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PixelFetcher:pixelfetcher ;
++-------------------+-------+--------------------------------------------+
+; Parameter Name    ; Value ; Type                                       ;
++-------------------+-------+--------------------------------------------+
+; IMG_WIDTH         ; 300   ; Signed Integer                             ;
+; IMG_HEIGHT        ; 300   ; Signed Integer                             ;
+; SCREEN_WIDTH      ; 640   ; Signed Integer                             ;
+; SCREEN_HEIGHT     ; 480   ; Signed Integer                             ;
+; IMAGE_START_ADDR1 ; 100   ; Signed Integer                             ;
+; IMAGE_START_ADDR2 ; 22601 ; Signed Integer                             ;
++-------------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: PixelFetcher:pixelfetcher|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                             ;
++------------------------+----------------+--------------------------------------------------+
+; LPM_WIDTHN             ; 19             ; Untyped                                          ;
+; LPM_WIDTHD             ; 9              ; Untyped                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
+; CBXI_PARAMETER         ; lpm_divide_sbm ; Untyped                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
++------------------------+----------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: PixelFetcher:pixelfetcher|lpm_divide:Div1 ;
++------------------------+----------------+--------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                             ;
++------------------------+----------------+--------------------------------------------------+
+; LPM_WIDTHN             ; 19             ; Untyped                                          ;
+; LPM_WIDTHD             ; 10             ; Untyped                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
+; CBXI_PARAMETER         ; lpm_divide_4dm ; Untyped                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
++------------------------+----------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; altpll Parameter Settings by Entity Instance                                ;
++-------------------------------+---------------------------------------------+
+; Name                          ; Value                                       ;
++-------------------------------+---------------------------------------------+
+; Number of entity instances    ; 1                                           ;
+; Entity Instance               ; vga_clk:clk_divider|altpll:altpll_component ;
+;     -- OPERATION_MODE         ; NORMAL                                      ;
+;     -- PLL_TYPE               ; AUTO                                        ;
+;     -- PRIMARY_CLOCK          ; INCLK0                                      ;
+;     -- INCLK0_INPUT_FREQUENCY ; 20000                                       ;
+;     -- INCLK1_INPUT_FREQUENCY ; 0                                           ;
+;     -- VCO_MULTIPLY_BY        ; 0                                           ;
+;     -- VCO_DIVIDE_BY          ; 0                                           ;
++-------------------------------+---------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PixelFetcher:pixelfetcher"                                                                                                        ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                        ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+; address ; Output ; Warning  ; Output or bidir port (22 bits) is wider than the port expression (18 bits) it drives; bit(s) "address[21..18]" have no fanouts ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "VGAController:VGA" ;
++------+-------+----------+---------------------+
+; Port ; Type  ; Severity ; Details             ;
++------+-------+----------+---------------------+
+; rst  ; Input ; Info     ; Stuck at VCC        ;
++------+-------+----------+---------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 56                          ;
+;     ENA SCLR          ; 10                          ;
+;     SCLR              ; 42                          ;
+;     plain             ; 4                           ;
+; arriav_lcell_comb     ; 8009                        ;
+;     arith             ; 291                         ;
+;         0 data inputs ; 38                          ;
+;         1 data inputs ; 73                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 106                         ;
+;         4 data inputs ; 68                          ;
+;     extend            ; 1646                        ;
+;         7 data inputs ; 1646                        ;
+;     normal            ; 6051                        ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 156                         ;
+;         3 data inputs ; 103                         ;
+;         4 data inputs ; 661                         ;
+;         5 data inputs ; 677                         ;
+;         6 data inputs ; 4453                        ;
+;     shared            ; 21                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 19                          ;
+; arriav_mac            ; 3                           ;
+; boundary_port         ; 31                          ;
+; generic_pll           ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 21.80                       ;
+; Average LUT depth     ; 9.94                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:01:39     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon May 15 12:16:49 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tessia-x -c TOP --analysis_and_elaboration
+    Info: Processing started: Mon May 15 19:28:18 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tessia-x -c TOP
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file vga/vgax.sv
+    Info (12023): Found entity 1: VGAX File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/VGAX.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbenches/alu_tb.sv
     Info (12023): Found entity 1: ALU_tb File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/testbenches/ALU_tb.sv Line: 1
-Warning (12019): Can't analyze file -- file VGA/ImageReader.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file vga/vgacontroller.sv
     Info (12023): Found entity 1: VGAController File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/VGAController.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga/vga_clk.sv
     Info (12023): Found entity 1: vga_clk File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/vga_clk.sv Line: 40
-Info (12021): Found 1 design units, including 1 entities, in source file vga/vga.sv
-    Info (12023): Found entity 1: VGA File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/VGA.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga/vertical_counter.sv
     Info (12023): Found entity 1: vertical_counter File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/vertical_counter.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga/horizontal_counter.sv
@@ -204,7 +874,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file execute
 Info (12021): Found 1 design units, including 1 entities, in source file execute-stage/conditionalunit.sv
     Info (12023): Found entity 1: ConditionalUnit File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/ConditionalUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file execute-stage/alu.sv
-    Info (12023): Found entity 1: ALU File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/ALU.sv Line: 44
+    Info (12023): Found entity 1: ALU File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/execute-stage/ALU.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fetch-stage/fetch.sv
     Info (12023): Found entity 1: fetch File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/fetch-stage/fetch.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hazards/hazardunit.sv
@@ -237,18 +907,140 @@ Info (12021): Found 1 design units, including 1 entities, in source file vga/pix
     Info (12023): Found entity 1: PixelFetcher File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/PixelFetcher.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga/imageram.sv
     Info (12023): Found entity 1: ImageRAM File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/ImageRAM.sv Line: 1
-Info (12127): Elaborating entity "ALU" for the top level hierarchy
+Info (12127): Elaborating entity "VGAX" for the top level hierarchy
+Info (12128): Elaborating entity "horizontal_counter" for hierarchy "horizontal_counter:HC" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/VGAX.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at horizontal_counter.sv(8): truncated value with size 32 to match size of target (10) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/horizontal_counter.sv Line: 8
+Info (12128): Elaborating entity "vertical_counter" for hierarchy "vertical_counter:VC" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/VGAX.sv Line: 33
+Warning (10230): Verilog HDL assignment warning at vertical_counter.sv(8): truncated value with size 32 to match size of target (10) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/vertical_counter.sv Line: 8
+Info (12128): Elaborating entity "vga_clk" for hierarchy "vga_clk:clk_divider" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/VGAX.sv Line: 39
+Info (12128): Elaborating entity "altpll" for hierarchy "vga_clk:clk_divider|altpll:altpll_component" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/vga_clk.sv Line: 91
+Info (12130): Elaborated megafunction instantiation "vga_clk:clk_divider|altpll:altpll_component" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/vga_clk.sv Line: 91
+Info (12133): Instantiated megafunction "vga_clk:clk_divider|altpll:altpll_component" with the following parameter: File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/vga_clk.sv Line: 91
+    Info (12134): Parameter "bandwidth_type" = "AUTO"
+    Info (12134): Parameter "clk0_divide_by" = "2"
+    Info (12134): Parameter "clk0_duty_cycle" = "50"
+    Info (12134): Parameter "clk0_multiply_by" = "1"
+    Info (12134): Parameter "clk0_phase_shift" = "0"
+    Info (12134): Parameter "compensate_clock" = "CLK0"
+    Info (12134): Parameter "inclk0_input_frequency" = "20000"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "CBX_MODULE_PREFIX=vga_clk"
+    Info (12134): Parameter "lpm_type" = "altpll"
+    Info (12134): Parameter "operation_mode" = "NORMAL"
+    Info (12134): Parameter "pll_type" = "AUTO"
+    Info (12134): Parameter "port_activeclock" = "PORT_UNUSED"
+    Info (12134): Parameter "port_areset" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkbad0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkbad1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkloss" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkswitch" = "PORT_UNUSED"
+    Info (12134): Parameter "port_configupdate" = "PORT_UNUSED"
+    Info (12134): Parameter "port_fbin" = "PORT_UNUSED"
+    Info (12134): Parameter "port_inclk0" = "PORT_USED"
+    Info (12134): Parameter "port_inclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_locked" = "PORT_UNUSED"
+    Info (12134): Parameter "port_pfdena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasecounterselect" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasedone" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasestep" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phaseupdown" = "PORT_UNUSED"
+    Info (12134): Parameter "port_pllena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanaclr" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanclk" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanclkena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandata" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandataout" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandone" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanread" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanwrite" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk0" = "PORT_USED"
+    Info (12134): Parameter "port_clk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
+    Info (12134): Parameter "width_clock" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/vga_clk_altpll.v
+    Info (12023): Found entity 1: vga_clk_altpll File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/db/vga_clk_altpll.v Line: 29
+Info (12128): Elaborating entity "vga_clk_altpll" for hierarchy "vga_clk:clk_divider|altpll:altpll_component|vga_clk_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
+Info (12128): Elaborating entity "VGAController" for hierarchy "VGAController:VGA" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/VGAX.sv Line: 52
+Info (12128): Elaborating entity "ImageRAM" for hierarchy "ImageRAM:mem" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/VGAX.sv Line: 59
+Warning (10850): Verilog HDL warning at ImageRAM.sv(19): number of words (45101) in memory file does not match the number of elements in the address range [0:45099] File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/ImageRAM.sv Line: 19
+Warning (10030): Net "RAM.data_a" at ImageRAM.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/ImageRAM.sv Line: 7
+Warning (10030): Net "RAM.waddr_a" at ImageRAM.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/ImageRAM.sv Line: 7
+Warning (10030): Net "RAM.we_a" at ImageRAM.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/ImageRAM.sv Line: 7
+Info (12128): Elaborating entity "PixelFetcher" for hierarchy "PixelFetcher:pixelfetcher" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/VGAX.sv Line: 73
+Warning (10230): Verilog HDL assignment warning at PixelFetcher.sv(29): truncated value with size 32 to match size of target (10) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/PixelFetcher.sv Line: 29
+Warning (10230): Verilog HDL assignment warning at PixelFetcher.sv(30): truncated value with size 32 to match size of target (10) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/PixelFetcher.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at PixelFetcher.sv(31): truncated value with size 32 to match size of target (22) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/PixelFetcher.sv Line: 31
+Warning (10230): Verilog HDL assignment warning at PixelFetcher.sv(34): truncated value with size 32 to match size of target (10) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/PixelFetcher.sv Line: 34
+Warning (10230): Verilog HDL assignment warning at PixelFetcher.sv(35): truncated value with size 32 to match size of target (10) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/PixelFetcher.sv Line: 35
+Warning (10230): Verilog HDL assignment warning at PixelFetcher.sv(36): truncated value with size 32 to match size of target (22) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/PixelFetcher.sv Line: 36
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "ImageRAM:mem|RAM" is uninferred due to asynchronous read logic File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/ImageRAM.sv Line: 7
+Critical Warning (127005): Memory depth (65536) in the design file differs from memory depth (45100) in the Memory Initialization File "C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/db/TOP.ram0_ImageRAM_7bb68496.hdl.mif" -- setting initial value for remaining addresses to 0
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PixelFetcher:pixelfetcher|Div0" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/PixelFetcher.sv Line: 34
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PixelFetcher:pixelfetcher|Div1" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/PixelFetcher.sv Line: 35
+Info (12130): Elaborated megafunction instantiation "PixelFetcher:pixelfetcher|lpm_divide:Div0" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/PixelFetcher.sv Line: 34
+Info (12133): Instantiated megafunction "PixelFetcher:pixelfetcher|lpm_divide:Div0" with the following parameter: File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/PixelFetcher.sv Line: 34
+    Info (12134): Parameter "LPM_WIDTHN" = "19"
+    Info (12134): Parameter "LPM_WIDTHD" = "9"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_sbm.tdf
+    Info (12023): Found entity 1: lpm_divide_sbm File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/db/lpm_divide_sbm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_2mh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_2mh File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/db/sign_div_unsign_2mh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a0f.tdf
+    Info (12023): Found entity 1: alt_u_div_a0f File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/db/alt_u_div_a0f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "PixelFetcher:pixelfetcher|lpm_divide:Div1" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/PixelFetcher.sv Line: 35
+Info (12133): Instantiated megafunction "PixelFetcher:pixelfetcher|lpm_divide:Div1" with the following parameter: File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/PixelFetcher.sv Line: 35
+    Info (12134): Parameter "LPM_WIDTHN" = "19"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_4dm.tdf
+    Info (12023): Found entity 1: lpm_divide_4dm File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/db/lpm_divide_4dm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_anh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_anh File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/db/sign_div_unsign_anh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_q2f.tdf
+    Info (12023): Found entity 1: alt_u_div_q2f File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/db/alt_u_div_q2f.tdf Line: 22
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/VGA/VGAX.sv Line: 8
+Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/output_files/TOP.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4787 megabytes
-    Info: Processing ended: Mon May 15 12:17:03 2023
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:09
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Warning: RST port on the PLL is not properly connected on instance vga_clk:clk_divider|altpll:altpll_component|vga_clk_altpll:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/db/vga_clk_altpll.v Line: 60
+    Info: Must be connected
+Info (21057): Implemented 8068 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 8033 logic cells
+    Info (21065): Implemented 1 PLLs
+    Info (21062): Implemented 3 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 5046 megabytes
+    Info: Processing ended: Mon May 15 19:31:41 2023
+    Info: Elapsed time: 00:03:23
+    Info: Total CPU time (on all processors): 00:02:06
 
 
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
 The suppressed messages can be found in C:/Users/kevii/OneDrive/Escritorio/GitHub/earce_computer_architecture_1_2023_grupal/TessiaX/output_files/TOP.map.smsg.
 
 

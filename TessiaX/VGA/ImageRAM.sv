@@ -4,11 +4,11 @@ module ImageRAM(
   output logic [31:0] pixel
 );
 
-  logic [31:0] RAM [0:89999]; // 300x300 pixels, 8 bits per pixel
+  logic [31:0] RAM [0:45099]; // 300x300 pixels, 8 bits per pixel
 
   // Read from memory
   always_ff @(posedge clk) begin
-    if (address < 90000)
+    if (address < 45100)
       pixel <= RAM[address];
     else
       pixel <= 0; // Default value if address is out of range
@@ -16,7 +16,7 @@ module ImageRAM(
 
   // Initialize memory contents
   initial begin
-    $readmemh("tessia.mif", RAM); // Read memory values from .mif file
+    $readmemh("tessia.dat", RAM); // Read memory values from .mif file
   end
 
 endmodule

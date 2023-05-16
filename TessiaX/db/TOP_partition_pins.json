@@ -110,6 +110,10 @@
 				{
 					"name" : "VGA_HS",
 					"strict" : false
+				},
+				{
+					"name" : "imageSelector",
+					"strict" : false
 				}
 			]
 		}
