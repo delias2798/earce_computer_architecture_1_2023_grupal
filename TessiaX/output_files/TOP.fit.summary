@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon May 15 19:40:42 2023
+Fitter Status : Successful - Tue May 16 00:21:19 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : TOP
 Top-level Entity Name : VGAX
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 7,100 / 32,070 ( 22 % )
-Total registers : 56
+Logic utilization (in ALMs) : 28,571 / 32,070 ( 89 % )
+Total registers : 80
 Total pins : 31 / 457 ( 7 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )

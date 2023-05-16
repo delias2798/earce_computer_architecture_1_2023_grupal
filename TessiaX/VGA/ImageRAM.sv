@@ -4,11 +4,11 @@ module ImageRAM(
   output logic [31:0] pixel
 );
 
-  logic [31:0] RAM [0:45099]; // 300x300 pixels, 8 bits per pixel
+  logic [31:0] RAM [0:45500]; // 300x300 pixels, 8 bits per pixel
 
   // Read from memory
   always_ff @(posedge clk) begin
-    if (address < 45100)
+    if (address < 45501)
       pixel <= RAM[address];
     else
       pixel <= 0; // Default value if address is out of range
