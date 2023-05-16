@@ -20,8 +20,8 @@ module ConditionCheck(
 			//4'b1000: CondEx = carry & ~zero; // HI
 			//4'b1001: CondEx = ~(carry & ~zero); // LS
 			//4'b1010: CondEx = ge; // GE
-			//4'b1011: CondEx = ~ge; // LT
-			//4'b1100: CondEx = ~zero & ge; // GT
+			4'b1011: CondEx = ~ge; // LT
+			4'b1100: CondEx = ~zero & ge; // GT
 			//4'b1101: CondEx = ~(~zero & ge); // LE
 			4'b1110: CondEx = 1'b1; // Always
 			default: CondEx = 1'bx; // undefined
